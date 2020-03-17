@@ -1,0 +1,14 @@
+{
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "Portfolio generator created using [Eleventy](https://www.11ty.dev/). Just give it the portfolio.json file and it will generate a whole static website for you to easily publish.",
+	"scripts": {
+		"start": "npx @11ty/eleventy --serve",
+		"build": "npx @11ty/eleventy"
+	},
+	"author": "Jhow",
+	"license": "MIT",
+	"devDependencies": {
+		"@11ty/eleventy": "^0.10.0"
+	}
+}
