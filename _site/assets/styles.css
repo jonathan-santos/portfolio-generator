@@ -1,0 +1,237 @@
+html {
+    --primary-color: #8be9fd;
+    --secondary-color: #ff2d9a;
+    --text-light-color: #eeeeee;
+    --text-dark-color: #333333;
+    --background-light-color: #eeeeee;
+    --background-dark-color: #1a2a3a;
+}
+
+/* #region Default Tag Styling */
+html {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark-color);
+    background-color: #eee;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+main {
+    min-height: 100%;
+    padding-bottom: 10rem;
+}
+
+hr {
+  border-top: 1px solid var(--text-dark-color);
+}
+
+::-webkit-scrollbar {
+  width: 0.35rem;
+  height: 0.35rem;
+  border: 1px solid rgba(0, 0, 0, 0.01);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--primary-color)
+}
+/* #endregion */
+
+/* #region Helper classes */
+.no-underline {
+    text-decoration: none;
+}
+/* #endregion */
+
+/* #region area-title */
+.area-title {
+    min-height: 10rem;
+    padding: 1.5rem 2rem 1rem 2rem;
+    text-align: center;
+    color: #333;
+    border-bottom: 1px solid #333;
+}
+
+    .area-title .title {
+        line-height: 3rem;
+    }
+
+    .area-title .description {
+        font-size: 1.3rem;
+    }
+/* #endregion */
+
+/* #region area-tags */
+.tags-area {
+    padding: 1rem 0.5rem;
+	border-bottom: 1px solid #333;
+}
+
+	.tags-area #are-tags-visible {
+		display: none;
+  	}
+
+  	.tags-area .are-tags-visible {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+		.tags-area .are-tags-visible .text {
+			margin: 0;
+			display: inline;
+		}
+
+		.tags-area .are-tags-visible .arrow {
+			width: 2rem;
+			height: 2rem;
+		}
+
+	.tags-area #are-tags-visible:checked ~ .are-tags-visible .arrow {
+		transform: rotate(90deg);
+	}
+
+	.tags-area #are-tags-visible:checked ~ .tags {
+		margin-top: 1rem;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.tags-area .tags {
+		display: none;
+	}
+
+		.tags-area .tags .tag {
+			margin-right: 0.75rem;
+			margin-bottom: 0.75rem;
+			padding: 0.35rem;
+			border-radius: 10px;
+			background-color: var(--primary-color);
+			text-align: center;
+			text-decoration: none;
+			font-size: 0.9rem;
+		}
+/* #endregion */
+
+/* #region footer */
+footer {
+    width: 100%;
+    min-height: 10rem;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--background-dark-color);
+    color: var(--text-light-color);
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+  footer * {
+    margin: 0.5rem 0;
+  }
+
+  footer .back-to-top {
+    border: 2px solid var(--text-light-color);
+    padding: 0.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+/* #endregion */
+
+/* #region page */
+.content {
+    border-top: 1px solid #000;
+    padding: 0.5rem 2rem;
+    overflow: hidden;
+    line-height: 1.35rem;
+}
+
+  .content img {
+      max-width: 100%;
+  }
+
+  .content > h2 {
+    margin: 2rem 0 0.5rem 0;
+    font-size: 1.85rem;
+    line-height: initial;
+  }
+
+  .content .next, .content .previous {
+    border: 1px solid var(--background-dark-color);
+    padding: 0.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+    .content .next {
+      float: right;
+    }
+    
+    .content .previous {
+      float: left;
+    }
+/* #endregion */
+
+/* #region Media Queries */
+@media (max-width: 420px) {
+    main {
+      padding-bottom: 15rem;
+    }
+
+    .area-title .title {
+        font-size: 2.2rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .area-title .description {
+        font-size: 1.1rem;
+    }
+
+    .area-title .details {
+      padding-top: 0.5rem;
+      flex-direction: column;
+    }
+
+      .area-title .inner-details {
+        margin-bottom: 1rem;
+        border-right: none;
+        border-bottom: 1px solid var(--background-dark-color);
+        padding-bottom: 1rem;
+        padding-right: 0.5rem;
+      }
+
+        .area-title .inner-details .group {
+          width: 100%;
+        }
+
+    footer {
+      min-height: 15rem;
+    }
+}
+
+@media (min-width: 600px) {
+  main .content {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+/* #endregion */

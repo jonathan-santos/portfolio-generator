@@ -1,5 +1,6 @@
 ---
 name: Jonathan Santos
+topPhrase: Alguma coisa, alguma outra coisa. Mais alguma outra coisa!
 website: https://jhow.io
 projects:
 - name: Project 1
@@ -7,21 +8,51 @@ projects:
 - name: Project 3
 ---
 
-<!doctype html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang='en'>
 
 <head>
-    <meta charset="utf-8">
-    <title>{{ name + " portfolio" }}</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='./assets/styles.css'>
+    <title>{{ name }} - Portfolio</title>
 </head>
 
 <body>
-    <h1>{{ name + " portfolio" }}</h1>
-    <ul>
-        {% for project in projects %}
-            <li>{{ project.name }}</li>
-        {% endfor %}
-    </ul>
+    <main>
+        <div class='area-title'>
+            <h1 class='title'>{{ name }}<br>Portfolio</h1>
+            <p class='descrip'>{{ topPhrase }}</p>
+        </div>
+
+        <div class='tags-area'>
+            <input type="checkbox" name="tags-visible" id="are-tags-visible">
+
+            <label for="are-tags-visible" class='are-tags-visible'>
+                <img class='arrow' src='./assets/arrowRight.webp' alt='Seta para a direita'>
+                <p class='text'>Filter by tags</p>
+            </label>
+
+            <div class="tags">
+                <div class="tag">Alguma</div>
+                <div class="tag">Alguma coisa</div>
+                <div class="tag">Alguma outra coisa</div>
+                <div class="tag">Mais alguma coisa</div>
+            </div>
+        </div>
+
+        <div class='projects'>
+            {% for project in projects %}
+                <div class='project'>
+
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <!-- <footer>
+        Alguma coisa
+    </footer> -->
 </body>
 
 </html>
