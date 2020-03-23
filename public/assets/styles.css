@@ -53,7 +53,7 @@ hr {
     padding: 1.5rem 0 0 0;
     border-bottom: 1px solid #333;
     color: #333;
-    text-align: center;
+	text-align: center;
 }
 
     .area-title .title {
@@ -66,7 +66,51 @@ hr {
 		background-color: var(--primary-color);
 		color: var(--background-light-color);
 		font-size: 1.35rem;
-    }
+	}
+
+.area-title.with-image {
+	border: 0;
+	padding-top: 0;
+	display: flex;
+	position: relative;
+}
+
+	.area-title.with-image .tag {
+		margin: 0;
+		position: absolute;
+		left: 0.5rem;
+		bottom: 0.5rem;
+		font-size: 0.9rem;
+	}
+	
+	.area-title.with-image .project-image {
+		max-width: 35%;
+		flex: 1;
+		object-fit: cover;
+		box-sizing: border-box;
+	}
+
+	.area-title.with-image .details {
+		border-left: 1px solid var(--primary-color);
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		text-align: start;
+	}
+
+	.area-title.with-image .title {
+		padding: 0 0.5rem;
+		font-size: 1.3rem;
+        line-height: 1.5rem;
+	}
+
+	.area-title.with-image .description {
+		font-size: 1rem;
+		padding: 0.5rem;
+		flex: 1;
+		display: flex;
+		align-items: center;
+	}
 /* #endregion */
 
 /* #region area-tags */
@@ -274,6 +318,40 @@ footer {
 		padding: 0.5rem;
 		border-radius: 50px;
 		text-decoration: none;
+	}
+/* #endregion */
+
+/* #region area-project */
+.area-project {
+	border-top: 1px solid var(--background-dark-color);
+	padding: 1rem;
+}
+
+	.area-project h2 {
+		margin: 0;
+		border-bottom: 1px solid var(--background-dark-color);
+	}
+/* #endregion */
+
+/* #region back-button */
+.back-button {
+	position: fixed;
+    left: 0.25rem;
+    top: 0.25rem;
+    width: 2rem;
+    height: 2rem;
+    border: 0.125rem solid var(--text-dark-color);
+    border-radius: 100%;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: var(--background-light-color);
+    z-index: 1001;
+}
+
+	.back-button img {
+		width: 1.75rem;
+		height: 1.75rem;
+		transform: rotate(180deg);
 	}
 /* #endregion */
 

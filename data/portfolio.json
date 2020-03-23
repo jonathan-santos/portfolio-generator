@@ -6,13 +6,13 @@
     "tagsFiltering": false,
     "projects": [{
         "name": "Project 1",
-        "description": "Something, something and another other thing",
+        "description": "Something about project 1",
         "image": "http://pudim.com.br/pudim.jpg",
         "tag": "something",
         "link": "project-1"
     }, {
         "name": "Project 2",
-        "description": "Something, something and another other thing",
+        "description": "An description about project 2",
         "image": "https://cdn.panelinha.com.br/receita/964494000000-Mandioca-frita.jpg",
         "tag": "other",
         "link": "project-2"

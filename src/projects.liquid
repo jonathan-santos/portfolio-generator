@@ -6,4 +6,72 @@ pagination:
 permalink: "{{ project.link | slug }}/"
 ---
 
-{{ project.name }}
+<!DOCTYPE HTML>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='../assets/styles.css'>
+    <title>{{ portfolio.name }} - Portfolio</title>
+    <style>
+        html {
+            --primary-color: #bf1cff;
+            --text-light-color: #eeeeee;
+            --text-dark-color: #333333;
+            --background-light-color: #eeeeee;
+            --background-dark-color: #1a2a3a;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <a href="/" class="back-button">
+            <img src='../assets/arrowRight.webp'>
+        </a>
+
+        <div class='area-title with-image'>
+            <div class="tag">{{ project.tag }}</div>
+
+            <img class='project-image' src="{{ project.image }}" alt="Project image">
+
+            <div class='details'>
+                <h1 id='title' class='title'>{{ portfolio.name }} - {{ project.name }}</h1>
+                <p class='description'>{{ project.description }}</p>
+            </div>
+        </div>
+
+        <div class='area-project'>
+            <div>
+                <h2>Details</h2>
+
+                
+            </div>
+
+            {% if project.screenshots.length %}
+                <div>
+                    <h2>Screenshots</h2>
+                </div>
+            {% endif %}
+
+            {% if project.video %}
+                <div>
+                    <h2>Video</h2>
+                </div>
+            {% endif %}
+        </div>
+    </main>
+
+    {% if portfolio.showFooter %}
+        <footer>
+            <p>Portfolio made with <a href='https://github.com/jonathan-santos/portfolio-generator' target='_blank'>Portfolio generator</a> by <a href='https://github.com/jonathan-santos' target='_blank'>Jonathan Santos</a></p>
+
+            <p>Built with with html, css, <a href='https://www.11ty.dev/' target='_blank'>Eleventy</a> and <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/160px-Heart_coraz%C3%B3n.svg.png'></p>
+
+            <a href='#' class='back-to-top'>Back to top</a>
+        </footer>
+    {% endif %}
+</body>
+
+</html>
