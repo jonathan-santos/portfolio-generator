@@ -21,7 +21,7 @@ a {
 
 main {
     min-height: 100%;
-	padding-bottom: 10rem;
+	padding-bottom: 8rem;
 	overflow: hidden;
 }
 
@@ -120,12 +120,66 @@ hr {
 
 /* #region area-projects */
 .area-projects {
-	padding: 0.5rem;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	padding: 0 0.5rem;
 }
 
 	.area-projects .project {
-
+		width: 12.5rem;
+		height: 10rem;
+		margin: 0.15rem 0;
+		border: 1px solid rgba(255, 255, 255, 0.75);
+		border-radius: 10px;
+		position: relative;
+		box-sizing: border-box;
+		background-color: #000;
+		font-size: 0.8rem;
+		text-align: center;
+		overflow: hidden;
 	}
+		
+		.area-projects .project .image {
+			object-fit: cover;
+		}
+	
+		.area-projects .project .details {
+			width: 100%;
+			height: 100%;
+			padding: 0.5rem;
+			box-sizing: border-box;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background-color: rgba(0, 0, 0, 0.75);
+			opacity: 0;
+			color: var(--text-light-color);
+		}
+	
+			.area-projects .project .name {
+				font-size: 1.3rem;
+				margin: 0;
+			}
+	
+			.area-projects .project .link {
+				border: 1px solid var(--primary-color);
+				padding: 0.5rem;
+				border-radius: 100px;
+				color: #fff;
+			}
+
+				.area-projects .project .details .link:hover, .area-projects .project .details .link:active {
+					background-color: var(--primary-color);
+				}
+	
+		.area-projects .project:hover .details, .area-projects .project:active .details {
+			opacity: 1;
+		}
 /* #endregion */
 
 /* #region footer */
@@ -167,10 +221,6 @@ footer {
 
 /* #region Media Queries */
 @media (max-width: 420px) {
-    main {
-      padding-bottom: 15rem;
-    }
-
     .area-title .title {
         font-size: 2.2rem;
         padding-bottom: 0.5rem;
@@ -178,31 +228,20 @@ footer {
 
     .area-title .description {
         font-size: 1.1rem;
-    }
+	}
 
-    .area-title .details {
-      padding-top: 0.5rem;
-      flex-direction: column;
-    }
+	.area-projects {
+		padding: 1rem;
+	}
+	
+		.area-projects .project {
+			width: 20rem;
+			height: 18rem;
+			margin: 0.5rem 0;
+		}
 
-      .area-title .inner-details {
-        margin-bottom: 1rem;
-        border-right: none;
-        border-bottom: 1px solid var(--background-dark-color);
-        padding-bottom: 1rem;
-        padding-right: 0.5rem;
-      }
-
-        .area-title .inner-details .group {
-          width: 100%;
-        }
+			.area-projects .project .details * {
+				margin: 1rem 0;
+			}
 }
-
-@media (min-width: 600px) {
-  main .content {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-}
-
 /* #endregion */

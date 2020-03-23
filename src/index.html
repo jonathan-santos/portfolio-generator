@@ -4,8 +4,10 @@ topPhrase: Alguma coisa, alguma outra coisa. Mais alguma outra coisa!
 website: https://jhow.io
 projects:
 - name: Project 1
+  description: Something, something and another other thing
   image: http://pudim.com.br/pudim.jpg
 - name: Project 2
+  description: Something, something and another other thing
   image: https://cdn.panelinha.com.br/receita/964494000000-Mandioca-frita.jpg
 - name: Project 3
   image: https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2018/08/14/batata-frita-sequinha-crocante.jpg
@@ -57,8 +59,13 @@ projects:
         <div class='area-projects'>
             {% for project in projects %}
                 <div class='project'>
-                    <img src="{{ project.image }}" alt="Project image">
-                    <p>{{ project.name }}</p>
+                    <img class='image' src="{{ project.image }}" alt="Project image">
+
+                    <figcaption class='details'>
+                        <h3 class='name'>{{ project.name }}</h3>
+                        <p class='description'>{{ project.description }}</p>
+                        <a class='link no-underline' href='{{ project.name }}.html'>More details</a>
+                    </figcaption>
                 </div>
             {% endfor %}
         </div>
