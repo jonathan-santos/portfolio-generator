@@ -1,0 +1,23 @@
+{
+    "name": "Jonathan Santos",
+    "description": "Something, other something and another thing...",
+    "website": "https://jhow.io",
+    "projects": [{
+        "name": "Project 1 ",
+        "description": "Something, something and another other thing",
+        "image": "http://pudim.com.br/pudim.jpg",
+        "tag": "something",
+        "link": "project-1"
+    }, {
+        "name": "Project 2",
+        "description": "Something, something and another other thing",
+        "image": "https://cdn.panelinha.com.br/receita/964494000000-Mandioca-frita.jpg",
+        "tag": "other",
+        "link": "project-2"
+    }, {
+        "name": "Project 3",
+        "image": "https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2018/08/14/batata-frita-sequinha-crocante.jpg",
+        "tag": "thing",
+        "link": "project-3"
+    }]
+}

@@ -5,7 +5,7 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='./assets/styles.css'>
-    <title>{{ portfolio.name }} - Portfolio</title>
+    <title>Jonathan Santos - Portfolio</title>
     <style>
         html {
             --primary-color: #bf1cff;
@@ -20,8 +20,8 @@
 <body>
     <main>
         <div class='area-title'>
-            <h1 id='title' class='title'>{{ portfolio.name }}<br>Portfolio</h1>
-            <p class='description'>{{ portfolio.description }}</p>
+            <h1 id='title' class='title'>Jonathan Santos<br>Portfolio</h1>
+            <p class='description'>Something, other something and another thing...</p>
         </div>
 
         <div class='area-tags'>
@@ -41,27 +41,67 @@
         </div>
 
         <div class='area-projects'>
-            {% for project in portfolio.projects %}
+            
                 <div class='project'>
                     
-                    <img class='image' src='{{ project.image }}' alt='Project image'>
+                    <img class='image' src='http://pudim.com.br/pudim.jpg' alt='Project image'>
                     
                     <figcaption class='details'>
                         <div class='top'>
-                            <h3 class='name'>{{ project.name }}</h3>
+                            <h3 class='name'>Project 1 </h3>
                         </div>
 
                         <div class='middle'>
-                            <p class='description'>{{ project.description }}</p>
+                            <p class='description'>Something, something and another other thing</p>
                         </div>
 
                         <div class='bottom'>
-                            <p class='tag'>{{ project.tag }}</p>
+                            <p class='tag'>something</p>
                             <a class='link no-underline' href='#'>...</a>
                         </div>
                     </figcaption>
                 </div>
-            {% endfor %}
+            
+                <div class='project'>
+                    
+                    <img class='image' src='https://cdn.panelinha.com.br/receita/964494000000-Mandioca-frita.jpg' alt='Project image'>
+                    
+                    <figcaption class='details'>
+                        <div class='top'>
+                            <h3 class='name'>Project 2</h3>
+                        </div>
+
+                        <div class='middle'>
+                            <p class='description'>Something, something and another other thing</p>
+                        </div>
+
+                        <div class='bottom'>
+                            <p class='tag'>other</p>
+                            <a class='link no-underline' href='#'>...</a>
+                        </div>
+                    </figcaption>
+                </div>
+            
+                <div class='project'>
+                    
+                    <img class='image' src='https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2018/08/14/batata-frita-sequinha-crocante.jpg' alt='Project image'>
+                    
+                    <figcaption class='details'>
+                        <div class='top'>
+                            <h3 class='name'>Project 3</h3>
+                        </div>
+
+                        <div class='middle'>
+                            <p class='description'></p>
+                        </div>
+
+                        <div class='bottom'>
+                            <p class='tag'>thing</p>
+                            <a class='link no-underline' href='#'>...</a>
+                        </div>
+                    </figcaption>
+                </div>
+            
         </div>
     </main>
 
