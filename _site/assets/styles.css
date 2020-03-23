@@ -50,7 +50,7 @@ hr {
 /* #region area-title */
 .area-title {
 	min-height: 10rem;
-    padding: 1.5rem 2rem 1rem 2rem;
+    padding: 1.5rem 0 0 0;
     border-bottom: 1px solid #333;
     color: #333;
     text-align: center;
@@ -61,7 +61,11 @@ hr {
     }
 
     .area-title .description {
-		font-size: 1.3rem;
+		margin: 0;
+		padding: 2.5rem;
+		background-color: var(--primary-color);
+		color: var(--background-light-color);
+		font-size: 1.35rem;
     }
 /* #endregion */
 
@@ -115,6 +119,7 @@ hr {
 	border-radius: 10px;
 	padding: 0.35rem;
 	background-color: var(--primary-color);
+	color: var(--text-dark-color);
 	font-size: 0.9rem;
 	text-align: center;
 	text-decoration: none;
