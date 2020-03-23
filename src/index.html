@@ -4,8 +4,11 @@ topPhrase: Alguma coisa, alguma outra coisa. Mais alguma outra coisa!
 website: https://jhow.io
 projects:
 - name: Project 1
+  image: http://pudim.com.br/pudim.jpg
 - name: Project 2
+  image: https://cdn.panelinha.com.br/receita/964494000000-Mandioca-frita.jpg
 - name: Project 3
+  image: https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2018/08/14/batata-frita-sequinha-crocante.jpg
 ---
 
 <!DOCTYPE HTML>
@@ -16,12 +19,22 @@ projects:
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='./assets/styles.css'>
     <title>{{ name }} - Portfolio</title>
+    <style>
+        html {
+            --primary-color: #8be9fd;
+            --secondary-color: #ff2d9a;
+            --text-light-color: #eeeeee;
+            --text-dark-color: #333333;
+            --background-light-color: #eeeeee;
+            --background-dark-color: #1a2a3a;
+        }
+    </style>
 </head>
 
 <body>
     <main>
         <div class='area-title'>
-            <h1 class='title'>{{ name }}<br>Portfolio</h1>
+            <h1 id='title' class='title'>{{ name }}<br>Portfolio</h1>
             <p class='descrip'>{{ topPhrase }}</p>
         </div>
 
@@ -41,18 +54,21 @@ projects:
             </div>
         </div>
 
-        <div class='projects'>
+        <div class='area-projects'>
             {% for project in projects %}
                 <div class='project'>
-
+                    <img src="{{ project.image }}" alt="Project image">
+                    <p>{{ project.name }}</p>
                 </div>
             {% endfor %}
         </div>
     </main>
 
-    <!-- <footer>
-        Alguma coisa
-    </footer> -->
+    <footer>
+        <p>Portfolio made with html, css, <a href='https://www.11ty.dev/'>Eleventy</a> and <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/160px-Heart_coraz%C3%B3n.svg.png'></p>
+
+        <a href='#title' class='back-to-top'>Back to top</a>
+    </footer>
 </body>
 
 </html>
