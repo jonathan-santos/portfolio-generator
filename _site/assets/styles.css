@@ -298,7 +298,7 @@ footer {
 		}
 }
 
-@media (max-width: 408px) {
+@media (max-width: 407px) {
 	.project {
 		width: 10.25rem;
 		min-width: 10.25rem;
@@ -319,11 +319,19 @@ footer {
 	}
 }
 
-@media (max-width: 321px) {
+@media (max-width: 359px) {
 	.project {
 		width: 9rem;
 		min-width: 9rem;
 		height: 9rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.project {
+		width: 15rem;
+		min-width: 15rem;
+		height: 15rem;
 	}
 }
 /* #endregion */
