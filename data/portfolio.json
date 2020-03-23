@@ -2,8 +2,10 @@
     "name": "Jonathan Santos",
     "description": "Something, other something and another thing...",
     "website": "https://jhow.io",
+    "showFooter": true,
+    "tagsFiltering": false,
     "projects": [{
-        "name": "Project 1 ",
+        "name": "Project 1",
         "description": "Something, something and another other thing",
         "image": "http://pudim.com.br/pudim.jpg",
         "tag": "something",
@@ -19,5 +21,10 @@
         "image": "https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2018/08/14/batata-frita-sequinha-crocante.jpg",
         "tag": "thing",
         "link": "project-3"
-    }]
+    }],
+    "tags": [
+        "something",
+        "other",
+        "thing"
+    ]
 }

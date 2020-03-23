@@ -1,3 +1,3 @@
-_site/*
-!_site/assets
+public/*
+!public/assets
 node_modules/
