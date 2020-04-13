@@ -2,7 +2,7 @@
     "name": "Jonathan Santos",
     "description": "Something, other something and another thing...",
     "showFooter": true,
-    "tagsFiltering": false,
+    "tagsFiltering": true,
     "colors": {
         "primary": "#bf1cff",
         "textLight": "#eeeeee",

@@ -1,22 +1,30 @@
+---
+pagination:
+    data: portfolio.tags
+    size: 1
+    alias: filterTag
+permalink: "/tags/{{ filterTag.name | slug }}/"
+---
+
 <!DOCTYPE HTML>
 <html lang='en'>
 
 <head>
     {% include head.html %}
-    <title>{{ portfolio.name }} - Portfolio</title>
+    <title>{{ portfolio.name }} - Portfolio {{ filterTag.name }}</title>
 </head>
 
 <body>
     <main>
         {% include areaTitle.html %}
 
-        {% if portfolio.tagsFiltering %}
-            {% include tagsFiltering.html %}
-        {% endif %}
+        {% include tagsFiltering.html %}
 
         <div class='area-projects'>
             {% for project in portfolio.projects %}
-                {% include project.html %}
+                {% if project.tag == filterTag.name %}
+                    {% include project.html %}
+                {% endif %}
             {% endfor %}
         </div>
     </main>

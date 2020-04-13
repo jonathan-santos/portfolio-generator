@@ -1,0 +1,23 @@
+<div class='project'>
+    <img class='image' src='{{ project.image }}' alt='Project image'>
+
+    <figcaption class='details'>
+        <div class='top'>
+            <h3 class='name'>{{ project.name }}</h3>
+        </div>
+
+        <div class='middle'>
+            <p class='description'>{{ project.description }}</p>
+        </div>
+
+        <div class='bottom'>
+            {% for tag in portfolio.tags %}
+                {% if tag.name == project.tag %}
+                    <p class='tag' style='background-color: {{ tag.color }} '>{{ tag.name }}</p>
+                {% endif %}
+            {% endfor %}
+
+            <a class='link no-underline' href='/{{ project.link }}/'>...</a>
+        </div>
+    </figcaption>
+</div>
