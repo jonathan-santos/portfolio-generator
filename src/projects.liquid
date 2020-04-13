@@ -16,11 +16,11 @@ permalink: "{{ project.link | slug }}/"
     <title>{{ portfolio.name }} - Portfolio</title>
     <style>
         html {
-            --primary-color: #bf1cff;
-            --text-light-color: #eeeeee;
-            --text-dark-color: #333333;
-            --background-light-color: #eeeeee;
-            --background-dark-color: #1a2a3a;
+            --primary-color: {{ portfolio.colors.primary }};
+            --text-light-color: {{ portfolio.colors.textLight }};
+            --text-dark-color: {{ portfolio.colors.textDark }};
+            --background-light-color: {{ portfolio.colors.backgroundLight }};
+            --background-dark-color: {{ portfolio.colors.backgroundDark }};
         }
     </style>
 </head>
@@ -32,7 +32,11 @@ permalink: "{{ project.link | slug }}/"
         </a>
 
         <div class='area-title with-image'>
-            <div class="tag">{{ project.tag }}</div>
+            {% for tag in portfolio.tags %}
+                {% if tag.name == project.tag %}
+                    <p class='tag' style='background-color: {{ tag.color }} '>{{ tag.name }}</p>
+                {% endif %}
+            {% endfor %}
 
             <div class='project-image-container'>
                 <img src="{{ project.image }}" alt="Project image">

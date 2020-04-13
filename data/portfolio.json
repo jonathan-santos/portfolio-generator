@@ -1,9 +1,15 @@
 {
     "name": "Jonathan Santos",
     "description": "Something, other something and another thing...",
-    "website": "https://jhow.io",
     "showFooter": true,
     "tagsFiltering": false,
+    "colors": {
+        "primary": "#bf1cff",
+        "textLight": "#eeeeee",
+        "textDark": "#333333",
+        "backgroundLight": "#eeeeee",
+        "backgroundDark": "#1a2a3a"
+    },
     "projects": [{
         "name": "Project 1",
         "description": "Something about project 1",
@@ -23,8 +29,8 @@
         "link": "project-3"
     }],
     "tags": [
-        "something",
-        "other",
-        "thing"
+        { "name": "something", "color": "red" },
+        { "name": "other", "color": "green" },
+        { "name": "thing", "color": "blue" }
     ]
 }

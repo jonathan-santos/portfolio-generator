@@ -50,8 +50,8 @@ hr {
 /* #region area-title */
 .area-title {
 	max-height: 15rem;
-    border-bottom: 1px solid #333;
-    color: #333;
+    border-bottom: 1px solid var(--text-dark-color);
+    color: var(--text-dark-color);
 	text-align: center;
 }
 
@@ -128,7 +128,7 @@ hr {
 
 /* #region area-tags */
 .area-tags {
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid var(--text-dark-color);
     padding: 0.8rem 0.5rem;
 }
 
@@ -159,7 +159,6 @@ hr {
 	}
 
 	.area-tags #are-tags-visible:checked ~ .tags {
-		margin-top: 1rem;
 		display: flex;
 		flex-wrap: wrap;
 	}
@@ -171,8 +170,7 @@ hr {
 
 /* #region tag */
 .tag {
-	margin-right: 0.75rem;
-	margin-bottom: 0.75rem;
+	margin: 0.75rem 0.75rem 0 0;
 	border-radius: 10px;
 	padding: 0.35rem;
 	background-color: var(--primary-color);
@@ -246,6 +244,7 @@ hr {
 			padding: 0 0.25rem;
 			display: flex;
 			align-items: center;
+			justify-content: center;
 			opacity: 0;
 			background-color: rgba(0, 0, 0, 0.75);
 		}
