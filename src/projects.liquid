@@ -49,7 +49,9 @@ permalink: "{{ project.link | slug }}/"
                     <span class='author'>by {{ portfolio.name }}</span>
                 </h1>
 
-                <p class='description'>{{ project.description }}</p>
+                {% if project.description %}
+                    <p class='description'>{{ project.description }}</p>
+                {% endif %}
             </div>
         </div>
 
