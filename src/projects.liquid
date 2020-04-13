@@ -26,7 +26,7 @@ permalink: "{{ project.link | slug }}/"
 </head>
 
 <body>
-    <main>
+    <main class='project-page'>
         <a href="/" class="back-button">
             <img src='../assets/arrowRight.webp'>
         </a>
@@ -34,10 +34,17 @@ permalink: "{{ project.link | slug }}/"
         <div class='area-title with-image'>
             <div class="tag">{{ project.tag }}</div>
 
-            <img class='project-image' src="{{ project.image }}" alt="Project image">
+            <div class='project-image-container'>
+                <img src="{{ project.image }}" alt="Project image">
+            </div>
 
             <div class='details'>
-                <h1 id='title' class='title'>{{ portfolio.name }} - {{ project.name }}</h1>
+                <h1 id='title' class='title'>
+                    <span class='project-name'>{{ project.name }}</span>
+                    <br>
+                    <span class='author'>by {{ portfolio.name }}</span>
+                </h1>
+
                 <p class='description'>{{ project.description }}</p>
             </div>
         </div>

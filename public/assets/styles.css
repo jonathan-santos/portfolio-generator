@@ -49,8 +49,7 @@ hr {
 
 /* #region area-title */
 .area-title {
-	min-height: 10rem;
-    padding: 1.5rem 0 0 0;
+	max-height: 15rem;
     border-bottom: 1px solid #333;
     color: #333;
 	text-align: center;
@@ -83,12 +82,18 @@ hr {
 		font-size: 0.9rem;
 	}
 	
-	.area-title.with-image .project-image {
-		max-width: 35%;
+	.area-title.with-image .project-image-container {
+		max-width: 45%;
 		flex: 1;
-		object-fit: cover;
 		box-sizing: border-box;
+		overflow: hidden;
 	}
+	
+		.area-title.with-image .project-image-container img {
+			min-width: 100%;
+			max-height: 100%;
+			object-fit: cover;
+		}
 
 	.area-title.with-image .details {
 		border-left: 1px solid var(--primary-color);
@@ -99,14 +104,22 @@ hr {
 	}
 
 	.area-title.with-image .title {
-		padding: 0 0.5rem;
-		font-size: 1.3rem;
-        line-height: 1.5rem;
+		padding: 0 1rem;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		font-size: 2rem;
+		line-height: 1.75rem;
 	}
+
+		.area-title.with-image .title .author {
+			font-size: 1.1rem;
+			font-weight: normal;
+		}
 
 	.area-title.with-image .description {
 		font-size: 1rem;
-		padding: 0.5rem;
+		padding: 1rem;
 		flex: 1;
 		display: flex;
 		align-items: center;
@@ -314,6 +327,7 @@ footer {
 	}
 
 	footer .back-to-top {
+		margin-bottom: 0;
 		border: 2px solid var(--text-light-color);
 		padding: 0.5rem;
 		border-radius: 50px;
@@ -357,6 +371,14 @@ footer {
 
 /* #region Media Queries */
 @media (min-width: 1000px) {
+	.area-title {
+		
+	}
+
+		.area-title.with-image .project-image-container {
+			max-width: 25%;
+		}
+
 	.project {
 		width: 15rem;
 		min-width: 15rem;
