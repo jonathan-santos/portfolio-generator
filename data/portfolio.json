@@ -10,27 +10,38 @@
         "backgroundLight": "#eeeeee",
         "backgroundDark": "#1a2a3a"
     },
-    "projects": [{
-        "name": "Project 1",
-        "description": "Something about project 1",
-        "image": "http://pudim.com.br/pudim.jpg",
-        "tag": "something",
-        "link": "project-1"
-    }, {
-        "name": "Project 2",
-        "description": "An description about project 2",
-        "image": "https://cdn.panelinha.com.br/receita/964494000000-Mandioca-frita.jpg",
-        "tag": "other",
-        "link": "project-2"
-    }, {
-        "name": "Project 3",
-        "image": "https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2018/08/14/batata-frita-sequinha-crocante.jpg",
-        "tag": "thing",
-        "link": "project-3"
-    }],
     "tags": [
-        { "name": "something", "color": "red" },
-        { "name": "other", "color": "green" },
-        { "name": "thing", "color": "blue" }
-    ]
+        { "name": "dessert", "color": "red" },
+        { "name": "french", "color": "green" },
+        { "name": "brazilian", "color": "blue" }
+    ],
+    "projects": [{
+        "name": "Example project 1",
+        "icon": "http://pudim.com.br/pudim.jpg",
+        "tag": "dessert",
+        "permalink": "example-project-1",
+        "description": "My project 1 is actually a Pudding",
+        "links": [
+            { "name": "website", "url": "http://www.pudim.com.br" },
+            { "name": "More images of pudding at google", "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1" }
+        ],
+        "images": [
+            "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg",
+            "https://www.yummytummyaarthi.com/wp-content/uploads/2017/08/1-9.jpg",
+            "https://d1alt1wkdk73qo.cloudfront.net/images/guide/2e31509ef83c46f0b8d491a8dde20a78/478x640_ac.jpg"
+        ],
+        "video": "https://kutt.it/7nbVKz"
+    }, {
+        "name": "Example project 2",
+        "permalink": "example-project-2",
+        "icon": "https://cdn.panelinha.com.br/receita/964494000000-Mandioca-frita.jpg",
+        "tag": "brazilian",
+        "description": "My project 2 is actually Cassava (Mandioca para os brasileiros)"
+    }, {
+        "name": "Example project 3",
+        "permalink": "example-project-3",
+        "icon": "https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2018/08/14/batata-frita-sequinha-crocante.jpg",
+        "tag": "french",
+        "youtube": "https://www.youtube.com/embed/CpGwrfOzCA0?start=21"
+    }]
 }

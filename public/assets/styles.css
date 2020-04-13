@@ -49,10 +49,11 @@ hr {
 
 /* #region area-title */
 .area-title {
-	max-height: 15rem;
+	max-height: 17rem;
     border-bottom: 1px solid var(--text-dark-color);
     color: var(--text-dark-color);
 	text-align: center;
+	overflow: overlay;
 }
 
     .area-title .title {
@@ -367,6 +368,31 @@ footer {
 		height: 1.75rem;
 		transform: rotate(180deg);
 	}
+/* #endregion */
+
+/* #region project-page */
+.project-page .images {
+    height: 20rem;
+    padding: 0.25rem 0;
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+	overflow: auto;
+}
+
+	.project-page .images img {
+		max-width: 100%;
+		max-height: 100%;
+		margin: 0 0.5rem;
+		object-fit: contain;
+		flex-grow: 1;
+		vertical-align: bottom;
+	}
+
+.project-page video {
+	max-width: 100%;
+	margin-top: 1rem;
+}
 /* #endregion */
 
 /* #region Media Queries */

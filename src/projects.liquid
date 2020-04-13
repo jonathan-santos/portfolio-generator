@@ -3,7 +3,7 @@ pagination:
     data: portfolio.projects
     size: 1
     alias: project
-permalink: "{{ project.link | slug }}/"
+permalink: "{{ project.permalink | slug }}/"
 ---
 
 <!DOCTYPE HTML>
@@ -28,7 +28,7 @@ permalink: "{{ project.link | slug }}/"
             {% endfor %}
 
             <div class='project-image-container'>
-                <img src="{{ project.image }}" alt="Project image">
+                <img src="{{ project.icon }}" alt="Project image">
             </div>
 
             <div class='details'>
@@ -45,19 +45,33 @@ permalink: "{{ project.link | slug }}/"
         </div>
 
         <div class='area-project'>
-            <div>
-                <h2>Details</h2>
-            </div>
+            {% if project.links  %}
+                <h2>Links</h2>
 
-            {% if project.screenshots.length %}
-                <div>
-                    <h2>Screenshots</h2>
-                </div>
+                <ul class='links'>
+                    {% for link in project.links %}
+                        <li><a href='{{ link.url }}' target='_blank'>{{ link.name }}</a></li>
+                    {% endfor %}
+                </ul>
             {% endif %}
 
-            {% if project.video %}
-                <div>
-                    <h2>Video</h2>
+            {% if project.video or project.youtube %}
+                <h2>Video</h2>
+
+                {% if project.youtube %}
+                    <iframe width="560" height="315" src="{{ project.youtube }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                {% else %}
+                    <video width="560" controls src="{{ project.video }}" poster="{{ project.icon }}"></video>
+                {% endif %}
+            {% endif %}
+
+            {% if project.images %}
+                <h2>Images</h2>
+
+                <div class="images">
+                    {% for image in project.images %}
+                        <img src="{{ image }}" alt="Image of {{ project.name }}" loading='lazy'>
+                    {% endfor %}
                 </div>
             {% endif %}
         </div>

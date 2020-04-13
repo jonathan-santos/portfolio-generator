@@ -1,5 +1,5 @@
-<div class='project'>
-    <img class='image' src='{{ project.image }}' alt='Project image'>
+<a href='/{{ project.permalink }}/' class='project'>
+    <img class='image' src='{{ project.icon }}' alt='Project image'>
 
     <figcaption class='details'>
         <div class='top'>
@@ -16,8 +16,6 @@
                     <p class='tag' style='background-color: {{ tag.color }} '>{{ tag.name }}</p>
                 {% endif %}
             {% endfor %}
-
-            <a class='link no-underline' href='/{{ project.link }}/'>...</a>
         </div>
     </figcaption>
-</div>
+</a>
