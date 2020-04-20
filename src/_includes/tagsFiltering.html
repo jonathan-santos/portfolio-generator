@@ -2,15 +2,15 @@
     <input type='checkbox' name='tags-visible' id='are-tags-visible'>
 
     <label for='are-tags-visible' class='are-tags-visible'>
-        <img class='arrow' src='/assets/arrowRight.webp' alt='Seta para a direita'>
+        <img class='arrow' src='{{ portfolio.root }}/assets/arrowRight.webp' alt='Seta para a direita'>
         <p class='text'>Filter by tag</p>
     </label>
     
     <div class='tags'>
-        <a href='/' style='background-color: grey' class='tag'>No filter</a>
+        <a href='{{ portfolio.root }}' style='background-color: grey' class='tag'>No filter</a>
         
         {% for tag in portfolio.tags %}
-            <a href='/tags/{{ tag.name }}/' style='background-color: {{ tag.color }}' class='tag'>{{ tag.name }}</a>
+            <a href='{{ portfolio.root }}/tags/{{ tag.name }}/' style='background-color: {{ tag.color }}' class='tag'>{{ tag.name }}</a>
         {% endfor %}
     </div>
 </div>

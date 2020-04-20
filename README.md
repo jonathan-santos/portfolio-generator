@@ -9,20 +9,21 @@ Created using [Eleventy](https://www.11ty.dev/).
 ## Portfolio.json
 The different properties from it and it's values:
 
-| Property               | Value   | What it does                                                                    | Example                                 |
-|:-----------------------|:--------|:--------------------------------------------------------------------------------|:----------------------------------------|
-| name                   | Text    | Name that appears at the top of the home page                                   | Jonathan                                |
-| description            | Text    | Text that appears bellow the name of home page                                  | Hello there! This is my portfolio       |
-| showFooter             | Boolean | If the default footer should appear                                             | true                                    |
-| tagsFiltering          | Boolean | If the tags filtering option should appear at the homepage                      | true                                    |
-| colors                 | Object  | Object that houses the properties that control the colors throught the site     | See the properties below                |
-| colors/primary         | Color   | The color used in accents and backgrounds of important places throught the site | #bf1cff                                 |
-| colors/textLight       | Color   | The color used in the light text throught the site                              | #eeeeee                                 |
-| colors/textDark        | Color   | The color used in the dark text throught the site                               | #333333                                 |
-| colors/backgroundLight | Color   | The color used in the light backgrounds throught the site                       | #eeeeee                                 |
-| colors/backgroundDark  | Color   | The color used in the dark backgrounds throught the site                        | #1a2a3a                                 |
-| tags                   | List    | The tags that projects can use for identification and filtering                 | See the [Tags](#tags) section         |
-| projects               | List    | The projects of the portfolio                                                   | See the [Projects](#projects) section |
+| Property               | Value   | What it does                                                                                                  | Example                               |
+|:-----------------------|:--------|:--------------------------------------------------------------------------------------------------------------|:--------------------------------------|
+| name                   | Text    | Name that appears at the top of the home page                                                                 | Jonathan                              |
+| description            | Text    | Text that appears bellow the name of home page                                                                | Hello there! This is my portfolio     |
+| showFooter             | Boolean | If the default footer should appear                                                                           | true                                  |
+| tagsFiltering          | Boolean | If the tags filtering option should appear at the homepage                                                    | true                                  |
+| root                   | Text    | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | example/                              |
+| colors                 | Object  | Object that houses the properties that control the colors throught the site                                   | See the properties below              |
+| colors/primary         | Color   | The color used in accents and backgrounds of important places throught the site                               | #bf1cff                               |
+| colors/textLight       | Color   | The color used in the light text throught the site                                                            | #eeeeee                               |
+| colors/textDark        | Color   | The color used in the dark text throught the site                                                             | #333333                               |
+| colors/backgroundLight | Color   | The color used in the light backgrounds throught the site                                                     | #eeeeee                               |
+| colors/backgroundDark  | Color   | The color used in the dark backgrounds throught the site                                                      | #1a2a3a                               |
+| tags                   | List    | The tags that projects can use for identification and filtering                                               | See the [Tags](#tags) section         |
+| projects               | List    | The projects of the portfolio                                                                                 | See the [Projects](#projects) section |
 
 ### Tags
 The properties possible for each tag:

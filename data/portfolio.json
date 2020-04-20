@@ -3,6 +3,7 @@
     "description": "An project that generates a portfolio site for you! All generated from a single json file.",
     "showFooter": true,
     "tagsFiltering": true,
+    "root": "/",
     "colors": {
         "primary": "#bf1cff",
         "textLight": "#eeeeee",
