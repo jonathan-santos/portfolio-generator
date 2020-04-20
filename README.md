@@ -48,7 +48,7 @@ The properties possible for each project:
 | youtube     | Text    | The link to a embed youtube video about the project                                                           |https://www.youtube.com/embed/dQw4w9WgXcQ                                                |
 
 ### Links
-THe properties for each possible link:
+The properties for each possible link:
 
 | Property | Value | What it does                          | Example                |
 |:---------|:------|:--------------------------------------|:-----------------------|
