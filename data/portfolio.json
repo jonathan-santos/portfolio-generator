@@ -1,6 +1,6 @@
 {
-    "name": "Jonathan Santos",
-    "description": "Something, other something and another thing...",
+    "name": "Portfolio generator",
+    "description": "An project that generates a portfolio site for you! All generated from a single json file.",
     "showFooter": true,
     "tagsFiltering": true,
     "colors": {

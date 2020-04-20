@@ -4,8 +4,7 @@
 	"description": "Portfolio generator created using [Eleventy](https://www.11ty.dev/). Just give it the portfolio.json file and it will generate a whole static website for you to easily publish.",
 	"scripts": {
 		"start": "npx @11ty/eleventy --config=eleventy.config.js --serve",
-		"build": "npx @11ty/eleventy --config=eleventy.config.js",
-		"clear": "rm public/index.html"
+		"build": "npx @11ty/eleventy --config=eleventy.config.js"
 	},
 	"author": "Jhow",
 	"license": "MIT",
