@@ -15,7 +15,7 @@ The different properties from it and it's values:
 | description            | Text    | Text that appears bellow the name of home page                                                                | Hello there! This is my portfolio     |
 | showFooter             | Boolean | If the default footer should appear                                                                           | true                                  |
 | tagsFiltering          | Boolean | If the tags filtering option should appear at the homepage                                                    | true                                  |
-| root                   | Text    | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | example/                              |
+| root                   | Text    | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | /portfolio                            |
 | colors                 | Object  | Object that houses the properties that control the colors throught the site                                   | See the properties below              |
 | colors/primary         | Color   | The color used in accents and backgrounds of important places throught the site                               | #bf1cff                               |
 | colors/textLight       | Color   | The color used in the light text throught the site                                                            | #eeeeee                               |
