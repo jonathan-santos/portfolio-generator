@@ -21,8 +21,8 @@ The different properties from it and it's values:
 | colors/textDark        | Color   | The color used in the dark text throught the site                               | #333333                                 |
 | colors/backgroundLight | Color   | The color used in the light backgrounds throught the site                       | #eeeeee                                 |
 | colors/backgroundDark  | Color   | The color used in the dark backgrounds throught the site                        | #1a2a3a                                 |
-| tags                   | List    | The tags that projects can use for identification and filtering                 | See the [Tags](###tags) section         |
-| projects               | List    | The projects of the portfolio                                                   | See the [Projects](###projects) section |
+| tags                   | List    | The tags that projects can use for identification and filtering                 | See the [Tags](#tags) section         |
+| projects               | List    | The projects of the portfolio                                                   | See the [Projects](#projects) section |
 
 ### Tags
 The properties possible for each tag:
@@ -42,7 +42,7 @@ The properties possible for each project:
 | tag         | Text    | The name of the tag of the project                                                                           | web                                                                                      |
 | permalink   | Text    | The final link of the project                                                                                | my-awesome-project                                                                       |
 | description | Text    | The description of the project                                                                               | This is my project about a thing I did in my free time                                   |
-| links       | List    | The list of links that appears on the dedicated page of the project                                          | See the [Links](###links) section                                                        |
+| links       | List    | The list of links that appears on the dedicated page of the project                                          | See the [Links](#links) section                                                        |
 | images      | List    | The list of images that appears on the dedicated page of the project, each image is a direct link to a image | [ "https://www.veggieprezi.com/wp-content/uploads/2017/09/20170731_214129-555x688.jpg" ] |
 | video       | Text    | The link to a video about the project                                                                        | https://kutt.it/7nbVKz                                                                   |
 | youtube     | Text    | The link to a embed youtube video about the project                                                           |https://www.youtube.com/embed/dQw4w9WgXcQ                                                |
