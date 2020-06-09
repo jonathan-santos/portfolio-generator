@@ -3,7 +3,7 @@ Created using [Eleventy](https://www.11ty.dev/).
 
 ## Portfolios built with it
 - Example portfolio (https://jhow.io/portfolio-generator/example/)
-- [Jhow Santos](https://twitter.com/pipocacafeinada) (https://jhow.io)
+- [Jhow Santos](https://twitter.com/pipocacafeinada) (https://portfolio.jhow.io)
 
 ## How to use it
 1. Edit the `portfolio.json` inside the `data` folder with information about your projects and yourself.
