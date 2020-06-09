@@ -57,8 +57,24 @@ hr {
 }
 
     .area-title .title {
+		position: relative;
+		height: 6rem;
+		margin: 0;
+		padding: 1.2rem 0;
+		color: var(--text-light-color);
         line-height: 3rem;
-    }
+	}
+	
+		.area-title .title img {
+			z-index: -1;
+    		filter: brightness(0.5);
+			height: 123%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			object-fit: cover;
+		}
 
     .area-title .description {
 		margin: 0;

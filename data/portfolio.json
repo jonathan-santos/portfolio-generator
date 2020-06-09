@@ -4,6 +4,7 @@
     "showFooter": true,
     "tagsFiltering": true,
     "root": "/portfolio-generator/example",
+    "heroImage": "https://assets.website-files.com/5e51b3b0337309d672efd94c/5e5346352c16e8d69e1649f2_cover_hero-1.svg",
     "colors": {
         "primary": "#bf1cff",
         "textLight": "#eeeeee",
