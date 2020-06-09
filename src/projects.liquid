@@ -16,14 +16,14 @@ permalink: "{{ project.permalink | slug }}/"
 
 <body>
     <main class='project-page'>
-        <a href="{{ portfolio.root }}" class="back-button">
+        <a href="{{ portfolio.root }}/" class="back-button">
             <img src='{{ portfolio.root }}/assets/arrowRight.webp'>
         </a>
 
         <div class='area-title with-image'>
             {% for tag in portfolio.tags %}
                 {% if tag.name == project.tag %}
-                    <a href='/tags/{{ tag.name }}/' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
+                    <a href='{{ portfolio.root }}/tags/{{ tag.name }}/' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
                 {% endif %}
             {% endfor %}
 

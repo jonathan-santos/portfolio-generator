@@ -49,11 +49,11 @@ hr {
 
 /* #region area-title */
 .area-title {
-	max-height: 17rem;
+	max-height: 17.5rem;
     border-bottom: 1px solid var(--text-dark-color);
     color: var(--text-dark-color);
 	text-align: center;
-	overflow: overlay;
+	overflow: hidden;
 }
 
     .area-title .title {
@@ -62,7 +62,8 @@ hr {
 
     .area-title .description {
 		margin: 0;
-		padding: 2.5rem;
+		padding: 1.5rem;
+		overflow: hidden;
 		background-color: var(--primary-color);
 		color: var(--background-light-color);
 		font-size: 1.35rem;
@@ -85,19 +86,19 @@ hr {
 	
 	.area-title.with-image .project-image-container {
 		max-width: 45%;
+		border-right: 1px solid var(--primary-color);
 		flex: 1;
 		box-sizing: border-box;
 		overflow: hidden;
 	}
 	
 		.area-title.with-image .project-image-container img {
-			min-width: 100%;
-			max-height: 100%;
+			width: 100%;
+    		height: 100%;
 			object-fit: cover;
 		}
 
 	.area-title.with-image .details {
-		border-left: 1px solid var(--primary-color);
 		flex: 1;
 		display: flex;
 		flex-direction: column;
@@ -173,6 +174,7 @@ hr {
 /* #region tag */
 .tag {
 	margin: 0.75rem 0.75rem 0 0;
+	border: 1px solid rgba(255,255,255,0.35);
 	border-radius: 10px;
 	padding: 0.35rem;
 	background-color: var(--primary-color);
@@ -238,7 +240,10 @@ hr {
 	}
 
 		.project .details .top {
+			max-height: 5rem;
+			line-height: 1.25rem;
 			padding: 0.15rem 0;
+    		overflow: hidden;
 			background-color: rgba(0, 0, 0, 0.75);
 		}
 
@@ -346,6 +351,10 @@ footer {
 		margin: 0;
 		border-bottom: 1px solid var(--background-dark-color);
 	}
+
+	.area-project .links li {
+		margin-bottom: 0.7rem;
+	}
 /* #endregion */
 
 /* #region back-button */
@@ -397,13 +406,9 @@ footer {
 
 /* #region Media Queries */
 @media (min-width: 1000px) {
-	.area-title {
-		
+	.area-title.with-image .project-image-container {
+		max-width: 25%;
 	}
-
-		.area-title.with-image .project-image-container {
-			max-width: 25%;
-		}
 
 	.project {
 		width: 15rem;
@@ -465,6 +470,9 @@ footer {
 }
 
 @media (max-width: 320px) {
+	.area-title .description {
+		font-size: 1.2rem;
+	}
 	.project {
 		width: 15rem;
 		min-width: 15rem;
