@@ -21,14 +21,14 @@
     <div class='filter-group'>
         <span>categories: </span>
         {% for category in portfolio.categories %}
-            <a href='{{ portfolio.root }}/categories/{{ category.name }}/' style='background-color: {{ category.color }}' class='category'>{{ category.name }}</a>
+            <a href='{{ portfolio.root }}/categories/{{ category.name | downcase }}/' style='background-color: {{ category.color }}' class='category'>{{ category.name }}</a>
         {% endfor %}
     </div>
 
     <div class='filter-group'>
         <span>tags: </span>
         {% for tag in portfolio.tags %}
-            <a href='{{ portfolio.root }}/tags/{{ tag.name }}/' style='background-color: {{ tag.color }}' class='tag'>{{ tag.name }}</a>
+            <a href='{{ portfolio.root }}/tags/{{ tag.name | downcase }}/' style='background-color: {{ tag.color }}' class='tag'>{{ tag.name }}</a>
         {% endfor %}
     </div>
 </div>
