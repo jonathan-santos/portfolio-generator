@@ -3,7 +3,8 @@
     "description": "An project that generates a portfolio site for you! All generated from a single json file.",
     "showFooter": true,
     "filters": true,
-    "root": "/portfolio-generator/example",
+    "root": "",
+    "root2": "/portfolio-generator/example",
     "heroImage": "https://assets.website-files.com/5e51b3b0337309d672efd94c/5e5346352c16e8d69e1649f2_cover_hero-1.svg",
     "colors": {
         "primary": "#bf1cff",
@@ -24,7 +25,6 @@
         "name": "Example project 1",
         "icon": "http://pudim.com.br/pudim.jpg",
         "category": "Dessert",
-        "permalink": "example-project-1",
         "description": "My project 1 is actually a Pudding",
         "links": [
             { "name": "website", "url": "http://www.pudim.com.br" },
@@ -38,14 +38,12 @@
         "video": "https://kutt.it/7nbVKz"
     }, {
         "name": "Example project 2",
-        "permalink": "example-project-2",
         "icon": "https://cdn.panelinha.com.br/receita/964494000000-Mandioca-frita.jpg",
         "category": "Vegetable",
         "tags": [ "Brazilian" ],
         "description": "My project 2 is actually Cassava (Mandioca para os brasileiros)"
     }, {
         "name": "Example project 3",
-        "permalink": "example-project-3",
         "icon": "https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2018/08/14/batata-frita-sequinha-crocante.jpg",
         "category": "Vegetable",
         "tags": [ "French" ],
