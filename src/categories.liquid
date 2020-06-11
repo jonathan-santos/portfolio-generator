@@ -1,9 +1,9 @@
 ---
 pagination:
-    data: portfolio.tags
+    data: portfolio.categories
     size: 1
-    alias: filterTag
-permalink: "/tags/{{ filterTag.name | slug }}/"
+    alias: filterCategory
+permalink: "/categories/{{ filterCategory.name | slug }}/"
 ---
 
 <!DOCTYPE HTML>
@@ -11,7 +11,7 @@ permalink: "/tags/{{ filterTag.name | slug }}/"
 
 <head>
     {% include head.html %}
-    <title>{{ portfolio.name }} - Portfolio {{ filterTag.name }}</title>
+    <title>{{ portfolio.name }} - Portfolio {{ filterCategory.name }}</title>
 </head>
 
 <body>
@@ -27,11 +27,9 @@ permalink: "/tags/{{ filterTag.name | slug }}/"
         <div class='area-projects'>
 
             {% for project in portfolio.projects %}
-                {% for tag in project.tags %}
-                    {% if tag == filterTag.name %}
-                        {% include project.html %}
-                    {% endif %}
-                {% endfor %}
+                {% if project.category == filterCategory.name %}
+                    {% include project.html %}
+                {% endif %}
             {% endfor %}
 
         </div>

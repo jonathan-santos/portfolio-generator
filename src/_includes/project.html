@@ -11,11 +11,7 @@
         </div>
 
         <div class='bottom'>
-            {% for tag in portfolio.tags %}
-                {% if tag.name == project.tag %}
-                    <p class='tag' style='background-color: {{ tag.color }} '>{{ tag.name }}</p>
-                {% endif %}
-            {% endfor %}
+            {% include categoryAndTags.html %}
         </div>
     </figcaption>
 </a>

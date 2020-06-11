@@ -21,11 +21,10 @@ permalink: "{{ project.permalink | slug }}/"
         </a>
 
         <div class='area-title with-image'>
-            {% for tag in portfolio.tags %}
-                {% if tag.name == project.tag %}
-                    <a href='{{ portfolio.root }}/tags/{{ tag.name }}/' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
-                {% endif %}
-            {% endfor %}
+            <div class="category-and-tags">
+                {% assign links=true %}
+                {% include categoryAndTags.html %}
+            </div>
 
             <div class='project-image-container'>
                 <img src="{{ project.icon }}" alt="Project image">

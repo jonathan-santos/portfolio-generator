@@ -10,8 +10,8 @@
     <main>
         {% include areaTitle.html %}
 
-        {% if portfolio.tagsFiltering %}
-            {% include tagsFiltering.html %}
+        {% if portfolio.filters %}
+            {% include filters.html %}
         {% endif %}
 
         <div class='area-projects'>

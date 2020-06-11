@@ -1,0 +1,25 @@
+{% for category in portfolio.categories %}
+    {% if category.name == project.category %}
+
+        {% if links == true %}
+            <a href='{{ portfolio.root }}/categories/{{ category.name }}/' class='category' style='background-color: {{ category.color }}'>{{ category.name }}</a>
+        {% else %}
+            <p class='category' style='background-color: {{ category.color }} '>{{ category.name }}</p>
+        {% endif %}
+
+    {% endif %}
+{% endfor %}
+
+{% for tag in portfolio.tags %}
+    {% for projTag in project.tags %}
+        {% if tag.name == projTag %}
+
+            {% if links == true %}
+                <a href='{{ portfolio.root }}/tags/{{ tag.name }}/' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
+            {% else %}
+                <p class='tag' style='background-color: {{ tag.color }} '>{{ tag.name }}</p>
+            {% endif %}
+
+        {% endif %}
+    {% endfor %}
+{% endfor %}

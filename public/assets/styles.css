@@ -92,12 +92,13 @@ hr {
 	position: relative;
 }
 
-	.area-title.with-image .tag {
-		margin: 0;
+	.area-title.with-image .category-and-tags {
 		position: absolute;
 		left: 0.5rem;
 		bottom: 0.5rem;
-		font-size: 0.9rem;
+		margin: 0;
+		display: flex;
+		align-items: flex-end;
 	}
 	
 	.area-title.with-image .project-image-container {
@@ -113,7 +114,7 @@ hr {
     		height: 100%;
 			object-fit: cover;
 		}
-
+		
 	.area-title.with-image .details {
 		flex: 1;
 		display: flex;
@@ -122,13 +123,14 @@ hr {
 	}
 
 	.area-title.with-image .title {
-		padding: 0 1rem;
+		padding: 1rem;
 		flex: 1;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		font-size: 2rem;
 		line-height: 1.75rem;
+		color: var(--text-dark-color);
 	}
 
 		.area-title.with-image .title .author {
@@ -145,64 +147,104 @@ hr {
 	}
 /* #endregion */
 
-/* #region area-tags */
-.area-tags {
+/* #region area-filters */
+.area-filters {
 	border-bottom: 1px solid var(--text-dark-color);
     padding: 0.8rem 0.5rem;
 }
 
-	.area-tags #are-tags-visible {
+	.area-filters #are-filters-visible {
 		display: none;
   	}
 
-  	.area-tags .are-tags-visible {
+  	.area-filters .are-filters-visible {
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
 		cursor: pointer;
 	}
 
-		.area-tags .are-tags-visible .text {
+		.area-filters .are-filters-visible .text {
 			margin: 0;
 			display: inline;
 		}
 
-		.area-tags .are-tags-visible .arrow {
+		.area-filters .are-filters-visible .arrow {
 			width: 1.5rem;
 			height: 1.5rem;
 			margin-right: 0.5rem;
 		}
 
-	.area-tags #are-tags-visible:checked ~ .are-tags-visible .arrow {
+		.area-filters .are-filters-visible .tag, .area-filters .are-filters-visible .category {
+			margin-left: 0.5rem;
+			margin-bottom: 0;
+			cursor: initial;
+		} 
+
+	.area-filters #are-filters-visible:checked ~ .are-filters-visible {
+		margin-bottom: 0.5rem;
+	}
+	
+	.area-filters #are-filters-visible:checked ~ .are-filters-visible .arrow {
 		transform: rotate(90deg);
 	}
 
-	.area-tags #are-tags-visible:checked ~ .tags {
+	.area-filters #are-filters-visible:checked ~ .filter-group {
+		padding: 0.75rem 0 0.7rem 0;
+		border-top: 1px solid rgba(0, 0, 0, 0.25);
 		display: flex;
 		flex-wrap: wrap;
+		align-items: center;
 	}
 
-	.area-tags .tags {
+	.area-filters .filter-group {
 		display: none;
+	}
+
+		.area-filters .filter-group * {
+			margin-bottom: 0.15rem;
+			margin-right: 0.5rem;
+			font-size: 0.9rem;
+		}
+/* #endregion */
+
+/* #region category */
+.category {
+	margin: 0 0.25rem 0 0;
+	border-top: 1px solid rgba(255,255,255,0.35);
+	border-right: 1px solid rgba(255,255,255,0.35);
+	border-radius: 2px;
+	padding: 0.35rem;
+	background-color: var(--primary-color);
+	color: var(--text-light-color);
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+	.project .category {
+		cursor: initial;
 	}
 /* #endregion */
 
 /* #region tag */
 .tag {
-	margin: 0.75rem 0.75rem 0 0;
+	margin: 0 0.15rem 0.05rem 0;
 	border: 1px solid rgba(255,255,255,0.35);
 	border-radius: 10px;
-	padding: 0.35rem;
+	padding: 0.25rem;
 	background-color: var(--primary-color);
 	color: var(--text-light-color);
-	font-size: 0.9rem;
+	font-size: 0.8rem;
+	font-weight: bold;
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
 }
 
 	.project .tag {
-		margin: 0 0.25rem 0 0;
 		cursor: initial;
 	}
 /* #endregion */
@@ -225,7 +267,7 @@ hr {
 	min-width: 12.5rem;
 	height: 12.5rem;
 	margin: 0.5rem;
-	border: 1px solid rgba(255, 255, 255, 0.75);
+	border: 1.5px solid var(--background-dark-color);
 	border-radius: 10px;
 	box-sizing: border-box;
 	position: relative;
@@ -273,10 +315,10 @@ hr {
 		}
 
 		.project .details .bottom {
-			padding: 0.15rem 0.25rem 0.25rem 0.25rem;
+			padding: 0;
 			display: flex;
 			align-items: flex-end;
-			justify-content: space-between;
+			justify-content: flex-start;
 			background-color: none;
 		}
 
