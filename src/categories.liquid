@@ -16,9 +16,7 @@ permalink: "/categories/{{ filterCategory.name | slug }}/"
 
 <body>
     <main>
-        <a href="{{ portfolio.root }}/" class="back-button">
-            <img src='{{ portfolio.root }}/assets/arrowRight.webp'>
-        </a>
+        {% include backButton.html %}
 
         {% include areaTitle.html %}
 
@@ -35,9 +33,7 @@ permalink: "/categories/{{ filterCategory.name | slug }}/"
         </div>
     </main>
 
-    {% if portfolio.showFooter %}
-        {% include footer.html %}
-    {% endif %}
+    {% include footer.html %}
 </body>
 
 </html>

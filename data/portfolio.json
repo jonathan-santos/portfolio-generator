@@ -3,9 +3,8 @@
     "description": "An project that generates a portfolio site for you! All generated from a single json file.",
     "showFooter": true,
     "filters": true,
-    "root": "",
-    "root2": "/portfolio-generator/example",
-    "heroImage": "https://assets.website-files.com/5e51b3b0337309d672efd94c/5e5346352c16e8d69e1649f2_cover_hero-1.svg",
+    "root": "/portfolio-generator/example",
+    "heroImage": "heroImage.png",
     "colors": {
         "primary": "#bf1cff",
         "textLight": "#eeeeee",
@@ -44,7 +43,7 @@
         "description": "My project 2 is actually Cassava (Mandioca para os brasileiros)"
     }, {
         "name": "Example project 3",
-        "icon": "https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2018/08/14/batata-frita-sequinha-crocante.jpg",
+        "icon": "potato.jpg",
         "category": "Vegetable",
         "tags": [ "French" ],
         "youtube": "https://www.youtube.com/embed/CpGwrfOzCA0?start=21"

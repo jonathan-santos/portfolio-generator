@@ -16,16 +16,13 @@ permalink: "/tags/{{ filterTag.name | slug }}/"
 
 <body>
     <main>
-        <a href="{{ portfolio.root }}/" class="back-button">
-            <img src='{{ portfolio.root }}/assets/arrowRight.webp'>
-        </a>
+        {% include backButton.html %}
 
         {% include areaTitle.html %}
 
         {% include filters.html %}
 
         <div class='area-projects'>
-
             {% for project in portfolio.projects %}
                 {% for tag in project.tags %}
                     {% if tag == filterTag.name %}
@@ -33,13 +30,10 @@ permalink: "/tags/{{ filterTag.name | slug }}/"
                     {% endif %}
                 {% endfor %}
             {% endfor %}
-
         </div>
     </main>
 
-    {% if portfolio.showFooter %}
-        {% include footer.html %}
-    {% endif %}
+    {% include footer.html %}
 </body>
 
 </html>

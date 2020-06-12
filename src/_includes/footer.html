@@ -1,7 +1,9 @@
-<footer>
-    <p>Portfolio made with <a href='https://github.com/jonathan-santos/portfolio-generator' target='_blank'>Portfolio generator</a> by <a href='https://github.com/jonathan-santos' target='_blank'>Jonathan Santos</a></p>
+{% if portfolio.showFooter %}
+    <footer>
+        <p>Portfolio made with <a href='https://github.com/jonathan-santos/portfolio-generator' target='_blank'>Portfolio generator</a> by <a href='https://github.com/jonathan-santos' target='_blank'>Jonathan Santos</a></p>
 
-    <p>Built with with html, css, <a href='https://www.11ty.dev/' target='_blank'>Eleventy</a> and <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/160px-Heart_coraz%C3%B3n.svg.png'></p>
+        <p>Built with with html, css, <a href='https://www.11ty.dev/' target='_blank'>Eleventy</a> and <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/160px-Heart_coraz%C3%B3n.svg.png'></p>
 
-    <a href='#' class='back-to-top'>Back to top</a>
-</footer>
+        <a href='#' class='back-to-top'>Back to top</a>
+    </footer>
+{% endif %}

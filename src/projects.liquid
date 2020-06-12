@@ -16,9 +16,7 @@ permalink: "/projects/{{ project.name | slug }}/"
 
 <body>
     <main class='project-page'>
-        <a href="{{ portfolio.root }}/" class="back-button">
-            <img src='{{ portfolio.root }}/assets/arrowRight.webp'>
-        </a>
+        {% include backButton.html %}
 
         <div class='area-title with-image'>
             <div class="category-and-tags">
@@ -27,7 +25,7 @@ permalink: "/projects/{{ project.name | slug }}/"
             </div>
 
             <div class='project-image-container'>
-                <img src="{{ project.icon }}" alt="Project image">
+                <img src="{{ project.icon | assetLink }}" alt="Project image">
             </div>
 
             <div class='details'>
@@ -60,7 +58,7 @@ permalink: "/projects/{{ project.name | slug }}/"
                 {% if project.youtube %}
                     <iframe width="560" height="315" src="{{ project.youtube }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 {% else %}
-                    <video width="560" controls src="{{ project.video }}" poster="{{ project.icon }}"></video>
+                    <video width="560" controls src="{{ project.video | assetLink }}" poster="{{ project.icon | assetLink }}"></video>
                 {% endif %}
             {% endif %}
 
@@ -69,16 +67,14 @@ permalink: "/projects/{{ project.name | slug }}/"
 
                 <div class="images">
                     {% for image in project.images %}
-                        <img src="{{ image }}" alt="Image of {{ project.name }}" loading='lazy'>
+                        <img src="{{ image | assetLink }}" alt="Image of {{ project.name }}" loading='lazy'>
                     {% endfor %}
                 </div>
             {% endif %}
         </div>
     </main>
 
-    {% if portfolio.showFooter %}
-        {% include footer.html %}
-    {% endif %}
+    {% include footer.html %}
 </body>
 
 </html>
