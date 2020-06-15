@@ -5,16 +5,30 @@
 <head>
     <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<meta name='description' content='A project that generates a portfolio site for you! All generated from a single json file'>
+<meta name='theme-color' content='#BF1CFF'>
+
 <link rel='stylesheet' href='/portfolio-generator/example/styles.css'>
+<link rel="apple-touch-icon" sizes="180x180" href='/portfolio-generator/example/favicon/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='/portfolio-generator/example/favicon/favicon-32x32.png'>
+<link rel="icon" type="image/png" sizes="16x16" href='/portfolio-generator/example/favicon/favicon-16x16.png'>
+<link rel="manifest" href='/portfolio-generator/example/site.webmanifest'>
+
 <style>
     html {
-        --primary-color: #bf1cff;
-        --text-light-color: #eeeeee;
+        --primary-color: #BF1CFF;
+        --text-light-color: #EEEEEE;
         --text-dark-color: #333333;
-        --background-light-color: #eeeeee;
-        --background-dark-color: #1a2a3a;
+        --background-light-color: #EEEEEE;
+        --background-dark-color: #1A2A3A;
     }
 </style>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/portfolio-generator/example/sw.js');
+    }
+</script>
     <title>Portfolio generator - Example project 3</title>
 </head>
 
