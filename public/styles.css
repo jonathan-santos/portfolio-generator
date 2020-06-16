@@ -82,7 +82,8 @@ hr {
 		overflow: hidden;
 		background-color: var(--primary-color);
 		color: var(--background-light-color);
-		font-size: 1.35rem;
+		font-size: 1.2rem;
+		font-weight: bold;
 	}
 
 .area-title.with-image {
@@ -144,6 +145,7 @@ hr {
 		flex: 1;
 		display: flex;
 		align-items: center;
+		font-weight: bold;
 	}
 /* #endregion */
 
@@ -529,7 +531,7 @@ footer {
 
 @media (max-width: 320px) {
 	.area-title .description {
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 	.project {
 		width: 15rem;

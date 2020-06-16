@@ -2,7 +2,7 @@
 Created using [Eleventy](https://www.11ty.dev/).
 
 ## Portfolios built with it
-- Example portfolio (https://jhow.io/portfolio-generator/example/)
+- Example portfolio (https://jhow.io/portfolio-generator/public/)
 - [Jhow Santos](https://twitter.com/pipocacafeinada) (https://portfolio.jhow.io)
 
 ## How to use it
@@ -12,7 +12,6 @@ Created using [Eleventy](https://www.11ty.dev/).
 
 ## Portfolio.json
 The different properties from it and it's values:
-
 | Property               | Value   | What it does                                                                                                  | Example                               |
 |:-----------------------|:--------|:--------------------------------------------------------------------------------------------------------------|:--------------------------------------|
 | name                   | Text    | Name that appears at the top of the home page                                                                 | Jonathan                              |
