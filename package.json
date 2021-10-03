@@ -1,14 +1,24 @@
 {
 	"name": "portfolio",
-	"version": "1.0.0",
+	"version": "1.1.0",
+	"author": "Jhow",
+	"license": "MIT",
 	"description": "Portfolio generator created using [Eleventy](https://www.11ty.dev/). Just give it the portfolio.json file and it will generate a whole static website for you to easily publish.",
 	"scripts": {
 		"start": "npx @11ty/eleventy --config=eleventy.config.js --serve",
-		"build": "npx @11ty/eleventy --config=eleventy.config.js"
+		"build": "npx @11ty/eleventy --config=eleventy.config.js",
+		"deploy": "gh-pages-deploy"
 	},
-	"author": "Jhow",
-	"license": "MIT",
 	"devDependencies": {
-		"@11ty/eleventy": "^0.10.0"
+		"@11ty/eleventy": "^0.10.0",
+		"gh-pages-deploy": "^0.5.1"
+	},
+	"gh-pages-deploy": {
+		"staticpath": "public",
+		"noprompt": true,
+		"commit": "New deploy",
+		"prep": [
+		  "build"
+		]
 	}
 }
