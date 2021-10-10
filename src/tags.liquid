@@ -17,7 +17,7 @@ permalink: '/tags/{{ filterTag.name | slug }}/'
 
     {% include area-title, title: filterTag.name %}
 
-    {% include filters %}
+    {% include filters, selected: 'tag', filter: filterTag %}
 
     <div class='area-projects'>
       {% for project in portfolio.projects %}
