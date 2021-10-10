@@ -9,10 +9,7 @@ permalink: "/projects/{{ project.name | slug }}/"
 <!DOCTYPE HTML>
 <html lang='en'>
 
-<head>
-  {% include head %}
-  <title>{{ portfolio.name }} - {{ project.name }}</title>
-</head>
+{% include head, title: project.name %}
 
 <body>
   <main class='project-page'>

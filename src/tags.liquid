@@ -9,10 +9,7 @@ permalink: "/tags/{{ filterTag.name | slug }}/"
 <!DOCTYPE HTML>
 <html lang='en'>
 
-<head>
-  {% include head %}
-  <title>{{ portfolio.name }} - Portfolio {{ filterTag.name }}</title>
-</head>
+{% include head, title: filterTag.name %}
 
 <body>
   <main>
