@@ -1,11 +1,3 @@
-:root {
-  --primary-color: {{ portfolio.colors.primary | default: '#BF1CFF' }};
-  --text-light-color: {{ portfolio.colors.textLight | default: '#EEEEEE' }};
-  --text-dark-color: {{ portfolio.colors.textDark | default: '#333333' }};
-  --background-light-color: {{ portfolio.colors.backgroundLight | default: '#EEEEEE' }};
-  --background-dark-color: {{ portfolio.colors.backgroundDark | default: '#1A2A3A' }};
-}
-
 /* #region Default Tag Styling */
 html {
   min-height: 100vh;
