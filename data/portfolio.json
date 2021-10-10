@@ -3,7 +3,7 @@
   "description": "A project that generates a portfolio site for you! All generated from a single json file",
   "showFooter": true,
   "filters": true,
-  "root": "",
+  "root": "/portfolio-generator",
   "heroImage": "heroImage.png",
   "colors": {
     "primary": "#BF1CFF",
@@ -32,7 +32,7 @@
           "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
         }
       ],
-      "icon": "http://pudim.com.br/pudim.jpg",
+      "icon": "pudding.jpg",
       "images": [
         {
           "src": "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg",
@@ -49,13 +49,13 @@
       "description": "My project 2 is actually Cassava (Mandioca para os brasileiros)",
       "category": "Vegetable",
       "tags": ["Brazilian"],
-      "icon": "https://cdn.panelinha.com.br/receita/964494000000-Mandioca-frita.jpg"
+      "icon": "cassava.jpg"
     },
     {
       "name": "Example project 3",
       "category": "Vegetable",
       "tags": ["French"],
-      "icon": "potato.jpg",
+      "icon": "frenchfries.jpg",
       "youtube": "https://www.youtube.com/embed/CpGwrfOzCA0?start=21"
     }
   ]
