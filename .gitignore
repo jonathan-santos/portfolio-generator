@@ -1,6 +1,3 @@
 node_modules/
-!public/assets
-!public/favicon
-!public/styles.css
-!public/favicon
 public/*
+.DS_Store
