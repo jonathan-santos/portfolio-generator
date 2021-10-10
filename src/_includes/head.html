@@ -10,17 +10,19 @@
 <link rel="manifest" href='{{ "/site.webmanifest" | relativeLink }}'>
 
 <style>
-    html {
-        --primary-color: {{ portfolio.colors.primary }};
-        --text-light-color: {{ portfolio.colors.textLight }};
-        --text-dark-color: {{ portfolio.colors.textDark }};
-        --background-light-color: {{ portfolio.colors.backgroundLight }};
-        --background-dark-color: {{ portfolio.colors.backgroundDark }};
-    }
+  html {
+    --primary-color: {{ portfolio.colors.primary }};
+    --text-light-color: {{ portfolio.colors.textLight }};
+    --text-dark-color: {{ portfolio.colors.textDark }};
+    --background-light-color: {{ portfolio.colors.backgroundLight }};
+    --background-dark-color: {{ portfolio.colors.backgroundDark }};
+  }
 </style>
 
-<!-- <script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('{{ "/sw.js" | relativeLink }}');
-    }
-</script> -->
+<!--
+<script>
+  if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('{{ "/sw.js" | relativeLink }}');
+  }
+</script>
+-->

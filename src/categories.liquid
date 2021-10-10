@@ -1,8 +1,8 @@
 ---
 pagination:
-    data: portfolio.categories
-    size: 1
-    alias: filterCategory
+  data: portfolio.categories
+  size: 1
+  alias: filterCategory
 permalink: "/categories/{{ filterCategory.name | slug }}/"
 ---
 
@@ -10,30 +10,28 @@ permalink: "/categories/{{ filterCategory.name | slug }}/"
 <html lang='en'>
 
 <head>
-    {% include head.html %}
-    <title>{{ portfolio.name }} - Portfolio {{ filterCategory.name }}</title>
+  {% include head.html %}
+  <title>{{ portfolio.name }} - Portfolio {{ filterCategory.name }}</title>
 </head>
 
 <body>
-    <main>
-        {% include backButton.html %}
+  <main>
+    {% include backButton.html %}
 
-        {% include areaTitle.html %}
+    {% include areaTitle.html %}
 
-        {% include filters.html %}
+    {% include filters.html %}
 
-        <div class='area-projects'>
+    <div class='area-projects'>
+      {% for project in portfolio.projects %}
+        {% if project.category == filterCategory.name %}
+          {% include project.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </main>
 
-            {% for project in portfolio.projects %}
-                {% if project.category == filterCategory.name %}
-                    {% include project.html %}
-                {% endif %}
-            {% endfor %}
-
-        </div>
-    </main>
-
-    {% include footer.html %}
+  {% include footer.html %}
 </body>
 
 </html>

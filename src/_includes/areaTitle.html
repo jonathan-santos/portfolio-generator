@@ -1,22 +1,22 @@
 <div class='area-title'>
-    <h1 id='title' class='title'>
-        {% if portfolio.heroImage  %}
-            <img src="{{ portfolio.heroImage | assetLink }}" alt="background image of the title">
-        {% endif  %}
+  <h1 id='title' class='title'>
+    {% if portfolio.heroImage %}
+      <img src="{{ portfolio.heroImage | assetLink }}" alt="background image of the title">
+    {% endif %}
 
-        <span>
-            {{ portfolio.name }}
-            <br>Portfolio
+    <span>
+      {{ portfolio.name }}
+      <br>Portfolio
 
-            {% if filterTag != null %}
-                - {{ filterTag.name }}
-            {% endif %}
+      {% if filterTag != null %}
+        - {{ filterTag.name }}
+      {% endif %}
 
-            {% if filterCategory != null %}
-                - {{ filterCategory.name }}
-            {% endif %}
-        </span>
-    </h1>
-    
-    <p class='description'>{{ portfolio.description }}</p>
+      {% if filterCategory != null %}
+        - {{ filterCategory.name }}
+      {% endif %}
+    </span>
+  </h1>
+
+  <p class='description'>{{ portfolio.description }}</p>
 </div>
