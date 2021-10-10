@@ -35,13 +35,11 @@
       "icon": "http://pudim.com.br/pudim.jpg",
       "images": [
         {
-          "src": "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg"
+          "src": "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg",
+          "alt": "A Pudding"
         },
         {
           "src": "https://www.yummytummyaarthi.com/wp-content/uploads/2017/08/1-9.jpg"
-        },
-        {
-          "src": "https://d1alt1wkdk73qo.cloudfront.net/images/guide/2e31509ef83c46f0b8d491a8dde20a78/478x640_ac.jpg"
         }
       ],
       "video": "https://kutt.it/7nbVKz"
