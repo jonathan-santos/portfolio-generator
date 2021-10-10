@@ -1,21 +1,29 @@
+:root {
+  --primary-color: {{ portfolio.colors.primary | default: '#BF1CFF' }};
+  --text-light-color: {{ portfolio.colors.textLight | default: '#EEEEEE' }};
+  --text-dark-color: {{ portfolio.colors.textDark | default: '#333333' }};
+  --background-light-color: {{ portfolio.colors.backgroundLight | default: '#EEEEEE' }};
+  --background-dark-color: {{ portfolio.colors.backgroundDark | default: '#1A2A3A' }};
+}
+
 /* #region Default Tag Styling */
 html {
-    min-height: 100vh;
-    position: relative;
-    margin: 0;
-    padding: 0;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #eee;
-    color: var(--text-dark-color);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  color: var(--text-dark-color);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 	text-decoration: underline;
 }
 
@@ -50,24 +58,24 @@ hr {
 /* #region area-title */
 .area-title {
 	max-height: 17.5rem;
-    border-bottom: 1px solid var(--text-dark-color);
-    color: var(--text-dark-color);
+  border-bottom: 1px solid var(--text-dark-color);
+  color: var(--text-dark-color);
 	text-align: center;
 	overflow: hidden;
 }
 
-    .area-title .title {
+  .area-title .title {
 		position: relative;
 		height: 6rem;
 		margin: 0;
 		padding: 1.2rem 0;
 		color: var(--text-light-color);
-        line-height: 3rem;
+    line-height: 3rem;
 	}
 	
 		.area-title .title img {
 			z-index: -1;
-    		filter: brightness(0.5);
+      filter: brightness(0.5);
 			height: 123%;
 			width: 100%;
 			position: absolute;
@@ -76,15 +84,15 @@ hr {
 			object-fit: cover;
 		}
 
-    .area-title .description {
-		margin: 0;
-		padding: 1.5rem;
-		overflow: hidden;
-		background-color: var(--primary-color);
-		color: var(--background-light-color);
-		font-size: 1.2rem;
-		font-weight: bold;
-	}
+  .area-title .description {
+    margin: 0;
+    padding: 1.5rem;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    color: var(--background-light-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 
 .area-title.with-image {
 	border: 0;
@@ -112,7 +120,7 @@ hr {
 	
 		.area-title.with-image .project-image-container img {
 			width: 100%;
-    		height: 100%;
+      height: 100%;
 			object-fit: cover;
 		}
 		
@@ -152,14 +160,14 @@ hr {
 /* #region area-filters */
 .area-filters {
 	border-bottom: 1px solid var(--text-dark-color);
-    padding: 0.8rem 0.5rem;
+  padding: 0.8rem 0.5rem;
 }
 
 	.area-filters #are-filters-visible {
-		display: none;
-  	}
+    display: none;
+  }
 
-  	.area-filters .are-filters-visible {
+  .area-filters .are-filters-visible {
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
@@ -255,7 +263,7 @@ hr {
 .area-projects {
 	padding: 1rem 0.5rem;
 	display: flex;
-    flex-direction: row;
+  flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
 	flex-wrap: wrap;
@@ -365,21 +373,21 @@ hr {
 
 /* #region footer */
 footer {
-    width: 100%;
-    min-height: 10rem;
-    padding: 1rem;
-    position: absolute;
-    bottom: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-    background-color: var(--background-dark-color);
-    color: var(--text-light-color);
-    text-align: center;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  width: 100%;
+  min-height: 10rem;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: var(--background-dark-color);
+  color: var(--text-light-color);
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 	footer * {
@@ -420,16 +428,16 @@ footer {
 /* #region back-button */
 .back-button {
 	position: fixed;
-    left: 0.25rem;
-    top: 0.25rem;
-    width: 2rem;
-    height: 2rem;
-    border: 0.125rem solid var(--text-dark-color);
-    border-radius: 100%;
-    cursor: pointer;
-    box-sizing: border-box;
-    background-color: var(--background-light-color);
-    z-index: 1001;
+  left: 0.25rem;
+  top: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0.125rem solid var(--text-dark-color);
+  border-radius: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: var(--background-light-color);
+  z-index: 1001;
 }
 
 	.back-button img {
@@ -441,11 +449,10 @@ footer {
 
 /* #region project-page */
 .project-page .images {
-    height: 20rem;
-    padding: 0.25rem 0;
+  height: 20rem;
+  padding: 0.25rem 0;
 	display: flex;
 	align-items: center;
-	/* justify-content: center; */
 	overflow: auto;
 }
 
