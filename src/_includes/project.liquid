@@ -1,5 +1,5 @@
-<a href='{{ '/projects/' | relativeLink }}{{ project.name | slug }}/' class='project'>
-  <img class='image' src='{{ project.icon | assetLink }}' alt='{{ project.name }} icon' loading='lazy'>
+<a href='{{ '/projects/' | relative }}{{ project.name | slug }}/' class='project'>
+  <img class='image' src='{{ project.icon | img }}' alt='{{ project.name }} icon' loading='lazy'>
 
   <figcaption class='details'>
     <div class='top'>

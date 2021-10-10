@@ -3,7 +3,7 @@
     <input type='checkbox' name='are-filters-visible' id='are-filters-visible' aria-hidden='true'>
 
     <label for='are-filters-visible' class='are-filters-visible' role='text' aria-label='Active filter: {{ selected | default: 'none' }} {{ filter.name }}'>
-      <img class='arrow' src='{{ 'arrowRight.webp' | assetLink }}' alt='Arrow icon'>
+      <img class='arrow' src='{{ 'arrowRight.webp' | img }}' alt='Arrow icon'>
 
       <span class='text'>Filter</span>
       
@@ -13,14 +13,14 @@
     </label>
 
     <div class='filter-group'>
-      <a href='{{ '/' | relativeLink }}' style='background-color: grey' class='category'>No filter</a>
+      <a href='{{ '/' | relative }}' style='background-color: grey' class='category'>No filter</a>
     </div>
 
     <div class='filter-group'>
       <span>categories: </span>
 
       {% for category in portfolio.categories %}
-        <a href='{{ '/categories/' | relativeLink }}{{ category.name | slug }}' style='background-color: {{ category.color }}' class='category'>{{ category.name }}</a>
+        <a href='{{ '/categories/' | relative }}{{ category.name | slug }}' style='background-color: {{ category.color }}' class='category'>{{ category.name }}</a>
       {% endfor %}
     </div>
 
@@ -28,7 +28,7 @@
       <span>tags: </span>
 
       {% for tag in portfolio.tags %}
-        <a href='{{ '/tags/' | relativeLink }}{{ tag.name | slug }}' style='background-color: {{ tag.color }}' class='tag'>{{ tag.name }}</a>
+        <a href='{{ '/tags/' | relative }}{{ tag.name | slug }}' style='background-color: {{ tag.color }}' class='tag'>{{ tag.name }}</a>
       {% endfor %}
     </div>
   </div>
