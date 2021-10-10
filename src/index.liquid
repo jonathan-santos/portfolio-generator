@@ -7,9 +7,7 @@
   <main>
     {% include area-title %}
 
-    {% if portfolio.filters %}
-      {% include filters %}
-    {% endif %}
+    {% include filters %}
 
     <div class='area-projects'>
       {% for project in portfolio.projects %}
