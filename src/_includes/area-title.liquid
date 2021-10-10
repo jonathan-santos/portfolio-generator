@@ -6,14 +6,10 @@
 
     <span>
       {{ portfolio.name }}
-      <br>Portfolio
-
-      {% if filterTag != null %}
-        - {{ filterTag.name }}
-      {% endif %}
-
-      {% if filterCategory != null %}
-        - {{ filterCategory.name }}
+      
+      {% if title %}
+        <br>
+        {{ title }}
       {% endif %}
     </span>
   </h1>

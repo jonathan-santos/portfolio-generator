@@ -15,7 +15,7 @@ permalink: "/tags/{{ filterTag.name | slug }}/"
   <main>
     {% include back-button %}
 
-    {% include area-title %}
+    {% include area-title, title: filterTag.name %}
 
     {% include filters %}
 

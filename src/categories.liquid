@@ -15,7 +15,7 @@ permalink: "/categories/{{ filterCategory.name | slug }}/"
   <main>
     {% include back-button %}
 
-    {% include area-title %}
+    {% include area-title, title: filterCategory.name %}
 
     {% include filters %}
 
