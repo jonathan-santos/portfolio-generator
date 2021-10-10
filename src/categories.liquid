@@ -10,28 +10,28 @@ permalink: "/categories/{{ filterCategory.name | slug }}/"
 <html lang='en'>
 
 <head>
-  {% include head.html %}
+  {% include head %}
   <title>{{ portfolio.name }} - Portfolio {{ filterCategory.name }}</title>
 </head>
 
 <body>
   <main>
-    {% include backButton.html %}
+    {% include backButton %}
 
-    {% include areaTitle.html %}
+    {% include areaTitle %}
 
-    {% include filters.html %}
+    {% include filters %}
 
     <div class='area-projects'>
       {% for project in portfolio.projects %}
         {% if project.category == filterCategory.name %}
-          {% include project.html %}
+          {% include project %}
         {% endif %}
       {% endfor %}
     </div>
   </main>
 
-  {% include footer.html %}
+  {% include footer %}
 </body>
 
 </html>

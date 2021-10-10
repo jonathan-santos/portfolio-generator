@@ -10,18 +10,18 @@ permalink: "/projects/{{ project.name | slug }}/"
 <html lang='en'>
 
 <head>
-  {% include head.html %}
+  {% include head %}
   <title>{{ portfolio.name }} - {{ project.name }}</title>
 </head>
 
 <body>
   <main class='project-page'>
-    {% include backButton.html %}
+    {% include backButton %}
 
     <div class='area-title with-image'>
       <div class="category-and-tags">
         {% assign links=true %}
-        {% include categoryAndTags.html %}
+        {% include categoryAndTags %}
       </div>
 
       <div class='project-image-container'>
@@ -83,7 +83,7 @@ permalink: "/projects/{{ project.name | slug }}/"
     </div>
   </main>
 
-  {% include footer.html %}
+  {% include footer %}
 </body>
 
 </html>

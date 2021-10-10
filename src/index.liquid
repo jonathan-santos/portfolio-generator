@@ -2,26 +2,26 @@
 <html lang='en'>
 
 <head>
-  {% include head.html %}
+  {% include head %}
   <title>{{ portfolio.name }} - Portfolio</title>
 </head>
 
 <body>
   <main>
-    {% include areaTitle.html %}
+    {% include areaTitle %}
 
     {% if portfolio.filters %}
-      {% include filters.html %}
+      {% include filters %}
     {% endif %}
 
     <div class='area-projects'>
       {% for project in portfolio.projects %}
-        {% include project.html %}
+        {% include project %}
       {% endfor %}
     </div>
   </main>
 
-  {% include footer.html %}
+  {% include footer %}
 </body>
 
 </html>
