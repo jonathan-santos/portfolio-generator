@@ -1,0 +1,21 @@
+<div class='area-title with-image'>
+  <div class='category-and-tags'>
+    {% include project-categories-and-tags, links: true %}
+  </div>
+
+  <div class='project-image-container'>
+    <img src='{{ project.icon | img }}' alt='Project image'>
+  </div>
+
+  <div class='details'>
+    <h1 class='title' role='text'>
+      <span class='project-name'>{{ project.name }}</span>
+      <br>
+      <span class='author'>by {{ portfolio.name }}</span>
+    </h1>
+
+    {% if project.description %}
+      <p class='description'>{{ project.description }}</p>
+    {% endif %}
+  </div>
+</div>

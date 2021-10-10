@@ -1,0 +1,40 @@
+<div class='area-project'>
+  {% if project.links %}
+    <h2>Links</h2>
+
+    <ul class='links'>
+      {% for link in project.links %}
+        <li>
+          <a href='{{ link.url }}' rel='noopener' target='_blank' aria-label='{{ link.name }}, opens an external link in a new window'>{{ link.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if project.video or project.youtube %}
+    <h2>Video</h2>
+
+    {% if project.youtube %}
+      <iframe width='560' height='315' src='{{ project.youtube }}' frameborder='0'
+        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+    {% else %}
+      <video width='560' controls src='{{ project.video | img }}' poster='{{ project.icon | img }}'></video>
+    {% endif %}
+  {% endif %}
+
+  {% if project.images %}
+    <h2>Images</h2>
+
+    <div class='images'>
+      {% for image in project.images %}
+        {% if image.alt %}
+          {% assign imgAlt = image.alt %}
+        {% else %}
+          {% assign imgAlt = 'Image ' | append: forloop.index | append: ' of ' | append: project.name %}
+        {% endif %}
+
+        <img src='{{ image.src | img }}' alt='{{ imgAlt }}' loading='lazy'>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

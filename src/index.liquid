@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+
+{% include head %}
+
+<body>
+  <main>
+    {% include area-title %}
+
+    {% include filters %}
+
+    <div class='area-projects'>
+      {% for project in portfolio.projects %}
+        {% include project %}
+      {% endfor %}
+    </div>
+  </main>
+
+  {% include footer %}
+</body>
+
+</html>

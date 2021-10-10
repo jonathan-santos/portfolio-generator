@@ -1,0 +1,18 @@
+<div class='area-title'>
+  <h1 class='title' role='text'>
+    {% if portfolio.heroImage %}
+      <img src='{{ portfolio.heroImage | img }}' alt='Title background image'>
+    {% endif %}
+
+    <span>
+      {{ portfolio.name }}
+      
+      {% if title %}
+        <br>
+        {{ title }}
+      {% endif %}
+    </span>
+  </h1>
+
+  <p class='description'>{{ portfolio.description }}</p>
+</div>
