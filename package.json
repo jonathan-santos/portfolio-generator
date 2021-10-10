@@ -5,7 +5,7 @@
   "license": "MIT",
   "description": "Portfolio generator created using [Eleventy](https://www.11ty.dev/). Just give it the portfolio.json file and it will generate a whole static website for you to easily publish.",
   "scripts": {
-    "start": "npx @11ty/eleventy --config=eleventy.config.js --serve",
+    "start": "NODE_ENV=dev npx @11ty/eleventy --config=eleventy.config.js --serve",
     "build": "npx @11ty/eleventy --config=eleventy.config.js",
     "deploy": "npm run build && gh-pages -d public -m 'New Deploy'"
   },

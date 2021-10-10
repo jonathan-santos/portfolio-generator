@@ -1,13 +1,21 @@
 const portfolio = require('./data/portfolio.json')
 
-module.exports = (eleventyConfig) => {
-  eleventyConfig.addFilter('relative', (value) => portfolio.root + value)
+const getRoot = () => {
+  if (process.env.NODE_ENV === 'dev') {
+    return ''
+  }
 
-  eleventyConfig.addFilter('asset', (value) => `${portfolio.root}/assets/${value}`)
+  return portfolio.root
+}
+
+module.exports = (eleventyConfig) => {
+  eleventyConfig.addFilter('relative', (value) => getRoot() + value)
+
+  eleventyConfig.addFilter('asset', (value) => `${getRoot()}/assets/${value}`)
 
   eleventyConfig.addFilter('img', (value) => {
     if (value.search('http') == -1) {
-      return `${portfolio.root}/assets/img/${value}`
+      return `${getRoot()}/assets/img/${value}`
     }
 
     return value
