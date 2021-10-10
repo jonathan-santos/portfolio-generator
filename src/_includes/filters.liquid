@@ -1,9 +1,9 @@
 {% if portfolio.filters %}
   <div class='area-filters'>
-    <input type='checkbox' name='are-filters-visible' id='are-filters-visible'>
+    <input type='checkbox' name='are-filters-visible' id='are-filters-visible' aria-hidden='true'>
 
     <label for='are-filters-visible' class='are-filters-visible' role='text' aria-label='Active filter: {{ selected | default: 'none' }} {{ filter.name }}'>
-      <img class='arrow' src='{{ 'arrowRight.webp' | assetLink }}' alt='Seta para a direita'>
+      <img class='arrow' src='{{ 'arrowRight.webp' | assetLink }}' alt='Arrow icon'>
 
       <span class='text'>Filter</span>
       
