@@ -1,7 +1,7 @@
 {% for category in portfolio.categories %}
   {% if category.name == project.category %}
     {% if links == true %}
-      <a href='{{ "/categories/" | relativeLink }}{{ category.name | slug }}/' class='category' style='background-color: {{ category.color }}'>{{ category.name }}</a>
+      <a href='{{ '/categories/' | relativeLink }}{{ category.name | slug }}/' class='category' style='background-color: {{ category.color }}'>{{ category.name }}</a>
     {% else %}
       <p class='category' style='background-color: {{ category.color }} '>{{ category.name }}</p>
     {% endif %}
@@ -12,7 +12,7 @@
   {% for projTag in project.tags %}
     {% if tag.name == projTag %}
       {% if links == true %}
-        <a href='{{ "/tags/" | relativeLink }}{{ tag.name | downcase }}/' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
+        <a href='{{ '/tags/' | relativeLink }}{{ tag.name | downcase }}/' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
       {% else %}
         <p class='tag' style='background-color: {{ tag.color }} '>{{ tag.name }}</p>
       {% endif %}

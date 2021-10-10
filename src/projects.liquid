@@ -3,7 +3,7 @@ pagination:
   data: portfolio.projects
   size: 1
   alias: project
-permalink: "/projects/{{ project.name | slug }}/"
+permalink: '/projects/{{ project.name | slug }}/'
 ---
 
 <!DOCTYPE HTML>
@@ -16,13 +16,13 @@ permalink: "/projects/{{ project.name | slug }}/"
     {% include back-button %}
 
     <div class='area-title with-image'>
-      <div class="category-and-tags">
+      <div class='category-and-tags'>
         {% assign links=true %}
         {% include categories-and-tags %}
       </div>
 
       <div class='project-image-container'>
-        <img src="{{ project.icon | assetLink }}" alt="Project image">
+        <img src='{{ project.icon | assetLink }}' alt='Project image'>
       </div>
 
       <div class='details'>
@@ -55,25 +55,25 @@ permalink: "/projects/{{ project.name | slug }}/"
         <h2>Video</h2>
 
         {% if project.youtube %}
-          <iframe width="560" height="315" src="{{ project.youtube }}" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width='560' height='315' src='{{ project.youtube }}' frameborder='0'
+            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
         {% else %}
-          <video width="560" controls src="{{ project.video | assetLink }}" poster="{{ project.icon | assetLink }}"></video>
+          <video width='560' controls src='{{ project.video | assetLink }}' poster='{{ project.icon | assetLink }}'></video>
         {% endif %}
       {% endif %}
 
       {% if project.images %}
         <h2>Images</h2>
 
-        <div class="images">
+        <div class='images'>
           {% for image in project.images %}
             {% if image.alt %}
               {% assign imgAlt = image.alt %}
             {% else %}
-              {% assign imgAlt = "Image {{ forloop.index }} of {{ project.name }}" %}
+              {% assign imgAlt = 'Image {{ forloop.index }} of {{ project.name }}' %}
             {% endif %}
 
-            <img src="{{ image.src | assetLink }}" alt="{{ imgAlt }}" loading='lazy'>
+            <img src='{{ image.src | assetLink }}' alt='{{ imgAlt }}' loading='lazy'>
           {% endfor %}
         </div>
       {% endif %}
