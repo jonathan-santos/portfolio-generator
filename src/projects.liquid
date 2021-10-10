@@ -17,8 +17,7 @@ permalink: '/projects/{{ project.name | slug }}/'
 
     <div class='area-title with-image'>
       <div class='category-and-tags'>
-        {% assign links=true %}
-        {% include categories-and-tags %}
+        {% include project-categories-and-tags, links: true %}
       </div>
 
       <div class='project-image-container'>
