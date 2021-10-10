@@ -3,154 +3,157 @@
 <html lang='en'>
 
 <head>
-    <meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<meta name='description' content='A project that generates a portfolio site for you! All generated from a single json file'>
-<meta name='theme-color' content='#BF1CFF'>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta name='description' content='A project that generates a portfolio site for you! All generated from a single json file'>
+  <meta name='theme-color' content='#BF1CFF'>
+  <title>Portfolio generator - Dessert</title>
+  <link rel='icon' href='/assets/favicon/favicon.ico' />
+  <link rel='icon' type='image/png' sizes='32x32' href='/assets/favicon/favicon-32x32.png'>
+  <link rel='icon' type='image/png' sizes='16x16' href='/assets/favicon/favicon-16x16.png'>
+  <link rel='apple-touch-icon' sizes='180x180' href='/assets/favicon/apple-touch-icon.png'>
+  <link rel='stylesheet' href='/assets/styles.css'>
+  <link rel='manifest' href='/site.webmanifest'>
 
-<link rel='stylesheet' href='/portfolio-generator/public/styles.css'>
-<link rel="apple-touch-icon" sizes="180x180" href='/portfolio-generator/public/favicon/apple-touch-icon.png'>
-<link rel="icon" type="image/png" sizes="32x32" href='/portfolio-generator/public/favicon/favicon-32x32.png'>
-<link rel="icon" type="image/png" sizes="16x16" href='/portfolio-generator/public/favicon/favicon-16x16.png'>
-<link rel="manifest" href='/portfolio-generator/public/site.webmanifest'>
-
-<style>
-    html {
-        --primary-color: #BF1CFF;
-        --text-light-color: #EEEEEE;
-        --text-dark-color: #333333;
-        --background-light-color: #EEEEEE;
-        --background-dark-color: #1A2A3A;
+  <style>
+    :root {
+      --primary-color: #BF1CFF;
+      --text-light-color: #EEEEEE;
+      --text-dark-color: #333333;
+      --background-light-color: #EEEEEE;
+      --background-dark-color: #1A2A3A;
     }
-</style>
-
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/portfolio-generator/public/sw.js');
-    }
-</script>
-    <title>Portfolio generator - Portfolio Dessert</title>
+  </style>
 </head>
 
+
 <body>
-    <main>
-        <a href="/portfolio-generator/public/" class="back-button">
-    <img src='/portfolio-generator/public/assets/arrowRight.webp'>
+  <main>
+    <a href='/' class='back-button' aria-label='go to Home'>
+  <img src='/assets/img/arrowRight.webp' alt='Arrow icon'>
 </a>
 
-        <div class='area-title'>
-    <h1 id='title' class='title'>
-        
-            <img src="/portfolio-generator/public/assets/heroImage.png" alt="background image of the title">
-        
 
-        <span>
-            Portfolio generator
-            <br>Portfolio
-
-            
-
-            
-                - Dessert
-            
-        </span>
-    </h1>
+    <div class='area-title'>
+  <h1 class='title' role='text'>
     
-    <p class='description'>A project that generates a portfolio site for you! All generated from a single json file</p>
+      <img src='/assets/img/heroImage.png' alt='Title background image'>
+    
+
+    <span>
+      Portfolio generator
+      
+      
+        <br>
+        Dessert
+      
+    </span>
+  </h1>
+
+  <p class='description'>A project that generates a portfolio site for you! All generated from a single json file</p>
 </div>
 
-        <div class='area-filters'>
-    <input type='checkbox' name='are-filters-visible' id='are-filters-visible'>
 
-    <label for='are-filters-visible' class='are-filters-visible'>
-        <img class='arrow' src='/portfolio-generator/public/assets/arrowRight.webp' alt='Seta para a direita'>
-        <p class='text'>Filter</p>
+    
+  <div class='area-filters'>
+    <input type='checkbox' name='are-filters-visible' id='are-filters-visible' aria-hidden='true'>
 
-        
+    <label for='are-filters-visible' class='are-filters-visible' role='text' aria-label='Active filter: category Dessert'>
+      <img class='arrow' src='/assets/img/arrowRight.webp' alt='Arrow icon'>
 
-        
-            :<p class='category' style='background-color: red '>Dessert</p>
-        
+      <span class='text'>Filter</span>
+      
+      
+        :<span class='category' style='background-color: red '>Dessert</span>
+      
     </label>
-    
+
     <div class='filter-group'>
-        <a href='/portfolio-generator/public/' style='background-color: grey' class='category'>No filter</a>
+      <a href='/' style='background-color: grey' class='category'>No filter</a>
     </div>
 
     <div class='filter-group'>
-        <span>categories: </span>
-        
-            <a href='/portfolio-generator/public/categories/dessert/' style='background-color: red' class='category'>Dessert</a>
-        
-            <a href='/portfolio-generator/public/categories/vegetable/' style='background-color: purple' class='category'>Vegetable</a>
-        
+      <span>categories: </span>
+
+      
+        <a href='/categories/dessert' style='background-color: red' class='category'>Dessert</a>
+      
+        <a href='/categories/vegetable' style='background-color: purple' class='category'>Vegetable</a>
+      
     </div>
 
     <div class='filter-group'>
-        <span>tags: </span>
-        
-            <a href='/portfolio-generator/public/tags/french/' style='background-color: green' class='tag'>French</a>
-        
-            <a href='/portfolio-generator/public/tags/brazilian/' style='background-color: blue' class='tag'>Brazilian</a>
-        
+      <span>tags: </span>
+
+      
+        <a href='/tags/french' style='background-color: green' class='tag'>French</a>
+      
+        <a href='/tags/brazilian' style='background-color: blue' class='tag'>Brazilian</a>
+      
     </div>
-</div>
+  </div>
 
-        <div class='area-projects'>
 
-            
-                
-                    <a href='/portfolio-generator/public/projects/example-project-1/' class='project'>
-    <img class='image' src='http://pudim.com.br/pudim.jpg' alt='Example project 1 icon' loading='lazy'>
 
-    <figcaption class='details'>
-        <div class='top'>
-            <h3 class='name'>Example project 1</h3>
-        </div>
-
-        <div class='middle'>
-            <p class='description'>My project 1 is actually a Pudding</p>
-        </div>
-
-        <div class='bottom'>
-            
-    
-
+    <div class='area-projects'>
+      
         
-            <p class='category' style='background-color: red '>Dessert</p>
-        
+          <a href='/projects/example-project-1/' class='project'>
+  <img class='image' src='http://pudim.com.br/pudim.jpg' alt='Example project 1 icon' loading='lazy'>
 
+  <figcaption class='details'>
+    <div class='top'>
+      <h2 class='name'>Example project 1</h2>
+    </div>
+
+    <div class='middle'>
+      <p class='description'>My project 1 is actually a Pudding</p>
+    </div>
+
+    <div class='bottom'>
+      
+  
     
-
+      <span class='category' style='background-color: red '>Dessert</span>
     
+  
+
+  
 
 
 
-    
+  
 
-    
+  
 
-        </div>
-    </figcaption>
+
+    </div>
+  </figcaption>
 </a>
-                
-            
-                
-            
-                
-            
 
-        </div>
-    </main>
+        
+      
+        
+      
+        
+      
+    </div>
+  </main>
 
-    
-    <footer>
-        <p>Portfolio made with <a href='https://github.com/jonathan-santos/portfolio-generator' rel='noopener' target='_blank'>Portfolio generator</a> by <a href='https://github.com/jonathan-santos' rel='noopener' target='_blank'>Jonathan Santos</a></p>
+  
+  <footer>
+    <p>Portfolio made with <a href='https://github.com/jonathan-santos/portfolio-generator' rel='noopener' target='_blank'
+        aria-label='Portfolio Generator in Github, opens an external link in a new window'>Portfolio generator</a> by <a
+        href='https://github.com/jonathan-santos' rel='noopener' target='_blank'
+        aria-label='Jonathan Santos Website, opens an external link in a new window'>Jonathan Santos</a></p>
 
-        <p>Built with with html, css, <a href='https://www.11ty.dev/' rel='noopener' target='_blank'>Eleventy</a> and <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/160px-Heart_coraz%C3%B3n.svg.png' alt='heart icon'></p>
+    <p>Built with with html, css, <a href='https://www.11ty.dev/' rel='noopener' target='_blank'
+        aria-label='Eleventy, opens an external link in a new window'>Eleventy</a> and <img
+        src='/assets/img/heart.png' alt='heart icon'></p>
 
-        <a href='#' class='back-to-top'>Back to top</a>
-    </footer>
+    <a href='#' class='back-to-top'>Back to top</a>
+  </footer>
+
 
 </body>
 
