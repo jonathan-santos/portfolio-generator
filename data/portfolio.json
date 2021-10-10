@@ -3,7 +3,7 @@
   "description": "A project that generates a portfolio site for you! All generated from a single json file",
   "showFooter": true,
   "filters": true,
-  "root": "",
+  "root": "/portfolio-generator",
   "heroImage": "heroImage.png",
   "colors": {
     "primary": "#BF1CFF",
