@@ -11,14 +11,6 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "0.12.1",
-    "gh-pages-deploy": "0.5.1"
-  },
-  "gh-pages-deploy": {
-    "staticpath": "public",
-    "noprompt": true,
-    "commit": "New deploy",
-    "prep": [
-      "build"
-    ]
+    "gh-pages": "3.2.3"
   }
 }
