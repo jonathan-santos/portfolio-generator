@@ -3,6 +3,8 @@ const portfolio = require('./data/portfolio.json')
 const getRoot = () => process.argv.includes('--serve') ? '' : portfolio.root
 
 module.exports = (eleventyConfig) => {
+  eleventyConfig.addWatchTarget('./src/styles')
+
   eleventyConfig.addFilter('relative', (value) => getRoot() + value)
 
   eleventyConfig.addFilter('asset', (value) => `${getRoot()}/assets/${value}`)
