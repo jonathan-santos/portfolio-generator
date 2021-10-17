@@ -6,7 +6,7 @@
   "description": "Portfolio generator created using [Eleventy](https://www.11ty.dev/). Just give it the portfolio.json file and it will generate a whole static website for you to easily publish.",
   "scripts": {
     "eleventy:build": "eleventy",
-    "eleventy:watch": "NODE_ENV=dev eleventy --serve",
+    "eleventy:watch": "eleventy --serve",
     "sass:build": "sass --no-source-map src/styles:public/assets",
     "sass:watch": "sass --no-source-map --watch src/styles:public/assets",
     "start": "npm-run-all --parallel eleventy:watch sass:watch",
