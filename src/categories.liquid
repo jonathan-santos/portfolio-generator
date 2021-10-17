@@ -19,7 +19,7 @@ permalink: '/categories/{{ category.name | slug }}/'
 
     {% include filters, selected: 'category', filter: category %}
 
-    <div class='area-projects'>
+    <div class='projects-area'>
       {% for project in portfolio.projects %}
         {% if project.category == category.name %}
           {% include project %}
