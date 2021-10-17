@@ -7,8 +7,8 @@
   "scripts": {
     "eleventy:build": "eleventy",
     "eleventy:watch": "eleventy --serve",
-    "sass:build": "sass --no-source-map src/styles:public/assets",
-    "sass:watch": "sass --no-source-map --watch src/styles:public/assets",
+    "sass:build": "sass --no-source-map src/styles/main.scss:public/assets/styles.css",
+    "sass:watch": "sass --no-source-map --watch src/styles/main.scss:public/assets/styles.css",
     "start": "npm-run-all --parallel eleventy:watch sass:watch",
     "build": "npm-run-all --parallel eleventy:build sass:build",
     "deploy": "npm run build && gh-pages -d public -m 'New Deploy'"

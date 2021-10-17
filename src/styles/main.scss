@@ -1,47 +1,4 @@
-html {
-  min-height: 100vh;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #eee;
-  color: var(--text-dark-color);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-a {
-  color: inherit;
-	text-decoration: underline;
-}
-
-main {
-	min-height: 100%;
-	padding-bottom: 10rem;
-	overflow: hidden;
-}
-
-hr {
-	border-top: 1px solid var(--text-dark-color);
-}
-
-::-webkit-scrollbar {
-	width: 0.35rem;
-	height: 0.35rem;
-	border: 1px solid rgba(0, 0, 0, 0.01);
-}
-
-::-webkit-scrollbar-thumb {
-	border-radius: 5px;
-	background-color: var(--primary-color)
-}
-
-.no-underline {
-	text-decoration: none;
-}
+@import './global';
 
 .area-title {
 	max-height: 17.5rem;
