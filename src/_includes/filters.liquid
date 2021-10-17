@@ -1,34 +1,34 @@
 {% if portfolio.filters %}
-  <div class='area-filters'>
-    <input type='checkbox' name='are-filters-visible' id='are-filters-visible' aria-hidden='true'>
+  <div class='filters'>
+    <input type='checkbox' id='are-filters-visible' hidden aria-hidden='true'>
 
-    <label for='are-filters-visible' class='are-filters-visible' role='text' aria-label='Active filter: {{ selected | default: 'none' }} {{ filter.name }}'>
-      <img class='arrow' src='{{ 'arrowRight.webp' | img }}' alt='Arrow icon'>
+    <label for='are-filters-visible' class='filters__selected' role='text' aria-label='Active filter: {{ selected | default: 'none' }} {{ filter.name }}'>
+      <img class='filters__arrow' src='{{ 'arrowRight.webp' | img }}' alt='Arrow icon'>
 
-      <span class='text'>Filter</span>
+      <span>Filter</span>
       
       {% if selected %}
-        :<span class='{{ selected }}' style='background-color: {{ filter.color }} '>{{ filter.name }}</span>
+        :<span class='{{ selected }}' style='background-color: {{ filter.color }}'>{{ filter.name }}</span>
       {% endif %}
     </label>
 
-    <div class='filter-group'>
-      <a href='{{ '/' | relative }}' style='background-color: grey' class='category'>No filter</a>
+    <div class='filters__group' hidden>
+      <a href='{{ '/' | relative }}' class='category' style='background-color: grey'>No filter</a>
     </div>
 
-    <div class='filter-group'>
-      <span>categories: </span>
+    <div class='filters__group' hidden>
+      <span>Categories: </span>
 
       {% for category in portfolio.categories %}
-        <a href='{{ '/categories/' | relative }}{{ category.name | slug }}' style='background-color: {{ category.color }}' class='category'>{{ category.name }}</a>
+        <a href='{{ '/categories/' | relative }}{{ category.name | slug }}' class='category' style='background-color: {{ category.color }}'>{{ category.name }}</a>
       {% endfor %}
     </div>
 
-    <div class='filter-group'>
-      <span>tags: </span>
+    <div class='filters__group' hidden>
+      <span>Tags: </span>
 
       {% for tag in portfolio.tags %}
-        <a href='{{ '/tags/' | relative }}{{ tag.name | slug }}' style='background-color: {{ tag.color }}' class='tag'>{{ tag.name }}</a>
+        <a href='{{ '/tags/' | relative }}{{ tag.name | slug }}' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
       {% endfor %}
     </div>
   </div>
