@@ -1,12 +1,13 @@
 @import './global';
 
-@import './area-filters';
-@import './area-projects';
-@import './area-title';
-@import './project';
-@import './footer';
-@import './tag';
-@import './category';
-@import './back-button';
-
 @import './pages/project';
+
+@import './sections/area-filters';
+@import './sections/area-projects';
+@import './sections/area-title';
+@import './sections/footer';
+
+@import './elements/tag';
+@import './elements/category';
+@import './elements/back-button';
+@import './elements/project';
