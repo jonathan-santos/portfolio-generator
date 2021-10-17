@@ -54,16 +54,16 @@ hr {
   color: var(--text-dark-color);
 	text-align: center;
 	overflow: hidden;
-}
 
-  .area-title .title {
-		position: relative;
+  .title {
+    position: relative;
 		height: 6rem;
 		margin: 0;
 		padding: 1.2rem 0;
 		color: var(--text-light-color);
     line-height: 3rem;
-	}
+  }
+}
 	
 		.area-title .title img {
 			z-index: -1;
