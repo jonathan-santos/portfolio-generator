@@ -1,0 +1,39 @@
+.project-content {
+  border-top: 1px solid var(--background-dark-color);
+  padding: 1rem;
+
+  &__title {
+    margin: 0;
+    border-bottom: 1px solid var(--background-dark-color);
+  }
+
+  &__links {
+    li {
+      margin-bottom: 0.7rem;
+    }
+  }
+
+  &__videos {
+    video {
+      max-width: 100%;
+      margin-top: 1rem;
+    }
+  }
+
+  &__images {
+    height: 20rem;
+    padding: 0.25rem 0;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0 0.5rem;
+      object-fit: contain;
+      flex-grow: 1;
+      vertical-align: bottom;
+    }
+  }  
+}
