@@ -1,0 +1,15 @@
+.area-project {
+	border-top: 1px solid var(--background-dark-color);
+	padding: 1rem;
+
+  h2 {
+		margin: 0;
+		border-bottom: 1px solid var(--background-dark-color);
+	}
+
+  .links {
+    li {
+      margin-bottom: 0.7rem;
+    }
+  }
+}

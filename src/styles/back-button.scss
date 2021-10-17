@@ -1,0 +1,19 @@
+.back-button {
+	position: fixed;
+  left: 0.25rem;
+  top: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0.125rem solid var(--text-dark-color);
+  border-radius: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: var(--background-light-color);
+  z-index: 1001;
+
+  img {
+		width: 1.75rem;
+		height: 1.75rem;
+		transform: rotate(180deg);
+	}
+}
