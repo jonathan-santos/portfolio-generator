@@ -17,6 +17,7 @@
   }
 
   &__selected {
+    padding-left: 0.2rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -24,8 +25,7 @@
   }
 
   &__arrow {
-    width: 1.5rem;
-    height: 1.5rem;
+    transition: transform 0.15s;
   }
 
   &__group {
