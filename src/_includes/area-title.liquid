@@ -1,5 +1,5 @@
 <div class='area-title'>
-  <h1 class='title' role='text'>
+  <h1 class='area-title__title' role='text'>
     {% if portfolio.heroImage %}
       <img src='{{ portfolio.heroImage | img }}' alt='Title background image'>
     {% endif %}
@@ -14,5 +14,5 @@
     </span>
   </h1>
 
-  <p class='description'>{{ portfolio.description }}</p>
+  <p class='area-title__description'>{{ portfolio.description }}</p>
 </div>
