@@ -22,7 +22,7 @@ permalink: '/categories/{{ category.name | slug }}/'
     <div class='projects-area'>
       {% for project in portfolio.projects %}
         {% if project.category == category.name %}
-          {% include project %}
+          {% include project-preview %}
         {% endif %}
       {% endfor %}
     </div>
