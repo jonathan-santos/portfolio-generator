@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #eee;
-  color: var(--text-dark-color);
+  color: var(--color-text-dark);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -25,7 +25,7 @@ main {
 }
 
 hr {
-	border-top: 1px solid var(--text-dark-color);
+	border-top: 1px solid var(--color-text-dark);
 }
 
 * {
@@ -40,5 +40,5 @@ hr {
 
 ::-webkit-scrollbar-thumb {
 	border-radius: 5px;
-	background-color: var(--primary-color)
+	background-color: var(--color-primary)
 }
