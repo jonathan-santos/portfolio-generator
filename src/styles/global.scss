@@ -1,15 +1,22 @@
-html {
-  min-height: 100vh;
-  position: relative;
+:root {
+  font-size: 60%;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  min-height: 100vh;
+  position: relative;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #eee;
+  background-color: var(--color-background-light);
   color: var(--color-text-dark);
+  font-size: 1.6rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -20,25 +27,6 @@ a {
 
 main {
 	min-height: 100%;
-	padding-bottom: 10rem;
+	padding-bottom: 16rem;
 	overflow: hidden;
-}
-
-hr {
-	border-top: 1px solid var(--color-text-dark);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-::-webkit-scrollbar {
-	width: 0.35rem;
-	height: 0.35rem;
-	border: 1px solid rgba(0, 0, 0, 0.01);
-}
-
-::-webkit-scrollbar-thumb {
-	border-radius: 5px;
-	background-color: var(--color-primary)
 }

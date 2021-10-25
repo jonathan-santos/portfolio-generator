@@ -1,9 +1,9 @@
 .footer {
   width: 100%;
-  min-height: 10rem;
+  min-height: 16rem;
   position: absolute;
   bottom: 0;
-  padding: 1rem;
+  padding: 1.6rem;
   overflow: hidden;
   background-color: var(--color-background-dark);
   color: var(--color-text-light);
@@ -14,13 +14,13 @@
   align-items: center;
 
   *:not(:last-child) {
-    margin: 0 0 0.8rem 0;
+    margin: 0 0 1.2rem 0;
   }
 
   &__back-to-top {
-    border: 2px solid var(--color-text-light);
-    padding: 0.5rem;
-    border-radius: 50px;
+    border: 0.2rem solid var(--color-text-light);
+    padding: 0.8rem;
+    border-radius: 5rem;
     text-decoration: none;
   }
 }

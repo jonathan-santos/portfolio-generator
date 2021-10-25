@@ -1,6 +1,6 @@
 .area-title {
-  max-height: 17.5rem;
-  border-bottom: 1px solid var(--color-text-dark);
+  max-height: 28rem;
+  border-bottom: 0.1rem solid var(--color-text-dark);
   color: var(--color-text-dark);
   text-align: center;
   overflow: hidden;
@@ -14,11 +14,11 @@
 
   &__title {
     position: relative;
-    height: 6rem;
     margin: 0;
-    padding: 1.2rem 0;
+    padding: 2rem 0;
     color: var(--color-text-light);
-    line-height: 3rem;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
 
     img {
       z-index: -1;
@@ -32,28 +32,28 @@
     }
 
     @at-root .area-title--project & {
-      padding: 1rem;
+      padding: 1.6rem;
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      font-size: 2rem;
-      line-height: 1.75rem;
+      font-size: 3.2rem;
+      line-height: 2.8rem;
       color: var(--color-text-dark);
     }
   }
 
   &__description {
     margin: 0;
-    padding: 1.5rem;
+    padding: 2.4rem;
     overflow: hidden;
     background-color: var(--color-primary);
     color: var(--color-background-light);
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: bold;
 
     @media (max-width: 320px) {
-      font-size: 1rem;
+      font-size: 1.6rem;
     }
 
     @at-root .area-title--project & {
@@ -65,7 +65,7 @@
 
   &__icon {
     max-width: 45%;
-    border-right: 2px solid var(--color-primary);
+    border-right: 0.2rem solid var(--color-primary);
     flex: 1;
     overflow: hidden;
 
@@ -82,8 +82,8 @@
 
   &__category-and-tags {
     position: absolute;
-    left: 0.5rem;
-    bottom: 0.5rem;
+    left: 0.8rem;
+    bottom: 0.8rem;
     margin: 0;
     display: flex;
     align-items: flex-end;

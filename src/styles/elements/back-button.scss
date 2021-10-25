@@ -1,13 +1,13 @@
 .back-button {
 	position: fixed;
-  left: 0.5rem;
-  top: 0.5rem;
-  width: 2rem;
-  height: 2rem;
-  border: 0.125rem solid var(--color-text-dark);
+  left: 0.8rem;
+  top: 0.8rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  border: 0.3rem solid var(--color-text-dark);
   border-radius: 100%;
   background-color: var(--color-background-light);
-  z-index: 1001;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
