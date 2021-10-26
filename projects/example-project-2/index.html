@@ -17,25 +17,37 @@
 
   <style>
     :root {
-      --primary-color: #BF1CFF;
-      --text-light-color: #EEEEEE;
-      --text-dark-color: #333333;
-      --background-light-color: #EEEEEE;
-      --background-dark-color: #1A2A3A;
+      --color-primary: #BF1CFF;
+      --color-text-light: #EEEEEE;
+      --color-text-dark: #333333;
+      --color-background-light: #EEEEEE;
+      --color-background-dark: #1A2A3A;
     }
   </style>
 </head>
 
 
 <body>
-  <main class='project-page'>
+  <main class='page-project'>
     <a href='/portfolio-generator/' class='back-button' aria-label='go to Home'>
-  <img src='/portfolio-generator/assets/img/arrowRight.webp' alt='Arrow icon'>
+  <img src='/portfolio-generator/assets/img/arrow.svg' alt='Arrow icon' width='12' height='18'>
 </a>
 
 
-    <div class='area-title with-image'>
-  <div class='category-and-tags'>
+    <div class='area-title area-title--project'>
+  <div class='area-title__details'>
+    <h1 class='area-title__title' role='text'>Example project 2</h1>
+
+    
+      <p class='area-title__description'>My project 2 is actually Cassava (Mandioca para os brasileiros)</p>
+    
+  </div>
+
+  <div class='area-title__icon'>
+    <img src='/portfolio-generator/assets/img/cassava.jpg' alt='Project image'>
+  </div>
+
+  <div class='area-title__category-and-tags'>
     
   
 
@@ -61,26 +73,10 @@
 
 
   </div>
-
-  <div class='project-image-container'>
-    <img src='/portfolio-generator/assets/img/cassava.jpg' alt='Project image'>
-  </div>
-
-  <div class='details'>
-    <h1 class='title' role='text'>
-      <span class='project-name'>Example project 2</span>
-      <br>
-      <span class='author'>by Portfolio generator</span>
-    </h1>
-
-    
-      <p class='description'>My project 2 is actually Cassava (Mandioca para os brasileiros)</p>
-    
-  </div>
-</div>
+ </div>
 
 
-    <div class='area-project'>
+    <div class='project-content'>
   
 
   
@@ -91,7 +87,7 @@
   </main>
 
   
-  <footer>
+  <footer class='footer'>
     <p>Portfolio made with <a href='https://github.com/jonathan-santos/portfolio-generator' rel='noopener' target='_blank'
         aria-label='Portfolio Generator in Github, opens an external link in a new window'>Portfolio generator</a> by <a
         href='https://github.com/jonathan-santos' rel='noopener' target='_blank'
@@ -99,9 +95,9 @@
 
     <p>Built with with html, css, <a href='https://www.11ty.dev/' rel='noopener' target='_blank'
         aria-label='Eleventy, opens an external link in a new window'>Eleventy</a> and <img
-        src='/portfolio-generator/assets/img/heart.png' alt='heart icon'></p>
+        src='/portfolio-generator/assets/img/heart.svg' alt='heart' width='16' height='16'></p>
 
-    <a href='#' class='back-to-top'>Back to top</a>
+    <a href='#' class='footer__back-to-top' aria-hidden='true'>Back to top</a>
   </footer>
 
 

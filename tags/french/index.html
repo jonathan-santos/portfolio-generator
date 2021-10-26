@@ -17,11 +17,11 @@
 
   <style>
     :root {
-      --primary-color: #BF1CFF;
-      --text-light-color: #EEEEEE;
-      --text-dark-color: #333333;
-      --background-light-color: #EEEEEE;
-      --background-dark-color: #1A2A3A;
+      --color-primary: #BF1CFF;
+      --color-text-light: #EEEEEE;
+      --color-text-dark: #333333;
+      --color-background-light: #EEEEEE;
+      --color-background-dark: #1A2A3A;
     }
   </style>
 </head>
@@ -30,14 +30,14 @@
 <body>
   <main>
     <a href='/portfolio-generator/' class='back-button' aria-label='go to Home'>
-  <img src='/portfolio-generator/assets/img/arrowRight.webp' alt='Arrow icon'>
+  <img src='/portfolio-generator/assets/img/arrow.svg' alt='Arrow icon' width='12' height='18'>
 </a>
 
 
     <div class='area-title'>
-  <h1 class='title' role='text'>
+  <h1 class='area-title__title' role='text'>
     
-      <img src='/portfolio-generator/assets/img/heroImage.png' alt='Title background image'>
+      <img src='/portfolio-generator/assets/img/hero-image.png' alt='Title background image'>
     
 
     <span>
@@ -50,52 +50,52 @@
     </span>
   </h1>
 
-  <p class='description'>A project that generates a portfolio site for you! All generated from a single json file</p>
+  <p class='area-title__description'>A project that generates a portfolio site for you! All generated from a single json file</p>
 </div>
 
 
     
-  <div class='area-filters'>
-    <input type='checkbox' name='are-filters-visible' id='are-filters-visible' aria-hidden='true'>
+  <div class='filters'>
+    <input type='checkbox' id='are-filters-visible' hidden aria-hidden='true'>
 
-    <label for='are-filters-visible' class='are-filters-visible' role='text' aria-label='Active filter: tag French'>
-      <img class='arrow' src='/portfolio-generator/assets/img/arrowRight.webp' alt='Arrow icon'>
+    <label for='are-filters-visible' class='filters__selected' role='text' aria-label='Active filter: tag French'>
+      <img class='filters__arrow' src='/portfolio-generator/assets/img/arrow.svg' alt='Arrow icon' width='12' height='18'>
 
-      <span class='text'>Filter</span>
+      <span>Filter</span>
       
       
-        :<span class='tag' style='background-color: green '>French</span>
+        :<span class='tag' style='background-color: green'>French</span>
       
     </label>
 
-    <div class='filter-group'>
-      <a href='/portfolio-generator/' style='background-color: grey' class='category'>No filter</a>
+    <div class='filters__group' hidden>
+      <a href='/portfolio-generator/' class='category' style='background-color: grey'>No filter</a>
     </div>
 
-    <div class='filter-group'>
-      <span>categories: </span>
+    <div class='filters__group' hidden>
+      <span>Categories: </span>
 
       
-        <a href='/portfolio-generator/categories/dessert' style='background-color: red' class='category'>Dessert</a>
+        <a href='/portfolio-generator/categories/dessert' class='category' style='background-color: red'>Dessert</a>
       
-        <a href='/portfolio-generator/categories/vegetable' style='background-color: purple' class='category'>Vegetable</a>
+        <a href='/portfolio-generator/categories/vegetable' class='category' style='background-color: purple'>Vegetable</a>
       
     </div>
 
-    <div class='filter-group'>
-      <span>tags: </span>
+    <div class='filters__group' hidden>
+      <span>Tags: </span>
 
       
-        <a href='/portfolio-generator/tags/french' style='background-color: green' class='tag'>French</a>
+        <a href='/portfolio-generator/tags/french' class='tag' style='background-color: green'>French</a>
       
-        <a href='/portfolio-generator/tags/brazilian' style='background-color: blue' class='tag'>Brazilian</a>
+        <a href='/portfolio-generator/tags/brazilian' class='tag' style='background-color: blue'>Brazilian</a>
       
     </div>
   </div>
 
 
 
-    <div class='area-projects'>
+    <div class='projects-area'>
       
         
       
@@ -105,19 +105,19 @@
       
         
           
-            <a href='/portfolio-generator/projects/example-project-3/' class='project'>
-  <img class='image' src='/portfolio-generator/assets/img/frenchfries.jpg' alt='Example project 3 icon' loading='lazy'>
+            <a href='/portfolio-generator/projects/example-project-3/' class='project-preview'>
+  <img class='project-preview__icon' src='/portfolio-generator/assets/img/french-fries.jpg' alt='Example project 3 icon' loading='lazy'>
 
-  <figcaption class='details'>
-    <div class='top'>
-      <h2 class='name'>Example project 3</h2>
+  <figcaption class='project-preview__details'>
+    <div class='project-preview__top'>
+      <h2 class='project-preview__name'>Example project 3</h2>
     </div>
 
-    <div class='middle'>
-      <p class='description'></p>
+    <div class='project-preview__middle'>
+      <p class='project-preview__description'></p>
     </div>
 
-    <div class='bottom'>
+    <div class='project-preview__bottom'>
       
   
 
@@ -153,7 +153,7 @@
   </main>
 
   
-  <footer>
+  <footer class='footer'>
     <p>Portfolio made with <a href='https://github.com/jonathan-santos/portfolio-generator' rel='noopener' target='_blank'
         aria-label='Portfolio Generator in Github, opens an external link in a new window'>Portfolio generator</a> by <a
         href='https://github.com/jonathan-santos' rel='noopener' target='_blank'
@@ -161,9 +161,9 @@
 
     <p>Built with with html, css, <a href='https://www.11ty.dev/' rel='noopener' target='_blank'
         aria-label='Eleventy, opens an external link in a new window'>Eleventy</a> and <img
-        src='/portfolio-generator/assets/img/heart.png' alt='heart icon'></p>
+        src='/portfolio-generator/assets/img/heart.svg' alt='heart' width='16' height='16'></p>
 
-    <a href='#' class='back-to-top'>Back to top</a>
+    <a href='#' class='footer__back-to-top' aria-hidden='true'>Back to top</a>
   </footer>
 
 
