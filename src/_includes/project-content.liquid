@@ -1,8 +1,8 @@
-<div class='area-project'>
+<div class='project-content'>
   {% if project.links %}
-    <h2>Links</h2>
+    <h2 class='project-content__title'>Links</h2>
 
-    <ul class='links'>
+    <ul class='project-content__links'>
       {% for link in project.links %}
         <li>
           <a href='{{ link.url }}' rel='noopener' target='_blank' aria-label='{{ link.name }}, opens an external link in a new window'>{{ link.name }}</a>
@@ -12,20 +12,21 @@
   {% endif %}
 
   {% if project.video or project.youtube %}
-    <h2>Video</h2>
+    <h2 class='project-content__title'>Video</h2>
 
-    {% if project.youtube %}
-      <iframe width='560' height='315' src='{{ project.youtube }}' frameborder='0'
-        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-    {% else %}
-      <video width='560' controls src='{{ project.video | img }}' poster='{{ project.icon | img }}'></video>
-    {% endif %}
+    <div class='project-content__videos'>
+      {% if project.youtube %}
+        <iframe width='560' height='315' src='{{ project.youtube }}' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+      {% else %}
+        <video width='560' controls src='{{ project.video | img }}' poster='{{ project.icon | img }}'></video>
+      {% endif %}
+    </div>
   {% endif %}
 
   {% if project.images %}
-    <h2>Images</h2>
+    <h2 class='project-content__title'>Images</h2>
 
-    <div class='images'>
+    <div class='project-content__images'>
       {% for image in project.images %}
         {% if image.alt %}
           {% assign imgAlt = image.alt %}

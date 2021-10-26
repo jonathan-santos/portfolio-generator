@@ -4,7 +4,7 @@
   "showFooter": true,
   "filters": true,
   "root": "/portfolio-generator",
-  "heroImage": "heroImage.png",
+  "heroImage": "hero-image.png",
   "colors": {
     "primary": "#BF1CFF",
     "textLight": "#EEEEEE",
@@ -55,7 +55,7 @@
       "name": "Example project 3",
       "category": "Vegetable",
       "tags": ["French"],
-      "icon": "frenchfries.jpg",
+      "icon": "french-fries.jpg",
       "youtube": "https://www.youtube.com/embed/CpGwrfOzCA0?start=21"
     }
   ]

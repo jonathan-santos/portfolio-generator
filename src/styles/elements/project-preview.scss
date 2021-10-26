@@ -1,0 +1,81 @@
+.project-preview {
+  position: relative;
+  border: 0.3rem solid var(--color-background-dark);
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #000;
+  text-align: center;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: var(--color-primary);
+
+    .project-preview {
+      &__middle {
+        flex: 1;
+        opacity: 1;
+      }
+
+      &__bottom {
+        background-color: rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-text-light);
+  }
+
+  &__top {
+    max-height: 8rem;
+    padding: 0.24rem;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  &__middle {
+    padding: 0 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  &__bottom {
+    padding-top: 0.4rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.15);
+
+    > * + * {
+      margin-left: 0.6rem;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  &__description {
+    padding: 0 0.8rem;
+    font-size: 1.4rem;
+  }
+}

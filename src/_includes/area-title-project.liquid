@@ -1,21 +1,17 @@
-<div class='area-title with-image'>
-  <div class='category-and-tags'>
-    {% include project-categories-and-tags, links: true %}
+<div class='area-title area-title--project'>
+  <div class='area-title__details'>
+    <h1 class='area-title__title' role='text'>{{ project.name }}</h1>
+
+    {% if project.description %}
+      <p class='area-title__description'>{{ project.description }}</p>
+    {% endif %}
   </div>
 
-  <div class='project-image-container'>
+  <div class='area-title__icon'>
     <img src='{{ project.icon | img }}' alt='Project image'>
   </div>
 
-  <div class='details'>
-    <h1 class='title' role='text'>
-      <span class='project-name'>{{ project.name }}</span>
-      <br>
-      <span class='author'>by {{ portfolio.name }}</span>
-    </h1>
-
-    {% if project.description %}
-      <p class='description'>{{ project.description }}</p>
-    {% endif %}
+  <div class='area-title__category-and-tags'>
+    {% include project-categories-and-tags, links: true %}
   </div>
-</div>
+ </div>

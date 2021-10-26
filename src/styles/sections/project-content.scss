@@ -1,0 +1,44 @@
+.project-content {
+  border-top: 0.1rem solid var(--color-background-dark);
+  padding: 1.6rem;
+
+  &__title {
+    margin: 0;
+    border-bottom: 0.1rem solid var(--color-background-dark);
+
+    & + * {
+      padding: 1.6rem 2.4rem;
+    }
+  }
+
+  &__links {
+    padding-left: 3.2rem;
+
+    li {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__videos {
+    video {
+      max-width: 100%;
+      margin-top: 1.6rem;
+    }
+  }
+
+  &__images {
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0 0.8rem;
+      object-fit: contain;
+      flex-grow: 1;
+      vertical-align: bottom;
+    }
+  }  
+}

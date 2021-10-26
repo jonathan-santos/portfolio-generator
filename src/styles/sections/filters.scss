@@ -1,0 +1,48 @@
+.filters {
+  border-bottom: 0.1rem solid var(--color-text-dark);
+  padding: 1.2rem 0.8rem;
+
+  #are-filters-visible:checked {
+    ~ .filters__selected {
+      margin-bottom: 0.8rem;
+
+      .filters__arrow {
+        transform: rotate(90deg);
+      }
+    }
+
+    ~ .filters__group {
+      display: flex;
+    }
+  }
+
+  &__selected {
+    padding-left: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+
+  &__arrow {
+    transition: transform 0.15s;
+  }
+
+  &__group {
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.25);
+    padding: 1.2rem 0;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
+  &__selected,
+  &__group {
+    * + * {
+      margin-left: 1rem;
+    }
+  }
+}

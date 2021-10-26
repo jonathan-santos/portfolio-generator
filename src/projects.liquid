@@ -12,12 +12,12 @@ permalink: '/projects/{{ project.name | slug }}/'
 {% include head, title: project.name %}
 
 <body>
-  <main class='project-page'>
+  <main class='page-project'>
     {% include back-button %}
 
     {% include area-title-project %}
 
-    {% include area-project %}
+    {% include project-content %}
   </main>
 
   {% include footer %}

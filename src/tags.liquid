@@ -19,11 +19,11 @@ permalink: '/tags/{{ tag.name | slug }}/'
 
     {% include filters, selected: 'tag', filter: tag %}
 
-    <div class='area-projects'>
+    <div class='projects-area'>
       {% for project in portfolio.projects %}
         {% for ProjectTag in project.tags %}
           {% if ProjectTag == tag.name %}
-            {% include project %}
+            {% include project-preview %}
           {% endif %}
         {% endfor %}
       {% endfor %}

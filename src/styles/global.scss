@@ -1,0 +1,32 @@
+:root {
+  font-size: 60%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100vh;
+  position: relative;
+}
+
+body {
+  background-color: var(--color-background-light);
+  color: var(--color-text-dark);
+  font-size: 1.6rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+	text-decoration: underline;
+}
+
+main {
+	min-height: 100%;
+	padding-bottom: 16rem;
+	overflow: hidden;
+}
