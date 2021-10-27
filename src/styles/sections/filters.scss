@@ -1,5 +1,10 @@
 .filters {
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
   border-bottom: 0.1rem solid var(--color-text-dark);
+  background-color: var(--color-background-light);
+  z-index: 1;
 
   #are-filters-visible:checked {
     ~ .filters__selected {
@@ -14,7 +19,7 @@
   }
 
   &__selected {
-    padding: 1.6rem;
+    padding: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
