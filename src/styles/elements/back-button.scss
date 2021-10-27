@@ -12,6 +12,13 @@
   align-items: center;
   justify-content: center;
 
+  &:hover,
+  &:active,
+  &:focus {
+    filter: brightness(98%);
+    border-width: 0.4rem;
+  }
+
   img {
 		transform: rotate(180deg);
 	}
