@@ -1,11 +1,8 @@
 .filters {
   border-bottom: 0.1rem solid var(--color-text-dark);
-  padding: 1.2rem 0.8rem;
 
   #are-filters-visible:checked {
     ~ .filters__selected {
-      margin-bottom: 0.8rem;
-
       .filters__arrow {
         transform: rotate(90deg);
       }
@@ -17,7 +14,7 @@
   }
 
   &__selected {
-    padding-left: 0.3rem;
+    padding: 1.6rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -30,12 +27,12 @@
 
   &__group {
     border-top: 0.1rem solid rgba(0, 0, 0, 0.25);
-    padding: 1.2rem 0;
+    padding: 1.2rem;
     flex-wrap: wrap;
     align-items: center;
 
     &:last-of-type {
-      padding-bottom: 0;
+      padding-bottom: 1.2rem;
     }
   }
 
