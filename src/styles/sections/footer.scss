@@ -13,14 +13,35 @@
   justify-content: space-evenly;
   align-items: center;
 
-  *:not(:last-child) {
-    margin: 0 0 1.2rem 0;
+  p > a {
+    border: 0.25rem solid transparent;
+    border-radius: 0.6rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      outline: solid 0.3rem var(--color-text-light);
+    }
+  }
+
+
+  & > * + * {
+    margin-top: 1.2rem;
   }
 
   &__back-to-top {
-    border: 0.2rem solid var(--color-text-light);
+    border: 0.25rem solid var(--color-text-light);
     padding: 0.8rem;
     border-radius: 5rem;
     text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      filter: contrast(125%);
+      background-color: rgba(255, 255, 255, 0.1);
+      outline: solid 0.1rem var(--color-text-light);
+    }
   }
 }

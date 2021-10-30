@@ -1,7 +1,7 @@
 .tag {
-	border: 0.1rem solid rgba(255,255,255,0.35);
+	border: 0.25rem solid rgba(255,255,255,0.35);
 	border-radius: 1.4rem;
-	padding: 0.6rem 0.8rem;
+	padding: 0.4rem 0.6rem;
 	background-color: var(--color-primary);
 	color: var(--color-text-light);
 	font-size: 1.4rem;
@@ -9,4 +9,12 @@
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    filter: grayscale(20%) contrast(125%);
+    border-color: rgba(0, 0, 0, 0.5);
+    outline: solid 0.1rem rgba(0, 0, 0, 0.5);
+  }
 }

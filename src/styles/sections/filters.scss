@@ -2,7 +2,8 @@
   top: 0;
   position: -webkit-sticky;
   position: sticky;
-  border-bottom: 0.1rem solid var(--color-text-dark);
+  border-top: 0.15rem solid var(--color-text-dark);
+  border-bottom: 0.15rem solid var(--color-text-dark);
   background-color: var(--color-background-light);
   z-index: 1;
 
@@ -24,6 +25,18 @@
     align-items: center;
     justify-content: flex-start;
     cursor: pointer;
+    background-color: var(--color-background-light);
+
+    &:hover,
+    &:active,
+    &:focus {
+      filter: brightness(90%);
+
+      .category {
+        border-color: var(--color-text-dark);
+        filter: brightness(200%) contrast(150%);
+      }
+    }
   }
 
   &__arrow {

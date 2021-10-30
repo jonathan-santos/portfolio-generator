@@ -2,7 +2,7 @@
   <div class='filters'>
     <input type='checkbox' id='are-filters-visible' hidden aria-hidden='true'>
 
-    <label for='are-filters-visible' class='filters__selected' role='text' aria-label='Active filter: {{ selected | default: 'none' }} {{ filter.name }}'>
+    <label for='are-filters-visible' class='filters__selected' aria-label='Active filter: {{ selected | default: 'none' }} {{ filter.name }}' tabindex='0'>
       <img class='filters__arrow' src='{{ 'arrow.svg' | img }}' alt='Arrow icon' width='12' height='18'>
 
       <span>Filter</span>
