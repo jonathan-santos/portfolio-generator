@@ -1,3 +1,12 @@
+.tags {
+  display: flex;
+
+  li {
+    list-style: none;
+    margin-right: 0.6rem;
+  }
+}
+
 .tag {
 	border: 0.25rem solid rgba(255,255,255,0.35);
 	border-radius: 1.4rem;

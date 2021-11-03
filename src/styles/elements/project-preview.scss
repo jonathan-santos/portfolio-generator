@@ -58,15 +58,11 @@
   }
 
   &__bottom {
-    padding-top: 0.4rem;
+    padding-top: 0.3rem;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-start;
     background-color: rgba(0, 0, 0, 0.15);
-
-    > * + * {
-      margin-left: 0.5rem;
-    }
   }
 
   &__name {

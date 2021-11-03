@@ -1,21 +1,27 @@
 {% for category in portfolio.categories %}
   {% if category.name == project.category %}
     {% if links == true %}
-      <a href='{{ '/categories/' | relative }}{{ category.name | slug }}/' class='category' style='background-color: {{ category.color }}'>{{ category.name }}</a>
+    <a href='{{ '/categories/' | relative }}{{ category.name | slug }}/' class='category category--singular' style='background-color: {{ category.color }}'>{{ category.name }}</a>
     {% else %}
-      <span class='category' style='background-color: {{ category.color }} '>{{ category.name }}</span>
+      <span class='category category--singular' style='background-color: {{ category.color }}'>{{ category.name }}</span>
     {% endif %}
   {% endif %}
 {% endfor %}
 
-{% for tag in portfolio.tags %}
-  {% for projTag in project.tags %}
-    {% if tag.name == projTag %}
-      {% if links == true %}
-        <a href='{{ '/tags/' | relative }}{{ tag.name | downcase }}/' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
-      {% else %}
-        <span class='tag' style='background-color: {{ tag.color }} '>{{ tag.name }}</span>
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-{% endfor %}
+{% if project.tags.length > 0 %}
+  <ul class='tags'>
+    {% for tag in portfolio.tags %}
+      {% for projTag in project.tags %}
+        {% if tag.name == projTag %}
+          <li>
+            {% if links == true %}
+              <a href='{{ '/tags/' | relative }}{{ tag.name | downcase }}/' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
+            {% else %}
+              <span class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</span>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>
+{% endif %}

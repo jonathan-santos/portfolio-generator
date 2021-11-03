@@ -17,7 +17,7 @@
     ~ .filters__group {
       display: flex;
     }
-  }
+  } 
 
   &__selected {
     padding: 1.2rem;
@@ -26,6 +26,7 @@
     justify-content: flex-start;
     cursor: pointer;
     background-color: var(--color-background-light);
+    user-select: none;
 
     &:hover,
     &:active,
@@ -37,11 +38,15 @@
         filter: brightness(200%) contrast(150%);
       }
     }
+
+    * + * {
+      margin-left: 0.6rem;
+    }
   }
 
   &__arrow {
     transition: transform 0.15s;
-    margin-right: 0.5rem;
+    margin-right: 0.6rem;
   }
 
   &__group {
@@ -53,12 +58,9 @@
     &:last-of-type {
       padding-bottom: 1.2rem;
     }
-  }
 
-  &__selected,
-  &__group {
-    * + * {
-      margin-left: 0.5rem;
+    span {
+      margin-right: 0.6rem;
     }
   }
 }

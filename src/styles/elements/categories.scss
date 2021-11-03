@@ -1,3 +1,12 @@
+.categories {
+  display: flex;
+
+  li {
+    list-style: none;
+    margin-right: 0.6rem;
+  }
+}
+
 .category {
 	border: 0.25rem solid rgba(255,255,255,0.35);
 	border-radius: 0.4rem;
@@ -12,6 +21,8 @@
 
   @at-root .project-preview & {
     border-width: 0.1rem 0.1rem 0 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   &:hover,
@@ -20,5 +31,9 @@
     filter: grayscale(20%) contrast(125%);
     border-color: rgba(0, 0, 0, 0.5);
     outline: solid 0.1rem rgba(0, 0, 0, 0.5);
+  }
+
+  &--singular {
+    margin-right: 0.6rem;
   }
 }
