@@ -18,7 +18,7 @@
       {% if project.youtube %}
         <iframe width='560' height='315' src='{{ project.youtube }}' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
       {% else %}
-        <video width='560' controls src='{{ project.video | img }}' poster='{{ project.icon | img }}'></video>
+        <video width='560' controls src='{{ project.video | img }}' poster='{{ project.icon.src | img }}'></video>
       {% endif %}
     </div>
   {% endif %}
@@ -34,7 +34,12 @@
           {% assign imgAlt = 'Image ' | append: forloop.index | append: ' of ' | append: project.name %}
         {% endif %}
 
-        <img src='{{ image.src | img }}' alt='{{ imgAlt }}' loading='lazy'>
+        <img
+          src='{{ image.src | img }}'
+          alt='{{ imgAlt }}'
+          width='{{ image.width | default: '' }}'
+          height='{{ image.height | default: '' }}'
+          loading='lazy'>
       {% endfor %}
     </div>
   {% endif %}
