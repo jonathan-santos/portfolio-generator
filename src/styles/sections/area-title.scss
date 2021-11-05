@@ -5,15 +5,15 @@
   overflow: hidden;
   text-align: center;
 
-  @media (min-width: 720px) {
-    text-align: start;
-  }
-
   &--project {
     border: 0;
     padding-top: 0;
     display: flex;
     position: relative;
+
+    @media (min-width: 720px) {
+      text-align: start;
+    }
   }
 
   &__title {
@@ -47,7 +47,7 @@
     padding: 2.4rem;
     overflow: hidden;
     background-color: var(--color-primary);
-    color: var(--color-background-light);
+    color: var(--color-text-light);
     font-size: 1.8rem;
     font-weight: bold;
 
