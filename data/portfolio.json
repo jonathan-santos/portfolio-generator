@@ -6,11 +6,11 @@
   "root": "/portfolio-generator",
   "heroImage": "hero-image.png",
   "colors": {
-    "primary": "#BF1CFF",
-    "textLight": "#EEEEEE",
-    "textDark": "#333333",
-    "backgroundLight": "#EEEEEE",
-    "backgroundDark": "#1A2A3A"
+    "primary": "#0074D9",
+    "text-light": "#FFFFFF",
+    "text-dark": "#333333",
+    "background-light": "#EEEEEE",
+    "background-dark": "#1A2A3A"
   },
   "categories": [
     { "name": "Dessert", "color": "red" },
