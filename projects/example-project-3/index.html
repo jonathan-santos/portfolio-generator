@@ -6,19 +6,20 @@
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta name='description' content='A project that generates a portfolio site for you! All generated from a single json file'>
-  <meta name='theme-color' content='#BF1CFF'>
+  <meta name='theme-color' content='#0074D9'>
   <title>Portfolio generator - Example project 3</title>
   <link rel='icon' href='/portfolio-generator/assets/favicon/favicon.ico' />
   <link rel='icon' type='image/png' sizes='32x32' href='/portfolio-generator/assets/favicon/favicon-32x32.png'>
   <link rel='icon' type='image/png' sizes='16x16' href='/portfolio-generator/assets/favicon/favicon-16x16.png'>
   <link rel='apple-touch-icon' sizes='180x180' href='/portfolio-generator/assets/favicon/apple-touch-icon.png'>
+  <link rel='preload' href='/portfolio-generator/assets/styles.css' as='style'>
   <link rel='stylesheet' href='/portfolio-generator/assets/styles.css'>
-  <link rel='manifest' href='/portfolio-generator/site.webmanifest'>
+  <link rel='manifest' href='/portfolio-generator/assets/site.webmanifest'>
 
   <style>
     :root {
-      --color-primary: #BF1CFF;
-      --color-text-light: #EEEEEE;
+      --color-primary: #0074D9;
+      --color-text-light: #FFFFFF;
       --color-text-dark: #333333;
       --color-background-light: #EEEEEE;
       --color-background-dark: #1A2A3A;
@@ -41,35 +42,45 @@
     
   </div>
 
-  <div class='area-title__icon'>
-    <img src='/portfolio-generator/assets/img/french-fries.jpg' alt='Project image'>
-  </div>
-
   <div class='area-title__category-and-tags'>
     
   
 
   
     
-      <a href='/portfolio-generator/categories/vegetable/' class='category' style='background-color: purple'>Vegetable</a>
+    <a href='/portfolio-generator/categories/vegetable/' class='category category--singular' style='background-color: purple'>Vegetable</a>
     
   
 
 
 
-  
+  <ul class='tags'>
     
       
-        <a href='/portfolio-generator/tags/french/' class='tag' style='background-color: green'>French</a>
+        
+          <li>
+            
+              <a href='/portfolio-generator/tags/french/' class='tag' style='background-color: green'>French</a>
+            
+          </li>
+        
       
     
-  
-
-  
+      
+        
+      
     
-  
+  </ul>
 
 
+  </div>
+
+  <div class='area-title__icon'>
+    <img
+      src='/portfolio-generator/assets/img/french-fries.jpg'
+      alt='Example project 3 icon'
+      width=''
+      height=''>
   </div>
  </div>
 
@@ -78,15 +89,19 @@
   
 
   
-    <h2 class='project-content__title'>Video</h2>
 
-    <div class='project-content__videos'>
-      
-        <iframe width='560' height='315' src='https://www.youtube.com/embed/CpGwrfOzCA0?start=21' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-      
-    </div>
   
+    <h2 class='project-content__title'>Videos</h2>
 
+    <ul class='project-content__videos'>
+      
+        <li>
+          
+            <iframe src='https://www.youtube.com/embed/CpGwrfOzCA0?start=21' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+          
+        </li>
+      
+    </ul>
   
 </div>
 
@@ -101,9 +116,9 @@
 
     <p>Built with with html, css, <a href='https://www.11ty.dev/' rel='noopener' target='_blank'
         aria-label='Eleventy, opens an external link in a new window'>Eleventy</a> and <img
-        src='/portfolio-generator/assets/img/heart.svg' alt='heart' width='16' height='16'></p>
+        src='/portfolio-generator/assets/img/heart.svg' alt='heart' width='16' height='16' loading='lazy'></p>
 
-    <a href='#' class='footer__back-to-top' aria-hidden='true'>Back to top</a>
+    <a href='#' class='footer__back-to-top'>Back to top</a>
   </footer>
 
 
