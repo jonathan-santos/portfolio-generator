@@ -11,18 +11,6 @@
     </ul>
   {% endif %}
 
-  {% if project.video or project.youtube %}
-    <h2 class='project-content__title'>Video</h2>
-
-    <div class='project-content__videos'>
-      {% if project.youtube %}
-        <iframe width='560' height='315' src='{{ project.youtube }}' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-      {% else %}
-        <video width='560' controls src='{{ project.video | img }}' poster='{{ project.icon.src | img }}'></video>
-      {% endif %}
-    </div>
-  {% endif %}
-
   {% if project.images %}
     <h2 class='project-content__title'>Images</h2>
 
@@ -38,9 +26,20 @@
           src='{{ image.src | img }}'
           alt='{{ imgAlt }}'
           width='{{ image.width | default: '' }}'
-          height='{{ image.height | default: '' }}'
-          loading='lazy'>
+          height='{{ image.height | default: '' }}'>
       {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if project.video or project.youtube %}
+    <h2 class='project-content__title'>Video</h2>
+
+    <div class='project-content__videos'>
+      {% if project.youtube %}
+        <iframe width='560' height='315' src='{{ project.youtube }}' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+      {% else %}
+        <video width='560' controls src='{{ project.video | img }}' poster='{{ project.icon.src | img }}'></video>
+      {% endif %}
     </div>
   {% endif %}
 </div>
