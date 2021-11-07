@@ -1,19 +1,29 @@
 .projects-area {
   padding: 1.6rem 0.8rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--project-min-width, 16rem), 1fr));
   justify-items: stretch;
   gap: 1.6rem;
 
   @media (min-width: 720px) {
     padding: 1.6rem var(--desktop-horizontal-content-padding);
-    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
   }
 
   @media (min-width: 500px) {
+    --project-min-width: 20rem;
+
     & > *:first-child:nth-last-child(1) {
       width: 50%;
+      max-width: 45rem;
       margin: 0 auto;
     }
+  }
+
+  @media (min-width: 1135px) {
+    --project-min-width: 25rem;
+  }
+
+  @media (min-width: 1200px) {
+    --project-min-width: 26rem;
   }
 }
