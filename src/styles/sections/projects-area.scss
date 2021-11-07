@@ -4,10 +4,11 @@
   grid-template-columns: repeat(auto-fit, minmax(var(--project-min-width, 16rem), 1fr));
   grid-auto-rows: 1fr;
   justify-items: stretch;
-  gap: 1.6rem;
+  gap: 0.8rem;
 
   @media (min-width: 720px) {
     padding: 1.6rem var(--desktop-horizontal-content-padding);
+    gap: 1.6rem;
   }
 
   @media (min-width: 500px) {

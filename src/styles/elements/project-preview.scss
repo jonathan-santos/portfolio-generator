@@ -41,37 +41,45 @@
     color: var(--color-text-light);
   }
 
-  &__top {
-    max-height: 8rem;
-    padding: 0.24rem;
+  &__top,
+  &__middle,
+  &__bottom {
     overflow: hidden;
+    text-overflow: ellipsis;
     background-color: rgba(0, 0, 0, 0.75);
-  }
-
-  &__middle {
-    padding: 0 0.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__top {
+    display: initial;
+    padding: 0.3rem;
+  }
+
+  &__middle {
+    padding: 0 1rem;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.75);
   }
 
   &__bottom {
-    padding-top: 0.3rem;
-    display: flex;
-    align-items: center;
     justify-content: flex-start;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+  }
+
+  &__name,
+  &__description {
+    display: inline;
+    inline-size: 100%;
   }
 
   &__name {
-    margin: 0;
     font-size: 1.8rem;
+    white-space: nowrap;
   }
 
   &__description {
-    padding: 0 0.8rem;
     font-size: 1.4rem;
+    word-break: break-all;
   }
 }

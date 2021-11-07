@@ -18,7 +18,6 @@
 
   &__title {
     position: relative;
-    margin: 0;
     padding: 3.2rem 0;
     color: var(--color-text-light);
     font-size: 2.4rem;
@@ -43,7 +42,6 @@
   }
 
   &__description {
-    margin: 0;
     padding: 2.4rem;
     overflow: hidden;
     background-color: var(--color-primary);
@@ -82,7 +80,6 @@
     position: absolute;
     left: 0.3rem;
     bottom: 0.3rem;
-    margin: 0;
     display: flex;
     align-items: center;
   }
