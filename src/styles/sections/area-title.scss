@@ -27,11 +27,6 @@
       font-size: 3.2rem;
     }
 
-    // background-color: var(--color-background-dark);
-    // background-size: cover;
-    // background-blend-mode: soft-light;
-    // style='background-image: url({{ portfolio.heroImage | img }})'
-
     @at-root .area-title--project & {
       padding: 1.6rem;
       flex: 1;
