@@ -48,7 +48,9 @@
           "src": "https://www.yummytummyaarthi.com/wp-content/uploads/2017/08/1-9.jpg"
         }
       ],
-      "video": "https://kutt.it/7nbVKz"
+      "videos": [
+        { "src": "https://kutt.it/7nbVKz" }
+      ]
     },
     {
       "name": "Example project 2",
@@ -66,7 +68,9 @@
       "icon": {
         "src": "french-fries.jpg"
       },
-      "youtube": "https://www.youtube.com/embed/CpGwrfOzCA0?start=21"
+      "videos": [
+        { "youtube": "https://www.youtube.com/embed/CpGwrfOzCA0?start=21" }
+      ]
     }
   ]
 }
