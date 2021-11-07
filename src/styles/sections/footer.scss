@@ -3,15 +3,25 @@
   min-height: 16rem;
   position: absolute;
   bottom: 0;
-  padding: 1.6rem;
+  padding: 1.2rem 4.8rem;
   overflow: hidden;
   background-color: var(--color-background-dark);
   color: var(--color-text-light);
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 720px) {
+    & > * + * {
+      margin-top: 1.6rem;
+    }
+  }
+
+  @media (min-width: 720px) {
+    padding: 1.6rem var(--desktop-horizontal-content-padding) 0.8rem var(--desktop-horizontal-content-padding);
+  }
 
   p > a {
     border: 0.25rem solid transparent;
@@ -23,11 +33,6 @@
       text-decoration: none;
       outline: solid 0.3rem var(--color-text-light);
     }
-  }
-
-
-  & > * + * {
-    margin-top: 1.2rem;
   }
 
   &__back-to-top {

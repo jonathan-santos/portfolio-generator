@@ -2,6 +2,10 @@
   border-top: 0.1rem solid var(--color-background-dark);
   padding: 1.6rem;
 
+  @media (min-width: 720px) {
+    padding: 1.6rem var(--desktop-horizontal-content-padding);
+  }
+
   &__title {
     margin: 0;
     border-bottom: 0.1rem solid var(--color-background-dark);

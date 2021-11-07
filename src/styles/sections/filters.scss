@@ -7,6 +7,16 @@
   background-color: var(--color-background-light);
   z-index: 1;
 
+  > * {
+    padding: 1.2rem 1.6rem;
+  }
+
+  @media (min-width: 720px) {
+    > * {
+      padding: 1.2rem var(--desktop-horizontal-content-padding);
+    }
+  }
+
   #are-filters-visible:checked {
     ~ .filters__selected {
       .filters__arrow {
@@ -20,7 +30,6 @@
   } 
 
   &__selected {
-    padding: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -51,13 +60,8 @@
 
   &__group {
     border-top: 0.1rem solid rgba(0, 0, 0, 0.25);
-    padding: 1.2rem;
     flex-wrap: wrap;
     align-items: center;
-
-    &:last-of-type {
-      padding-bottom: 1.2rem;
-    }
 
     span {
       margin-right: 0.6rem;
