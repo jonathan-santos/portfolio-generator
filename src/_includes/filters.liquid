@@ -2,7 +2,7 @@
   <div class='filters'>
     <input type='checkbox' id='are-filters-visible' hidden aria-hidden='true'>
 
-    <label for='are-filters-visible' class='filters__selected' role='text' aria-label='Active filter: {{ selected | default: 'none' }} {{ filter.name }}'>
+    <label for='are-filters-visible' class='filters__selected' aria-label='Active filter: {{ selected | default: 'none' }} {{ filter.name }}' tabindex='0'>
       <img class='filters__arrow' src='{{ 'arrow.svg' | img }}' alt='Arrow icon' width='12' height='18'>
 
       <span>Filter</span>
@@ -19,17 +19,26 @@
     <div class='filters__group' hidden>
       <span>Categories: </span>
 
-      {% for category in portfolio.categories %}
-        <a href='{{ '/categories/' | relative }}{{ category.name | slug }}' class='category' style='background-color: {{ category.color }}'>{{ category.name }}</a>
-      {% endfor %}
+      <ul class='categories'>
+        {% for category in portfolio.categories %}
+          <li>
+            <a href='{{ '/categories/' | relative }}{{ category.name | slug }}' class='category' style='background-color: {{ category.color }}'>{{ category.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+
     </div>
 
     <div class='filters__group' hidden>
       <span>Tags: </span>
 
-      {% for tag in portfolio.tags %}
-        <a href='{{ '/tags/' | relative }}{{ tag.name | slug }}' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
-      {% endfor %}
+      <ul class='tags'>
+        {% for tag in portfolio.tags %}
+          <li>
+            <a href='{{ '/tags/' | relative }}{{ tag.name | slug }}' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 {% endif %}

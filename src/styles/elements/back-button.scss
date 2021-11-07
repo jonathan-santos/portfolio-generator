@@ -12,6 +12,13 @@
   align-items: center;
   justify-content: center;
 
+  &:hover,
+  &:active,
+  &:focus {
+    filter: contrast(150%);
+    outline: 0.25rem solid var(--color-text-light);
+  }
+
   img {
 		transform: rotate(180deg);
 	}

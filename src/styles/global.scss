@@ -1,5 +1,7 @@
 :root {
   font-size: 60%;
+  
+  --desktop-horizontal-content-padding: 10%;
 }
 
 * {
@@ -11,6 +13,7 @@
 html {
   min-height: 100vh;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,11 +25,9 @@ body {
 
 a {
   color: inherit;
-	text-decoration: underline;
 }
 
 main {
 	min-height: 100%;
 	padding-bottom: 16rem;
-	overflow: hidden;
 }

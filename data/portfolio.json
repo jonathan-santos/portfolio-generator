@@ -4,13 +4,12 @@
   "showFooter": true,
   "filters": true,
   "root": "/portfolio-generator",
-  "heroImage": "hero-image.png",
   "colors": {
-    "primary": "#BF1CFF",
-    "textLight": "#EEEEEE",
-    "textDark": "#333333",
-    "backgroundLight": "#EEEEEE",
-    "backgroundDark": "#1A2A3A"
+    "primary": "#0074D9",
+    "text-light": "#FFFFFF",
+    "text-dark": "#333333",
+    "background-light": "#EEEEEE",
+    "background-dark": "#1A2A3A"
   },
   "categories": [
     { "name": "Dessert", "color": "red" },
@@ -32,31 +31,45 @@
           "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
         }
       ],
-      "icon": "pudding.jpg",
+      "icon": {
+        "src": "pudding.jpg",
+        "width": 373,
+        "height": 280
+      },
       "images": [
         {
           "src": "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg",
-          "alt": "A Pudding"
+          "alt": "A Pudding",
+          "width": 1280,
+          "height": 720
         },
         {
           "src": "https://www.yummytummyaarthi.com/wp-content/uploads/2017/08/1-9.jpg"
         }
       ],
-      "video": "https://kutt.it/7nbVKz"
+      "videos": [
+        { "src": "https://kutt.it/7nbVKz" }
+      ]
     },
     {
       "name": "Example project 2",
       "description": "My project 2 is actually Cassava (Mandioca para os brasileiros)",
       "category": "Vegetable",
       "tags": ["Brazilian"],
-      "icon": "cassava.jpg"
+      "icon": {
+        "src": "cassava.jpg"
+      }
     },
     {
       "name": "Example project 3",
       "category": "Vegetable",
       "tags": ["French"],
-      "icon": "french-fries.jpg",
-      "youtube": "https://www.youtube.com/embed/CpGwrfOzCA0?start=21"
+      "icon": {
+        "src": "french-fries.jpg"
+      },
+      "videos": [
+        { "youtube": "https://www.youtube.com/embed/CpGwrfOzCA0?start=21" }
+      ]
     }
   ]
 }

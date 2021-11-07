@@ -1,5 +1,10 @@
-<a href='{{ '/projects/' | relative }}{{ project.name | slug }}/' class='project-preview'>
-  <img class='project-preview__icon' src='{{ project.icon | img }}' alt='{{ project.name }} icon' loading='lazy'>
+<a href='{{ ' /projects/' | relative }}{{ project.name | slug }}/' class='project-preview'>
+  <img
+    src='{{ project.icon.src | img }}'
+    alt='{{ project.name }} icon'
+    width='{{ project.icon.width | default: '' }}'
+    height='{{ project.icon.height | default: '' }}'
+    class='project-preview__icon'>
 
   <figcaption class='project-preview__details'>
     <div class='project-preview__top'>
