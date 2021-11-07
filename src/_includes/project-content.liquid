@@ -14,7 +14,7 @@
   {% if project.images %}
     <h2 class='project-content__title'>Images</h2>
 
-    <div class='project-content__images'>
+    <ul class='project-content__images'>
       {% for image in project.images %}
         {% if image.alt %}
           {% assign imgAlt = image.alt %}
@@ -22,24 +22,32 @@
           {% assign imgAlt = 'Image ' | append: forloop.index | append: ' of ' | append: project.name %}
         {% endif %}
 
-        <img
-          src='{{ image.src | img }}'
-          alt='{{ imgAlt }}'
-          width='{{ image.width | default: '' }}'
-          height='{{ image.height | default: '' }}'>
+        <li>
+          <img
+            src='{{ image.src | img }}'
+            alt='{{ imgAlt }}'
+            width='{{ image.width | default: '' }}'
+            height='{{ image.height | default: '' }}'>
+        </li>
       {% endfor %}
-    </div>
+
+      <!-- <li><img src='{{ project.images[0].src | img }}'></li> -->
+    </ul>
   {% endif %}
 
-  {% if project.video or project.youtube %}
-    <h2 class='project-content__title'>Video</h2>
+  {% if project.videos %}
+    <h2 class='project-content__title'>Videos</h2>
 
-    <div class='project-content__videos'>
-      {% if project.youtube %}
-        <iframe width='560' height='315' src='{{ project.youtube }}' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-      {% else %}
-        <video width='560' controls src='{{ project.video | img }}' poster='{{ project.icon.src | img }}'></video>
-      {% endif %}
-    </div>
+    <ul class='project-content__videos'>
+      {% for video in project.videos %}
+        <li>
+          {% if video.youtube %}
+            <iframe src='{{ video.youtube }}' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+          {% else %}
+            <video controls src='{{ video.src | video }}' poster='{{ project.icon.src | img }}'></video>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
   {% endif %}
 </div>
