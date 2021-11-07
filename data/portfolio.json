@@ -4,7 +4,6 @@
   "showFooter": true,
   "filters": true,
   "root": "/portfolio-generator",
-  "heroImage": "hero-image.png",
   "colors": {
     "primary": "#0074D9",
     "text-light": "#FFFFFF",
