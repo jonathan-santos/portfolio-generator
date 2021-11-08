@@ -72,6 +72,23 @@
         }
       }
 
+      &:fullscreen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 90%;
+          object-fit: contain;
+
+          &:hover,
+          &:active,
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
       * {
         width: 100%;
         height: 100%;
@@ -79,9 +96,9 @@
         border: 0.1rem solid rgba(0, 0, 0, 0.1);
         object-fit: cover;
 
-        &:hover,
-        &:active,
-        &:focus {
+        &:not(.no-interaction):hover,
+        &:not(.no-interaction):active,
+        &:not(.no-interaction):focus {
           outline: solid 0.4rem var(--color-text-dark);
         }
       }
