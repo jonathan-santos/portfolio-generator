@@ -7,8 +7,8 @@
   "scripts": {
     "eleventy:build": "eleventy",
     "eleventy:watch": "eleventy --serve",
-    "sass:build": "sass --no-source-map src/styles/main.scss:public/assets/styles.css",
-    "sass:watch": "sass --no-source-map --watch src/styles/main.scss:public/assets/styles.css",
+    "sass:build": "sass --no-source-map src/styles/main.scss:public/assets/styles.css --style compressed",
+    "sass:watch": "sass --no-source-map --watch src/styles/main.scss:public/assets/styles.css --style compressed",
     "start": "npm-run-all --parallel eleventy:watch sass:watch",
     "build": "npm-run-all --parallel eleventy:build sass:build",
     "deploy": "npm run build && gh-pages -d public -m 'New Deploy'"
@@ -16,6 +16,7 @@
   "devDependencies": {
     "@11ty/eleventy": "0.12.1",
     "gh-pages": "3.2.3",
+    "html-minifier": "4.0.0",
     "npm-run-all": "4.1.5",
     "sass": "1.43.2"
   }
