@@ -27,7 +27,8 @@
             src='{{ image.src | img }}'
             alt='{{ imgAlt }}'
             width='{{ image.width | default: '' }}'
-            height='{{ image.height | default: '' }}'>
+            height='{{ image.height | default: '' }}'
+            class='no-interaction'>
         </li>
       {% endfor %}
 
