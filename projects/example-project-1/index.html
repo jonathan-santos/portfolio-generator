@@ -100,7 +100,8 @@
             src='https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg'
             alt='A Pudding'
             width='1280'
-            height='720'>
+            height='720'
+            class='no-interaction'>
         </li>
       
         
@@ -112,7 +113,8 @@
             src='https://www.yummytummyaarthi.com/wp-content/uploads/2017/08/1-9.jpg'
             alt='Image 2 of Example project 1'
             width=''
-            height=''>
+            height=''
+            class='no-interaction'>
         </li>
       
 
@@ -153,5 +155,16 @@
 
 
 </body>
+
+<script>
+  document.querySelectorAll('.project-content__images li')
+    .forEach(function (li) {
+      li.children[0].classList.remove('no-interaction')
+
+      li.addEventListener('click', function() {
+        li.requestFullscreen({ navigationUI: 'show' })
+      })
+    })
+</script>
 
 </html>
