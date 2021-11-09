@@ -1,22 +1,22 @@
 <!DOCTYPE HTML>
 <html lang='en'>
 
-{% include head %}
+{% include components/head %}
 
 <body>
   <main>
-    {% include area-title %}
+    {% include components/area-title %}
 
-    {% include filters %}
+    {% include components/filters %}
 
     <div class='projects-area'>
       {% for project in portfolio.projects %}
-        {% include project-preview %}
+        {% include components/project-preview %}
       {% endfor %}
     </div>
   </main>
 
-  {% include footer %}
+  {% include components/footer %}
 </body>
 
 </html>

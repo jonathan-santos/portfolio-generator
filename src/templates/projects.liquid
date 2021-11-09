@@ -9,18 +9,18 @@ permalink: '/projects/{{ project.name | slug }}/'
 <!DOCTYPE HTML>
 <html lang='en'>
 
-{% include head, title: project.name %}
+{% include components/head, title: project.name %}
 
 <body>
   <main class='page-project'>
-    {% include back-button %}
+    {% include components/back-button %}
 
-    {% include area-title-project %}
+    {% include components/area-title-project %}
 
-    {% include project-content %}
+    {% include components/project-content %}
   </main>
 
-  {% include footer %}
+  {% include components/footer %}
 </body>
 
 <script>

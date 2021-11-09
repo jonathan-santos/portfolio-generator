@@ -9,28 +9,28 @@ permalink: '/tags/{{ tag.name | slug }}/'
 <!DOCTYPE HTML>
 <html lang='en'>
 
-{% include head, title: tag.name %}
+{% include components/head, title: tag.name %}
 
 <body>
   <main>
-    {% include back-button %}
+    {% include components/back-button %}
 
-    {% include area-title, title: tag.name %}
+    {% include components/area-title, title: tag.name %}
 
-    {% include filters, selected: 'tag', filter: tag %}
+    {% include components/filters, selected: 'tag', filter: tag %}
 
     <div class='projects-area'>
       {% for project in portfolio.projects %}
         {% for ProjectTag in project.tags %}
           {% if ProjectTag == tag.name %}
-            {% include project-preview %}
+            {% include components/project-preview %}
           {% endif %}
         {% endfor %}
       {% endfor %}
     </div>
   </main>
 
-  {% include footer %}
+  {% include components/footer %}
 </body>
 
 </html>
