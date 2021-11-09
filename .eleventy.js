@@ -1,5 +1,5 @@
 const htmlmin = require('html-minifier')
-const portfolio = require('./data/portfolio.json')
+const portfolio = require('./src/data/portfolio.json')
 
 const getRoot = () => process.argv.includes('--serve') ? '' : portfolio.root
 
@@ -22,7 +22,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('video', (asset) => getAssetLocation('video', asset))
 
-  eleventyConfig.addPassthroughCopy('src/assets')
+  eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' })
 
   eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
     if (outputPath && outputPath.endsWith('.html')) {
@@ -40,9 +40,9 @@ module.exports = (eleventyConfig) => {
 
   return {
     dir: {
-      input: 'src',
+      input: 'src/templates',
       output: 'public',
       data: '../data',
-    },
+    }, 
   }
 }
