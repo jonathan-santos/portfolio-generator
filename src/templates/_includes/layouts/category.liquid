@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+
+{% include components/head, title: category.name %}
+
+<body>
+  <main>
+    {% include components/back-button %}
+
+    {% include components/area-title, title: category.name %}
+
+    {% include components/filters, selected: 'category', filter: category %}
+
+    <div class='projects-area'>
+      {% for project in portfolio.projects %}
+        {% if project.category == category.name %}
+          {% include components/project-preview %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </main>
+
+  {% include components/footer %}
+</body>
+
+</html>
