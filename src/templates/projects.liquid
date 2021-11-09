@@ -1,37 +1,8 @@
 ---
+layout: layouts/project
 pagination:
   data: portfolio.projects
   size: 1
   alias: project
 permalink: '/projects/{{ project.name | slug }}/'
 ---
-
-<!DOCTYPE HTML>
-<html lang='en'>
-
-{% include components/head, title: project.name %}
-
-<body>
-  <main class='page-project'>
-    {% include components/back-button %}
-
-    {% include components/area-title-project %}
-
-    {% include components/project-content %}
-  </main>
-
-  {% include components/footer %}
-</body>
-
-<script>
-  document.querySelectorAll('.project-content__images li')
-    .forEach(function (li) {
-      li.children[0].classList.remove('no-interaction')
-
-      li.addEventListener('click', function() {
-        li.requestFullscreen({ navigationUI: 'show' })
-      })
-    })
-</script>
-
-</html>
