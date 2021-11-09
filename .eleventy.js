@@ -1,17 +1,18 @@
 const htmlmin = require('html-minifier')
+
 const portfolio = require('./src/data/portfolio.json')
 
-const getRoot = () => process.argv.includes('--serve') ? '' : portfolio.root
-
-const getAssetLocation = (assetType, asset) => {
-  if (asset.search('http') == -1) {
-    return `${getRoot()}/assets/${assetType}/${asset}`
-  }
-
-  return asset
-}
-
 module.exports = (eleventyConfig) => {
+  const getRoot = () => process.argv.includes('--serve') ? '' : portfolio.root
+
+  const getAssetLocation = (assetType, asset) => {
+    if (asset.search('http') == -1) {
+      return `${getRoot()}/assets/${assetType}/${asset}`
+    }
+
+    return asset
+  }
+  
   eleventyConfig.addWatchTarget('./src/styles')
 
   eleventyConfig.addFilter('relative', (value) => getRoot() + value)
