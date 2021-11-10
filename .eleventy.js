@@ -1,27 +1,19 @@
 const htmlmin = require('html-minifier')
 
+const { getRoot, getAssetLocation } = require('./src/utils')
+
 const portfolio = require('./src/data/portfolio.json')
 
 module.exports = (eleventyConfig) => {
-  const getRoot = () => process.argv.includes('--serve') ? '' : portfolio.root
-
-  const getAssetLocation = (assetType, asset) => {
-    if (asset.search('http') == -1) {
-      return `${getRoot()}/assets/${assetType}/${asset}`
-    }
-
-    return asset
-  }
-  
   eleventyConfig.addWatchTarget('./src/styles')
 
-  eleventyConfig.addFilter('relative', (value) => getRoot() + value)
+  eleventyConfig.addFilter('relative', (value) => getRoot(portfolio.root) + value)
 
-  eleventyConfig.addFilter('asset', (asset) => `${getRoot()}/assets/${asset}`)
+  eleventyConfig.addFilter('asset', (asset) => `${getRoot(portfolio.root)}/assets/${asset}`)
 
-  eleventyConfig.addFilter('img', (asset) => getAssetLocation('img', asset))
+  eleventyConfig.addFilter('img', (asset) => getAssetLocation(portfolio.root, 'img', asset))
 
-  eleventyConfig.addFilter('video', (asset) => getAssetLocation('video', asset))
+  eleventyConfig.addFilter('video', (asset) => getAssetLocation(portfolio.root, 'video', asset))
 
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' })
 
