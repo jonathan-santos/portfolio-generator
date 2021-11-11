@@ -1,6 +1,6 @@
 const htmlmin = require('html-minifier')
 
-const { getRoot, getAssetLocation } = require('./src/utils')
+const { getRoot, getAssetLocation, translate } = require('./src/utils')
 
 const portfolio = require('./src/data/portfolio.json')
 
@@ -14,6 +14,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('img', (asset) => getAssetLocation(portfolio.root, 'img', asset))
 
   eleventyConfig.addFilter('video', (asset) => getAssetLocation(portfolio.root, 'video', asset))
+
+  eleventyConfig.addFilter('translate', (key, locale) => translate(locale, key))
 
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' })
 
