@@ -16,7 +16,7 @@ permalink: /assets/site.webmanifest
       "sizes": "512x512",
       "type": "image/png"
   }],
-  "theme_color": "{{ portfolio.colors.primary }}",
+  "theme_color": "{{ portfolio.colors.primary | default: '#0074D9' }}",
   "background_color": "{{ portfolio.colors.backgroundLight }}",
   "display": "standalone"
 }
