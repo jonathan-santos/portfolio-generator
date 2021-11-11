@@ -1,14 +1,14 @@
 {% if portfolio.showFooter %}
   <footer class='footer'>
-    <p>Portfolio made with <a href='https://github.com/jonathan-santos/portfolio-generator' rel='noopener' target='_blank'
-        aria-label='Portfolio Generator in Github, opens an external link in a new window'>Portfolio generator</a> by <a
+    <p>{{ 'made-with' | translate: lang }} <a href='https://github.com/jonathan-santos/portfolio-generator' rel='noopener' target='_blank'
+        aria-label='Portfolio Generator Github, {{ 'external-link' | translate: lang }}'>Portfolio generator</a> {{ 'by' | translate: lang }} <a
         href='https://github.com/jonathan-santos' rel='noopener' target='_blank'
-        aria-label='Jonathan Santos Website, opens an external link in a new window'>Jonathan Santos</a></p>
+        aria-label='Jonathan Santos Website, {{ 'external-link' | translate: lang }}'>Jonathan Santos</a></p>
 
-    <p>Built with with html, css, <a href='https://www.11ty.dev/' rel='noopener' target='_blank'
-        aria-label='Eleventy, opens an external link in a new window'>Eleventy</a> and <img
-        src='{{ 'heart.svg' | img }}' alt='heart' width='16' height='16' loading='lazy'></p>
+    <p>{{ 'built-with' | translate: lang }} html, css, <a href='https://www.11ty.dev/' rel='noopener' target='_blank'
+        aria-label='Eleventy Website, {{ 'external-link' | translate: lang }}'>Eleventy</a> {{ 'and' | translate: lang }} <img
+        src='{{ 'heart.svg' | img }}' alt='{{ 'love' | translate: lang }}' width='16' height='16' loading='lazy'></p>
 
-    <a href='#' class='footer__back-to-top'>Back to top</a>
+    <a href='#' class='footer__back-to-top'>{{ 'back-to-top' | translate: lang }}</a>
   </footer>
 {% endif %}

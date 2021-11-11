@@ -1,25 +1,25 @@
 <div class='project-content'>
   {% if project.links %}
-    <h2 class='project-content__title'>Links</h2>
+    <h2 class='project-content__title'>{{ 'links' | translate: lang }}</h2>
 
     <ul class='project-content__links'>
       {% for link in project.links %}
         <li>
-          <a href='{{ link.url }}' rel='noopener' target='_blank' aria-label='{{ link.name }}, opens an external link in a new window'>{{ link.name | capitalize }}</a>
+          <a href='{{ link.url }}' rel='noopener' target='_blank' aria-label='{{ link.name }}, {{ 'external-link' | translate: lang }}'>{{ link.name | capitalize }}</a>
         </li>
       {% endfor %}
     </ul>
   {% endif %}
 
   {% if project.images %}
-    <h2 class='project-content__title'>Images</h2>
+    <h2 class='project-content__title'>{{ 'images' | translate: lang }}</h2>
 
     <ul class='project-content__images'>
       {% for image in project.images %}
         {% if image.alt %}
           {% assign imgAlt = image.alt %}
         {% else %}
-          {% assign imgAlt = 'Image ' | append: forloop.index | append: ' of ' | append: project.name %}
+          {% assign imgAlt = 'Image ' | append: forloop.index | append: ' {{ 'of' | translate: lang }} ' | append: project.name %}
         {% endif %}
 
         <li>
@@ -37,7 +37,7 @@
   {% endif %}
 
   {% if project.videos %}
-    <h2 class='project-content__title'>Videos</h2>
+    <h2 class='project-content__title'>{{ 'videos' | translate: lang }}</h2>
 
     <ul class='project-content__videos'>
       {% for video in project.videos %}

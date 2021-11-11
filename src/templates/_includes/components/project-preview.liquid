@@ -1,7 +1,7 @@
 <a href='{{ '/projects/' | relative }}{{ project.name | slug }}/' class='project-preview'>
   <img
     src='{{ project.icon.src | img }}'
-    alt='{{ project.name }} icon'
+    alt='{{ project.name }} {{ 'icon' | translate: lang }}'
     width='{{ project.icon.width | default: '' }}'
     height='{{ project.icon.height | default: '' }}'
     class='project-preview__icon'>

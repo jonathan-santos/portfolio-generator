@@ -14,7 +14,7 @@
   <div class='area-title__icon'>
     <img
       src='{{ project.icon.src | img }}'
-      alt='{{ project.name }} icon'
+      alt='{{ project.name }} {{ 'icon' | translate: lang }}'
       width='{{ project.icon.width | default: '' }}'
       height='{{ project.icon.height | default: '' }}'>
   </div>
