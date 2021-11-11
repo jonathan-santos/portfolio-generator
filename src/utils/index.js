@@ -1,3 +1,5 @@
+const translations = require('../data/translations.json')
+
 const getRoot = (root) => process.argv.includes('--serve') ? '' : root
 
 const getAssetLocation = (root, assetType, asset) => {
@@ -8,12 +10,7 @@ const getAssetLocation = (root, assetType, asset) => {
   return asset
 }
 
-const translate = (locale, key) => {
-  const translations = require(`../data/${locale}.json`)
-  return key
-    .split('.')
-    .reduce((a, b) => a[b], translations)
-}
+const translate = (locale, key) => translations[locale.toLowerCase()][key]
 
 module.exports = {
   getRoot,
