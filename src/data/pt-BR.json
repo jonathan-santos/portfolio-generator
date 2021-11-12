@@ -1,0 +1,65 @@
+{
+  "name": "Gerador de portfólios",
+  "description": "Um projeto que gera um site de portfólio para você! Tudo o que você precisa é o configurar com arquivos json",
+  "categories": [
+    { "name": "Sobremesa", "color": "red" },
+    { "name": "Vegetal", "color": "purple" }
+  ],
+  "tags": [
+    { "name": "Francês", "color": "green" },
+    { "name": "Brasileiro", "color": "blue" }
+  ],
+  "projects": [
+    {
+      "name": "Projeto exemplo 1",
+      "description": "O projeto exemplo 1 é um pudim",
+      "category": "Sobremesa",
+      "links": [
+        { "name": "Site", "url": "http://www.pudim.com.br" },
+        {
+          "name": "Mais imagens de pudim no google",
+          "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
+        }
+      ],
+      "icon": {
+        "src": "pudding.jpg",
+        "width": 373,
+        "height": 280
+      },
+      "images": [
+        {
+          "src": "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg",
+          "alt": "A Pudding",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "src": "https://www.yummytummyaarthi.com/wp-content/uploads/2017/08/1-9.jpg"
+        }
+      ],
+      "videos": [
+        { "src": "https://kutt.it/7nbVKz" }
+      ]
+    },
+    {
+      "name": "Projeto exemplo 2",
+      "description": "O projeto exemplo 2 é Mandioca (ou Aipin ou Macaxeira para alguns)",
+      "category": "Vegetal",
+      "tags": ["Brasileiro"],
+      "icon": {
+        "src": "cassava.jpg"
+      }
+    },
+    {
+      "name": "Projeto exemplo 3",
+      "category": "Vegetal",
+      "tags": ["Francês"],
+      "icon": {
+        "src": "french-fries.jpg"
+      },
+      "videos": [
+        { "youtube": "https://www.youtube.com/embed/CpGwrfOzCA0?start=21" }
+      ]
+    }
+  ]
+}
