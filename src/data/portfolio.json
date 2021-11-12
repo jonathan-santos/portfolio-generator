@@ -1,4 +1,6 @@
 {
+  "name": "Portfolio generator",
+  "description": "A project that generates a portfolio site for you! All generated from a single json file",
   "showFooter": true,
   "filters": true,
   "root": "/portfolio-generator",
