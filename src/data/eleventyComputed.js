@@ -1,12 +1,18 @@
-module.exports = {
-  projects: (data) => {
-    let projects
+const getPortfolio = (data) => {
+  if (!data.lang || data.lang === data.portfolio.i18n.default) {
+    return data.portfolio
+  }
 
-    if (!data.lang || data.lang === data.portfolio.i18n.default) {
-      projects = data.portfolio.projects
-    } else {
-      projects = data[data.lang].projects
-    }
+  return data[data.lang]
+}
+
+module.exports = {
+  name: (data) => getPortfolio(data).name,
+  description: (data) => getPortfolio(data).description,
+  categories: (data) => getPortfolio(data).categories,
+  tags: (data) => getPortfolio(data).tags,
+  projects: (data) => {
+    let projects = getPortfolio(data).projects
 
     if (data['filter-type'] === 'category') {
       projects = projects.filter(project => project.category === data.filter.name)
