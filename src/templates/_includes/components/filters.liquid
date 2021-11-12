@@ -13,7 +13,7 @@
     </label>
 
     <div class='filters__group' hidden>
-      <a href='{{ '/' | relative }}' class='category' style='background-color: grey'>{{ 'no-filter' | translate: lang }}</a>
+      <a href='{{ '/' | relative: lang }}' class='category' style='background-color: grey'>{{ 'no-filter' | translate: lang }}</a>
     </div>
 
     <div class='filters__group' hidden>
@@ -22,7 +22,7 @@
       <ul class='categories'>
         {% for category in categories %}
           <li>
-            <a href='{{ '/categories/' | relative }}{{ category.name | slug }}' class='category' style='background-color: {{ category.color }}'>{{ category.name }}</a>
+            <a href='{{ '/categories/' | relative: lang }}{{ category.name | slug }}' class='category' style='background-color: {{ category.color }}'>{{ category.name }}</a>
           </li>
         {% endfor %}
       </ul>
@@ -35,7 +35,7 @@
       <ul class='tags'>
         {% for tag in tags %}
           <li>
-            <a href='{{ '/tags/' | relative }}{{ tag.name | slug }}' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
+            <a href='{{ '/tags/' | relative: lang }}{{ tag.name | slug }}' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name }}</a>
           </li>
         {% endfor %}
       </ul>

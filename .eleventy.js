@@ -1,13 +1,13 @@
 const htmlmin = require('html-minifier')
 
-const { getRoot, getAssetLocation, translate } = require('./src/utils')
+const { getRoot, getRelativePath, getAssetLocation, translate } = require('./src/utils')
 
 const portfolio = require('./src/data/portfolio.json')
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addWatchTarget('./src/styles')
 
-  eleventyConfig.addFilter('relative', (value) => getRoot(portfolio.root) + value)
+  eleventyConfig.addFilter('relative', (path, lang) => getRelativePath(portfolio.root, path, lang))
 
   eleventyConfig.addFilter('asset', (asset) => `${getRoot(portfolio.root)}/assets/${asset}`)
 

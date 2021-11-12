@@ -7,7 +7,7 @@
   <main class='not-found'>
     <h1 class='not-found__title'>{{ title }}</h1>
 
-    <a href='{{ '/' | relative }}' class='not-found__link'>{{ link }}</a>
+    <a href='{{ '/' | relative: lang }}' class='not-found__link'>{{ link }}</a>
   </main>
 
   {% include components/footer %}
