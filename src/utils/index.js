@@ -10,7 +10,7 @@ const getAssetLocation = (root, assetType, asset) => {
   return asset
 }
 
-const translate = (locale, key) => translations[locale.toLowerCase()][key]
+const translate = (locale, key) => translations[locale][key]
 
 module.exports = {
   getRoot,

@@ -1,5 +1,5 @@
 {
-  "en-us": {
+  "en-US": {
     "categories": "Categories",
     "tags": "Tags",
     "links": "Links",
@@ -20,7 +20,7 @@
     "of": "of",
     "by": "by"
   },
-  "pt-br": {
+  "pt-BR": {
     "categories": "Categorias",
     "tags": "Tags",
     "links": "Links",
