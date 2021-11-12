@@ -28,6 +28,7 @@
 
     @at-root .area-title--project & {
       padding: 1.6rem;
+      font-size: 1.8rem;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -35,12 +36,17 @@
     }
   }
 
+  &__subtitle {
+    display: block;
+    margin-top: 0.8rem;
+  }
+
   &__description {
-    padding: 2.4rem;
+    padding: 2.4rem 4.8rem;
     overflow: hidden;
     background-color: var(--color-primary);
     color: var(--color-text-light);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
 
     @media (max-width: 320px) {
@@ -48,6 +54,7 @@
     }
 
     @at-root .area-title--project & {
+      padding: 2.4rem 3.2rem;
       flex: 1;
       display: flex;
       align-items: center;
