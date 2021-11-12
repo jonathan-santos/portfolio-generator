@@ -1,16 +1,16 @@
 <!DOCTYPE HTML>
 <html lang='{{ lang }}'>
 
-{% include components/head %}
+{% include components/head, title: filter.name %}
 
 <body>
   <main>
-    {% include components/area-title %}
+    {% include components/area-title, title: filter.name %}
 
-    {% include components/filters %}
+    {% include components/filters, type: filter-type, filter: filter %}
 
     <div class='projects-area'>
-      {% for project in portfolio.projects %}
+      {% for project in projects %}
         {% include components/project-preview %}
       {% endfor %}
     </div>

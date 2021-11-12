@@ -1,9 +1,10 @@
 ---
 lang: en-US
-layout: layouts/category
+layout: layouts/projects
 pagination:
   data: portfolio.categories
   size: 1
-  alias: category
-permalink: '/categories/{{ category.name | slug }}/'
+  alias: filter
+permalink: '/categories/{{ filter.name | slug }}/'
+filter-type: category
 ---

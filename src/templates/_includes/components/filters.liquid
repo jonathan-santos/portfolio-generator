@@ -7,8 +7,8 @@
 
       <span>{{ 'filter' | translate: lang }}</span>
       
-      {% if selected %}
-        :<span class='{{ selected }}' style='background-color: {{ filter.color }}'>{{ filter.name }}</span>
+      {% if filter-type %}
+        :<span class='{{ filter-type }}' style='background-color: {{ filter.color }}'>{{ filter.name }}</span>
       {% endif %}
     </label>
 

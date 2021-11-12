@@ -1,9 +1,10 @@
 ---
 lang: en-US
-layout: layouts/tag
+layout: layouts/projects
 pagination:
   data: portfolio.tags
   size: 1
-  alias: tag
-permalink: '/tags/{{ tag.name | slug }}/'
+  alias: filter
+permalink: '/tags/{{ filter.name | slug }}/'
+filter-type: tag
 ---
