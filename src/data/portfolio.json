@@ -12,6 +12,10 @@
     "background-dark": "#1A2A3A"
   },
   "i18n": {
+    "langs": [
+      "en-US",
+      "pt-BR"
+    ],
     "default": "en-US"
   },
   "categories": [
