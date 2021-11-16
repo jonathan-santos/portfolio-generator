@@ -5,6 +5,8 @@
 
 <body>
   <main>
+    {% include components/language-selector, selected: lang %}
+
     {% include components/area-title, title: filter.name %}
 
     {% include components/filters, type: filter-type, filter: filter %}

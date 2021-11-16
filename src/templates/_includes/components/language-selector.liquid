@@ -1,0 +1,17 @@
+<div class='language-selector'>
+  <span>Languages:</span>
+
+  <ul>
+    {% for language in portfolio.i18n.langs %}
+      {% if language == lang %}
+        {% assign li-class = 'selected' %}
+      {% else %}
+        {% assign li-class = '' %}
+      {% endif %}
+
+      <li class='{{ li-class }}'>
+        <a href='{{ '/' | relative: lang }}{{language}}'>{{ language }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
