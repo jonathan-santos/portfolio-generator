@@ -2,15 +2,16 @@
   "name": "Gerador de portfólios",
   "description": "Um projeto que gera um site de portfólio para você! Tudo o que você precisa é o configurar com arquivos json",
   "categories": [
-    { "name": "Sobremesa", "color": "red" },
-    { "name": "Vegetal", "color": "purple" }
+    { "id": 0, "name": "Sobremesa", "color": "red" },
+    { "id": 1, "name": "Vegetal", "color": "purple" }
   ],
   "tags": [
-    { "name": "Francês", "color": "green" },
-    { "name": "Brasileiro", "color": "blue" }
+    { "id": 0, "name": "Francês", "color": "green" },
+    { "id": 1, "name": "Brasileiro", "color": "blue" }
   ],
   "projects": [
     {
+      "id": 0,
       "name": "Projeto exemplo 1",
       "description": "O projeto exemplo 1 é um pudim",
       "category": "Sobremesa",
@@ -42,6 +43,7 @@
       ]
     },
     {
+      "id": 1,
       "name": "Projeto exemplo 2",
       "description": "O projeto exemplo 2 é Mandioca (ou Aipin ou Macaxeira para alguns)",
       "category": "Vegetal",
@@ -51,6 +53,7 @@
       }
     },
     {
+      "id": 2,
       "name": "Projeto exemplo 3",
       "category": "Vegetal",
       "tags": ["Francês"],

@@ -19,15 +19,16 @@
     "default": "en-US"
   },
   "categories": [
-    { "name": "Dessert", "color": "red" },
-    { "name": "Vegetable", "color": "purple" }
+    { "id": 0, "name": "Dessert", "color": "red" },
+    { "id": 1, "name": "Vegetable", "color": "purple" }
   ],
   "tags": [
-    { "name": "French", "color": "green" },
-    { "name": "Brazilian", "color": "blue" }
+    { "id": 0, "name": "French", "color": "green" },
+    { "id": 1, "name": "Brazilian", "color": "blue" }
   ],
   "projects": [
     {
+      "id": 0,
       "name": "Example project 1",
       "description": "My project 1 is actually a Pudding",
       "category": "Dessert",
@@ -57,6 +58,7 @@
       "videos": [{ "src": "https://kutt.it/7nbVKz" }]
     },
     {
+      "id": 1,
       "name": "Example project 2",
       "description": "My project 2 is actually Cassava (Mandioca para os brasileiros)",
       "category": "Vegetable",
@@ -66,6 +68,7 @@
       }
     },
     {
+      "id": 2,
       "name": "Example project 3",
       "category": "Vegetable",
       "tags": ["French"],
