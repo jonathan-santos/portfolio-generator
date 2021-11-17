@@ -16,7 +16,7 @@
   &:focus-within {
     outline: 0.25rem solid var(--color-text-light);
 
-    span,
+    .language-selector__title,
     li {
       position: initial;
       opacity: 1;
@@ -27,7 +27,7 @@
     }
   }
 
-  span,
+  &__title,
   li {
     position: absolute;
     opacity: 0;
@@ -37,9 +37,9 @@
     border: 0.25rem solid transparent;
     border-radius: 0.6rem;
 
-    &:hover,
-    &:active,
-    &:focus-within {
+    &:not(.selected):hover,
+    &:not(.selected):active,
+    &:not(.selected):focus-within {
       text-decoration: none;
       outline: solid 0.3rem var(--color-text-dark);
     }
@@ -48,10 +48,10 @@
       position: initial;
       opacity: 1;
     }
-  }
 
-  a {
-    outline: none;
-    text-decoration: none;
+    a {
+      outline: none;
+      text-decoration: none;
+    }
   }
 }
