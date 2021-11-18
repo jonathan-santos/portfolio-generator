@@ -14,7 +14,8 @@
   "i18n": {
     "langs": [
       "en-US",
-      "pt-BR"
+      "pt-BR",
+      "es-MX"
     ],
     "default": "en-US"
   },

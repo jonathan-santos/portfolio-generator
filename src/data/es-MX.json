@@ -1,24 +1,24 @@
 {
-  "name": "Gerador de portfólios",
-  "description": "Um projeto que gera um site de portfólio para você! Tudo o que você precisa é o configurar com arquivos json",
+  "name": "Generador de Portafolio",
+  "description": "¡Un proyecto que genera un sitio web de portafolio para ti! Todo lo que necesita es configurarlo con archivos json",
   "categories": [
-    { "id": 0, "name": "Sobremesa", "color": "red" },
+    { "id": 0, "name": "Postre", "color": "red" },
     { "id": 1, "name": "Vegetal", "color": "purple" }
   ],
   "tags": [
-    { "id": 0, "name": "Francês", "color": "green" },
-    { "id": 1, "name": "Brasileiro", "color": "blue" }
+    { "id": 0, "name": "francés", "color": "green" },
+    { "id": 1, "name": "brasileño", "color": "blue" }
   ],
   "projects": [
     {
       "id": 0,
-      "name": "Projeto exemplo 1",
-      "description": "O projeto exemplo 1 é um pudim",
-      "category": "Sobremesa",
+      "name": "Proyecto de ejemplo 1",
+      "description": "El proyecto de ejemplo 1 es un pudin",
+      "category": "Postre",
       "links": [
-        { "name": "Site", "url": "http://www.pudim.com.br" },
+        { "name": "Website", "url": "http://www.pudim.com.br" },
         {
-          "name": "Mais imagens de pudim no google",
+          "name": "Más imágenes de pudín en google",
           "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
         }
       ],
@@ -30,7 +30,7 @@
       "images": [
         {
           "src": "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg",
-          "alt": "Um pudim",
+          "alt": "Un pudín",
           "width": 1280,
           "height": 720
         },
@@ -44,19 +44,19 @@
     },
     {
       "id": 1,
-      "name": "Projeto exemplo 2",
-      "description": "O projeto exemplo 2 é Mandioca (ou Aipin ou Macaxeira para alguns)",
+      "name": "Proyecto de ejemplo 2",
+      "description": "El proyecto de ejemplo 2 es Cassava",
       "category": "Vegetal",
-      "tags": ["Brasileiro"],
+      "tags": ["brasileño"],
       "icon": {
         "src": "cassava.jpg"
       }
     },
     {
       "id": 2,
-      "name": "Projeto exemplo 3",
+      "name": "Proyecto de ejemplo 3",
       "category": "Vegetal",
-      "tags": ["Francês"],
+      "tags": ["francés"],
       "icon": {
         "src": "french-fries.jpg"
       },
