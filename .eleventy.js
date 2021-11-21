@@ -15,7 +15,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('video', (asset) => getAssetLocation(portfolio.root, 'video', asset))
 
-  eleventyConfig.addFilter('translate', (key, locale) => translate(locale, key))
+  eleventyConfig.addFilter('translate', (key, lang) => translate(key, lang))
 
   eleventyConfig.addShortcode('i18n-link', (url, lang, pageLang) => {
     if (lang === pageLang) {
