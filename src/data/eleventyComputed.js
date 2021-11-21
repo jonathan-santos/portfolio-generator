@@ -3,7 +3,7 @@ const { getPageLang } = require('../utils/translation')
 const getPortfolio = (data) => {
   const lang = getPageLang(data.page)
 
-  if (!lang || lang === data.portfolio.i18n.default) {
+  if (!lang || !data.portfolio.i18n || lang === data.portfolio.i18n.default) {
     return data.portfolio
   }
 
