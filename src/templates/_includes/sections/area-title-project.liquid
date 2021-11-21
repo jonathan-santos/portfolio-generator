@@ -8,13 +8,13 @@
   </div>
 
   <div class='area-title__category-and-tags'>
-    {% include project-categories-and-tags, links: true %}
+    {% include components/project-category-and-tags, links: true %}
   </div>
 
   <div class='area-title__icon'>
     <img
       src='{{ project.icon.src | img }}'
-      alt='{{ project.name }} icon'
+      alt='{{ project.name }} {{ 'icon' | translate: lang }}'
       width='{{ project.icon.width | default: '' }}'
       height='{{ project.icon.height | default: '' }}'>
   </div>

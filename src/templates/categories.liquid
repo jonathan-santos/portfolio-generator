@@ -1,34 +1,9 @@
 ---
+layout: layouts/projects-and-filters
 pagination:
   data: portfolio.categories
   size: 1
-  alias: category
-permalink: '/categories/{{ category.name | slug }}/'
+  alias: filter
+permalink: '{{ page.filePathStem }}/{{ filter.id }}/'
+filter-type: category
 ---
-
-<!DOCTYPE HTML>
-<html lang='en'>
-
-{% include head, title: category.name %}
-
-<body>
-  <main>
-    {% include back-button %}
-
-    {% include area-title, title: category.name %}
-
-    {% include filters, selected: 'category', filter: category %}
-
-    <div class='projects-area'>
-      {% for project in portfolio.projects %}
-        {% if project.category == category.name %}
-          {% include project-preview %}
-        {% endif %}
-      {% endfor %}
-    </div>
-  </main>
-
-  {% include footer %}
-</body>
-
-</html>

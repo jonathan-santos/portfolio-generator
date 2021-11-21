@@ -1,27 +1,14 @@
 const htmlmin = require('html-minifier')
 
-const portfolio = require('./src/data/portfolio.json')
+const addFilters = require('./src/eleventy/filters')
+const addShortcodes = require('./src/eleventy/shortcodes')
 
 module.exports = (eleventyConfig) => {
-  const getRoot = () => process.argv.includes('--serve') ? '' : portfolio.root
+  addFilters(eleventyConfig)
 
-  const getAssetLocation = (assetType, asset) => {
-    if (asset.search('http') == -1) {
-      return `${getRoot()}/assets/${assetType}/${asset}`
-    }
+  addShortcodes(eleventyConfig)
 
-    return asset
-  }
-  
   eleventyConfig.addWatchTarget('./src/styles')
-
-  eleventyConfig.addFilter('relative', (value) => getRoot() + value)
-
-  eleventyConfig.addFilter('asset', (asset) => `${getRoot()}/assets/${asset}`)
-
-  eleventyConfig.addFilter('img', (asset) => getAssetLocation('img', asset))
-
-  eleventyConfig.addFilter('video', (asset) => getAssetLocation('video', asset))
 
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' })
 

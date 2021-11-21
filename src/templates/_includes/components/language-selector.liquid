@@ -1,0 +1,11 @@
+{% if portfolio.i18n %}
+  <div class='language-selector'>
+    <span class='language-selector__title'>Languages:</span>
+
+    <ul>
+      {% for language in portfolio.i18n.langs %}
+        {% i18n-link page.url language lang %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

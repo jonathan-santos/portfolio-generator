@@ -1,16 +1,5 @@
-<!DOCTYPE HTML>
-<html lang='en'>
-
-{% include head %}
-
-<body>
-  <main class='not-found'>
-    <h1 class='not-found__title'>Page not found</h1>
-
-    <a href='{{ '/' | relative }}' class='not-found__link'>Go to home</a>
-  </main>
-
-  {% include footer %}
-</body>
-
-</html>
+---
+layout: layouts/not-found
+title: Not Found
+link: Go to home
+---

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang='{{ lang }}'>
+
+{% include sections/head, title: filter.name %}
+
+<body>
+  <main>
+    {% include components/language-selector, selected: lang %}
+
+    {% include sections/area-title, title: filter.name %}
+
+    {% include sections/filters, type: filter-type, filter: filter %}
+
+    <div class='projects-area'>
+      {% for project in projects %}
+        {% include components/project-preview %}
+      {% endfor %}
+    </div>
+  </main>
+
+  {% include sections/footer %}
+</body>
+
+</html>

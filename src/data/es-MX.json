@@ -1,0 +1,68 @@
+{
+  "name": "Generador de Portafolio",
+  "description": "¡Un proyecto que genera un sitio web de portafolio para ti! Todo lo que necesita es configurarlo con archivos json",
+  "categories": [
+    { "id": 0, "name": "Postre", "color": "red" },
+    { "id": 1, "name": "Vegetal", "color": "purple" }
+  ],
+  "tags": [
+    { "id": 0, "name": "francés", "color": "green" },
+    { "id": 1, "name": "brasileño", "color": "blue" }
+  ],
+  "projects": [
+    {
+      "id": 0,
+      "name": "Proyecto de ejemplo 1",
+      "description": "El proyecto de ejemplo 1 es un pudin",
+      "category": "Postre",
+      "links": [
+        { "name": "Website", "url": "http://www.pudim.com.br" },
+        {
+          "name": "Más imágenes de pudín en google",
+          "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
+        }
+      ],
+      "icon": {
+        "src": "pudding.jpg",
+        "width": 373,
+        "height": 280
+      },
+      "images": [
+        {
+          "src": "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg",
+          "alt": "Un pudín",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "src": "https://www.yummytummyaarthi.com/wp-content/uploads/2017/08/1-9.jpg"
+        }
+      ],
+      "videos": [
+        { "src": "https://kutt.it/7nbVKz" }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Proyecto de ejemplo 2",
+      "description": "El proyecto de ejemplo 2 es Cassava",
+      "category": "Vegetal",
+      "tags": ["brasileño"],
+      "icon": {
+        "src": "cassava.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Proyecto de ejemplo 3",
+      "category": "Vegetal",
+      "tags": ["francés"],
+      "icon": {
+        "src": "french-fries.jpg"
+      },
+      "videos": [
+        { "youtube": "https://www.youtube.com/embed/CpGwrfOzCA0?start=21" }
+      ]
+    }
+  ]
+}

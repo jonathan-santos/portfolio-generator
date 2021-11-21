@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html lang='{{ lang }}'>
+
+{% include sections/head %}
+
+<body>
+  <main class='not-found'>
+    <h1 class='not-found__title'>{{ title }}</h1>
+
+    <a href='{{ '/' | relative: lang }}' class='not-found__link'>{{ link }}</a>
+  </main>
+
+  {% include sections/footer %}
+</body>
+
+</html>
