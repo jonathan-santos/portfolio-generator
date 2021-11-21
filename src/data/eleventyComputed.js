@@ -1,4 +1,4 @@
-const { getPageLang } = require('../utils')
+const { getPageLang } = require('../utils/translation')
 
 const getPortfolio = (data) => {
   const lang = getPageLang(data.page)
@@ -11,11 +11,11 @@ const getPortfolio = (data) => {
 }
 
 module.exports = {
+  lang: (data) => getPageLang(data.page),
   name: (data) => getPortfolio(data).name,
   description: (data) => getPortfolio(data).description,
   categories: (data) => getPortfolio(data).categories,
   tags: (data) => getPortfolio(data).tags,
-  lang: (data) => getPageLang(data.page),
   projects: (data) => {
     let projects = getPortfolio(data).projects
 
