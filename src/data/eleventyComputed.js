@@ -1,9 +1,13 @@
+const { getPageLang } = require('../utils')
+
 const getPortfolio = (data) => {
-  if (!data.lang || data.lang === data.portfolio.i18n.default) {
+  const lang = getPageLang(data.page)
+
+  if (!lang || lang === data.portfolio.i18n.default) {
     return data.portfolio
   }
 
-  return data[data.lang]
+  return data[lang]
 }
 
 module.exports = {
@@ -11,6 +15,7 @@ module.exports = {
   description: (data) => getPortfolio(data).description,
   categories: (data) => getPortfolio(data).categories,
   tags: (data) => getPortfolio(data).tags,
+  lang: (data) => getPageLang(data.page),
   projects: (data) => {
     let projects = getPortfolio(data).projects
 
