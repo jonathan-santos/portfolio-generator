@@ -19,11 +19,24 @@ const getAssetLocation = (root, assetType, asset) => {
   return asset
 }
 
-const translate = (locale, key) => translations[locale][key]
+const getPageLang = (page) => {
+  const filePathSeparated = page.filePathStem.split('/').filter(u => u !== '')
+
+  if (filePathSeparated.length === 1) {
+    return portfolio.i18n.default
+  } else {
+    return filePathSeparated[0]
+  }
+}
+
+const translate = (key, lang) => {
+  return translations[lang][key]
+}
 
 module.exports = {
   getRoot,
   getRelativePath,
   getAssetLocation,
-  translate
+  translate,
+  getPageLang
 }
