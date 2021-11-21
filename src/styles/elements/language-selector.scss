@@ -47,6 +47,10 @@
     &.selected {
       position: initial;
       opacity: 1;
+
+      span {
+        text-decoration: underline;
+      }
     }
 
     a {
