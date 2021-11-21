@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang='{{ lang }}'>
 
-{% include components/head, title: project.name %}
+{% include sections/head, title: project.name %}
 
 <body>
   <main class='page-project'>
@@ -9,12 +9,12 @@
 
     {% include components/language-selector, selected: lang %}
 
-    {% include components/area-title-project %}
+    {% include sections/area-title-project %}
 
-    {% include components/project-content %}
+    {% include sections/project-content %}
   </main>
 
-  {% include components/footer %}
+  {% include sections/footer %}
 </body>
 
 <script>

@@ -1,15 +1,15 @@
 <!DOCTYPE HTML>
 <html lang='{{ lang }}'>
 
-{% include components/head, title: filter.name %}
+{% include sections/head, title: filter.name %}
 
 <body>
   <main>
     {% include components/language-selector, selected: lang %}
 
-    {% include components/area-title, title: filter.name %}
+    {% include sections/area-title, title: filter.name %}
 
-    {% include components/filters, type: filter-type, filter: filter %}
+    {% include sections/filters, type: filter-type, filter: filter %}
 
     <div class='projects-area'>
       {% for project in projects %}
@@ -18,7 +18,7 @@
     </div>
   </main>
 
-  {% include components/footer %}
+  {% include sections/footer %}
 </body>
 
 </html>

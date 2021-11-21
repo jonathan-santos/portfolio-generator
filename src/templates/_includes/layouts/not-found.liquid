@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang='{{ lang }}'>
 
-{% include components/head %}
+{% include sections/head %}
 
 <body>
   <main class='not-found'>
@@ -10,7 +10,7 @@
     <a href='{{ '/' | relative: lang }}' class='not-found__link'>{{ link }}</a>
   </main>
 
-  {% include components/footer %}
+  {% include sections/footer %}
 </body>
 
 </html>
