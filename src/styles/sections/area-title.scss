@@ -79,10 +79,13 @@
 
   &__category-and-tags {
     position: absolute;
-    left: 0.3rem;
-    bottom: 0.3rem;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.2rem;
     display: flex;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   &__details {
@@ -90,5 +93,6 @@
     order: 2;
     display: flex;
     flex-direction: column;
+    z-index: 1;
   }
 }

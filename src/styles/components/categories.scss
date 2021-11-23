@@ -8,9 +8,9 @@
 }
 
 .category {
-	border: 0.25rem solid rgba(255,255,255,0.35);
+	border: 0.25rem solid rgba(0, 0, 0, 0.5);
 	border-radius: 0.4rem;
-	padding: 0.6rem;
+	padding: 0.5rem;
 	background-color: var(--color-primary);
 	color: var(--color-text-light);
 	font-size: 1.4rem;
@@ -20,18 +20,16 @@
   text-shadow: -0.05rem 0 black, 0 0.05rem black, 0.05rem 0 black, 0 -0.05rem black;
 	cursor: pointer;
 
-  @at-root .project-preview & {
-    border-width: 0.1rem 0.1rem 0 0;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
   &:hover,
   &:active,
   &:focus {
+    border-color: rgba(0, 0, 0, 1);
     filter: grayscale(20%) contrast(125%);
-    border-color: rgba(0, 0, 0, 0.5);
-    outline: solid 0.1rem rgba(0, 0, 0, 0.5);
+    outline: solid 0.1rem rgba(0, 0, 0, 1);
+  }
+
+  @at-root .project-preview & {
+    border-color: rgba(255,255,255,0.35)
   }
 
   &--singular {
