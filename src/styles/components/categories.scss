@@ -28,8 +28,19 @@
     outline: solid 0.1rem rgba(0, 0, 0, 1);
   }
 
-  @at-root .project-preview & {
-    border-color: rgba(255,255,255,0.35)
+  @at-root {
+    .project-preview &,
+    .area-title__category-and-tags & {
+      border-color: rgba(255,255,255,0.35);
+    }
+
+    .area-title__category-and-tags & {
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: white;
+      }
+    }
   }
 
   &--singular {
