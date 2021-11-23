@@ -3,7 +3,7 @@
     <input type='checkbox' id='are-filters-visible' hidden aria-hidden='true'>
 
     <label for='are-filters-visible' class='filters__selected' aria-label='{{ 'active-filter' | translate: lang }}: {{ selected | default: 'none' }} {{ filter.name }}' tabindex='0'>
-      <img class='filters__arrow' src='{{ 'arrow.svg' | img }}' alt='{{ 'arrow-icon' | translate: lang }}' width='12' height='18'>
+      <img class='filters__arrow' src='{{ 'icons/arrow.svg' | asset }}' alt='{{ 'arrow-icon' | translate: lang }}' width='12' height='18'>
 
       <span>{{ 'filter' | translate: lang }}</span>
       
