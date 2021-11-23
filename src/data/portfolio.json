@@ -12,11 +12,7 @@
     "background-dark": "#1A2A3A"
   },
   "i18n": {
-    "langs": [
-      "en-US",
-      "pt-BR",
-      "es-MX"
-    ],
+    "langs": ["en-US", "pt-BR", "es-MX"],
     "default": "en-US"
   },
   "categories": [
@@ -33,18 +29,18 @@
       "name": "Example project 1",
       "description": "My project 1 is actually a Pudding",
       "category": "Dessert",
-      "links": [
-        { "name": "website", "url": "http://www.pudim.com.br" },
-        {
-          "name": "More images of pudding at google",
-          "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
-        }
-      ],
       "icon": {
         "src": "pudding.jpg",
         "width": 373,
         "height": 280
       },
+      "links": [
+        { "text": "website", "url": "http://www.pudim.com.br" },
+        {
+          "text": "More images of pudding at google",
+          "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
+        }
+      ],
       "images": [
         {
           "src": "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg",

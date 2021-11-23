@@ -5,7 +5,7 @@
     <ul class='project-content__links'>
       {% for link in project.links %}
         <li>
-          <a href='{{ link.url }}' rel='noopener' target='_blank' aria-label='{{ link.name }}, {{ 'external-link' | translate: lang }}'>{{ link.name | capitalize }}</a>
+          <a href='{{ link.url }}' rel='noopener' target='_blank' aria-label='{{ link.text }}, {{ 'external-link' | translate: lang }}'>{{ link.text | capitalize }}</a>
         </li>
       {% endfor %}
     </ul>

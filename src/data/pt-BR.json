@@ -16,9 +16,9 @@
       "description": "O projeto exemplo 1 é um pudim",
       "category": "Sobremesa",
       "links": [
-        { "name": "Site", "url": "http://www.pudim.com.br" },
+        { "text": "Site", "url": "http://www.pudim.com.br" },
         {
-          "name": "Mais imagens de pudim no google",
+          "text": "Mais imagens de pudim no google",
           "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
         }
       ],
