@@ -26,6 +26,10 @@ module.exports = (eleventyConfig) => {
     return content
   })
 
+  eleventyConfig.setBrowserSyncConfig({
+    port: 3000
+  })
+
   return {
     dir: {
       input: 'src/templates',
