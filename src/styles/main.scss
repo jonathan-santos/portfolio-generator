@@ -1,14 +1,15 @@
 @import './global';
 
-@import './sections/filters';
-@import './sections/projects-area';
+@import './components/back-button';
+@import './components/categories';
+@import './components/language-selector';
+@import './components/project-category-and-tags';
+@import './components/project-preview';
+@import './components/tags';
+
 @import './sections/area-title';
+@import './sections/filters';
 @import './sections/footer';
 @import './sections/not-found';
 @import './sections/project-content';
-
-@import './components/tags';
-@import './components/categories';
-@import './components/language-selector';
-@import './components/back-button';
-@import './components/project-preview';
+@import './sections/projects-area';

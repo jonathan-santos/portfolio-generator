@@ -1,0 +1,28 @@
+.project-category-and-tags {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  &__item {
+    display: inline-flex;
+    list-style: none;
+
+    & + & {
+      margin-left: 0.4rem;
+    }
+  }
+
+  @at-root .area-title & {
+    flex-wrap: wrap;
+
+    &__item {
+      margin-bottom: 0.4rem;
+
+      & + & {
+        margin-left: 0.4rem;
+      }
+    }
+  }
+}

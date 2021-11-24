@@ -1,19 +1,21 @@
-{% for category in categories %}
-  {% if category.name == project.category %}
-    {% if links == true %}
-      <a href='{{ '/categories' | relative: lang }}/{{ category.id }}#{{ category.name | slug }}/' class='category category--singular' style='background-color: {{ category.color }}'>{{ category.name | capitalize }}</a>
-    {% else %}
-      <span class='category category--singular' style='background-color: {{ category.color }}'>{{ category.name | capitalize }}</span>
+<ul class='project-category-and-tags'>
+  {% for category in categories %}
+    {% if category.name == project.category %}
+      <li class='project-category-and-tags__item'>
+        {% if links == true %}
+          <a href='{{ '/categories' | relative: lang }}/{{ category.id }}#{{ category.name | slug }}/' class='category' style='background-color: {{ category.color }}'>{{ category.name | capitalize }}</a>
+        {% else %}
+          <span class='category' style='background-color: {{ category.color }}'>{{ category.name | capitalize }}</span>
+        {% endif %}
+      </li>
     {% endif %}
-  {% endif %}
-{% endfor %}
+  {% endfor %}
 
-{% if project.tags.length > 0 %}
-  <ul class='tags'>
+  {% if project.tags.length > 0 %}
     {% for tag in tags %}
       {% for projTag in project.tags %}
         {% if tag.name == projTag %}
-          <li>
+          <li class='project-category-and-tags__item'>
             {% if links == true %}
               <a href='{{ '/tags' | relative: lang }}/{{ tag.id }}#{{ tag.name | slug }}' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name | capitalize }}</a>
             {% else %}
@@ -23,5 +25,5 @@
         {% endif %}
       {% endfor %}
     {% endfor %}
-  </ul>
-{% endif %}
+  {% endif %}
+</ul>
