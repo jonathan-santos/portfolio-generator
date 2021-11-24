@@ -4,16 +4,21 @@
   right: 0.8rem;
   border: 0.3rem solid var(--color-text-dark);
   border-radius: 0.8rem;
-  padding: 0.6rem;
+  padding: 0.3rem;
   background-color: var(--color-background-light);
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  @media (min-width: 720px) {
+    padding: 0.6rem;
+  }
+
   &:hover,
   &:active,
   &:focus-within {
+    padding: 0.8rem;
     outline: 0.25rem solid var(--color-text-light);
 
     .language-selector__title,
