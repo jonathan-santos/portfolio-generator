@@ -2,26 +2,16 @@
   {% for category in categories %}
     {% if category.name == project.category %}
       <li class='project-category-and-tags__item'>
-        {% if links == true %}
-          <a href='{{ '/categories' | relative: lang }}/{{ category.id }}#{{ category.name | slug }}/' class='category' style='background-color: {{ category.color }}'>{{ category.name | capitalize }}</a>
-        {% else %}
-          <span class='category' style='background-color: {{ category.color }}'>{{ category.name | capitalize }}</span>
-        {% endif %}
+        {% include components/category, class: 'project-category-and-tags__item', renderAsLink: renderAsLinks %}
       </li>
     {% endif %}
   {% endfor %}
 
   {% if project.tags.length > 0 %}
     {% for tag in tags %}
-      {% for projTag in project.tags %}
-        {% if tag.name == projTag %}
-          <li class='project-category-and-tags__item'>
-            {% if links == true %}
-              <a href='{{ '/tags' | relative: lang }}/{{ tag.id }}#{{ tag.name | slug }}' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name | capitalize }}</a>
-            {% else %}
-              <span class='tag' style='background-color: {{ tag.color }}'>{{ tag.name | capitalize }}</span>
-            {% endif %}
-          </li>
+      {% for projectTag in project.tags %}
+        {% if tag.name == projectTag %}
+          {% include components/tag, class: 'project-category-and-tags__item', renderAsLink: renderAsLinks %}
         {% endif %}
       {% endfor %}
     {% endfor %}
