@@ -1,21 +1,25 @@
 <div class='area-title area-title--project'>
-  <div class='area-title__details'>
-    <h1 class='area-title__title' role='text'>{{ project.name }}</h1>
+  <h1 class='area-title__title' role='text'>
+    <span class='area-title__subtitle'>{{ project.name }}</span>
+  </h1>
 
-    {% if project.description %}
-      <p class='area-title__description'>{{ project.description }}</p>
-    {% endif %}
-  </div>
-
-  <div class='area-title__category-and-tags'>
-    {% include components/project-category-and-tags, links: true %}
-  </div>
-
-  <div class='area-title__icon'>
-    <img
-      src='{{ project.icon.src | img }}'
-      alt='{{ project.name }} {{ 'icon' | translate: lang }}'
-      width='{{ project.icon.width | default: '' }}'
-      height='{{ project.icon.height | default: '' }}'>
+  <div class='area-title__horizontal-container'>
+    <div class='area-title__details'>
+      {% if project.description %}
+        <p class='area-title__description'>{{ project.description }}</p>
+      {% endif %}
+  
+      <div class='area-title__category-and-tags'>
+        {% include components/project-category-and-tags, links: true %}
+      </div>
+    </div>
+  
+    <div class='area-title__icon'>
+      <img
+        src='{{ project.icon.src | img }}'
+        alt='{{ project.name }} {{ 'icon' | translate: lang }}'
+        width='{{ project.icon.width | default: '' }}'
+        height='{{ project.icon.height | default: '' }}'>
+    </div>
   </div>
  </div>
