@@ -40,11 +40,11 @@
     &:hover,
     &:active,
     &:focus {
-      filter: brightness(90%);
+      filter: brightness(95%);
 
       .category {
         border-color: var(--color-text-dark);
-        filter: brightness(200%) contrast(150%);
+        filter: brightness(120%) contrast(150%);
       }
     }
 
