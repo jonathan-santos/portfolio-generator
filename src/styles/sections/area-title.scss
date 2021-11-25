@@ -1,13 +1,56 @@
 .area-title {
-  color: var(--color-text-dark);
   text-align: center;
 
+  &--project {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto;
+
+    .area-title__title {
+      grid-column: 1;
+      border-right: 0.1rem solid var(--color-text-light);
+    }
+
+    .area-title__details {
+      grid-column: 1;
+      grid-row: 2;
+      border-right: 0.1rem solid var(--color-text-light);
+      justify-self: stretch;
+    }
+
+    .area-title__description {
+      padding: 2.4rem 3.2rem;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 720px) {
+        min-height: 12.8rem;
+      }
+    }
+
+    .area-title__icon {
+      grid-column: 2;
+      grid-row: span 2;
+      align-self: stretch;
+      justify-self: stretch;
+
+      @media (min-width: 720px) {
+        max-height: 32rem;
+      }
+    }
+  }
+
   &__title {
-    position: relative;
-    padding: 4.8rem 0;
+    padding: 4.8rem 1.6rem;
     color: var(--color-text-light);
     font-size: 2.4rem;
     background-color: var(--color-background-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     @media (min-width: 720px) {
       font-size: 3.2rem;
@@ -26,22 +69,6 @@
     color: var(--color-text-light);
     font-size: 1.6rem;
     font-weight: bold;
-
-    @media (max-width: 320px) {
-      font-size: 1.6rem;
-    }
-
-    @at-root .area-title--project & {
-      padding: 2.4rem 3.2rem;
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      @media (max-width: 720px) {
-        min-height: 12.8rem;
-      }
-    }
   }
 
   &__icon {
@@ -53,20 +80,11 @@
       height: 100%;
       object-fit: cover;
     }
-
-    @media (min-width: 720px) {
-      max-width: 25%;
-    }
   }
 
   &__category-and-tags {
     background-color: var(--color-background-dark);
     padding: 0.6rem 0.6rem 0.2rem 0.6rem;
-  }
-
-  &__horizontal-container {
-    border-top: 0.1rem solid var(--color-background-light);
-    display: flex;
   }
 
   &__details {
@@ -76,7 +94,8 @@
     display: flex;
     flex-direction: column;
 
-    & > *:first-child:nth-last-child(1) {
+    & > .area-title__category-and-tags:first-child:nth-last-child(1) {
+      border-top: 0.1rem solid var(--color-text-light);
       flex: 1;
     }
   }
