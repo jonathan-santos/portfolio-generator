@@ -18,15 +18,17 @@
 </body>
 
 <script>
-  document.querySelectorAll('.project-content__images li')
-    .forEach(function (li) {
-      li.children[0].tabIndex = '0'
-      li.children[0].classList.remove('no-interaction')
-
-      li.addEventListener('click', function() {
-        li.requestFullscreen({ navigationUI: 'show' })
+  if (document.fullscreenEnabled) {
+    document.querySelectorAll('.project-content__images li')
+      .forEach(function (li) {
+        li.children[0].tabIndex = '0'
+        li.children[0].classList.remove('no-interaction')
+  
+        li.addEventListener('click', function() {
+          li.requestFullscreen({ navigationUI: 'show' })
+        })
       })
-    })
+  }
 </script>
 
 </html>
