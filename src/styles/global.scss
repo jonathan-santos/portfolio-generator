@@ -14,16 +14,17 @@ html {
   min-height: 100vh;
   position: relative;
   scroll-behavior: smooth;
+  background-color: var(--color-background-dark);
 }
 
 body {
-  background-color: var(--color-background-light);
   color: var(--color-text-dark);
   font-size: 1.6rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 main {
+  background-color: var(--color-background-light);
 	min-height: 100%;
 	padding-bottom: 16rem;
 }
