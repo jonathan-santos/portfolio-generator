@@ -1,8 +1,8 @@
 {% if portfolio.filters %}
   <div class='filters'>
-    <input type='checkbox' id='are-filters-visible' hidden aria-hidden='true'>
+    <input type='checkbox' id='are-filters-visible' hidden aria-hidden='true' tabindex='-1'>
 
-    <label for='are-filters-visible' class='filters__selected' aria-label='{{ 'active-filter' | translate: lang }}: {{ selected | default: 'none' }} {{ filter.name }}' tabindex='0'>
+    <label for='are-filters-visible' class='filters__selected' role='text' aria-label='{{ 'active-filter' | translate: lang }}: {{ selected | default: 'none' }} {{ filter.name }}' tabindex='-1'>
       <img class='filters__arrow' src='{{ 'icons/arrow.svg' | asset }}' alt='{{ 'arrow-icon' | translate: lang }}' width='12' height='18'>
 
       <span>{{ 'filter' | translate: lang }}</span>
@@ -12,11 +12,11 @@
       {% endif %}
     </label>
 
-    <div class='filters__group' hidden>
+    <div class='filters__group'>
       <a href='{{ '/' | relative: lang }}' class='category' style='background-color: grey'>{{ 'no-filter' | translate: lang }}</a>
     </div>
 
-    <div class='filters__group' hidden>
+    <div class='filters__group'>
       <span>{{ 'categories' | translate: lang }}: </span>
 
       <ul class='categories'>
@@ -27,7 +27,7 @@
 
     </div>
 
-    <div class='filters__group' hidden>
+    <div class='filters__group'>
       <span>{{ 'tags' | translate: lang }}: </span>
 
       <ul class='tags'>
