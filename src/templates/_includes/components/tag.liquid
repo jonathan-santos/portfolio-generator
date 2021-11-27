@@ -1,6 +1,6 @@
 <li class='{{ class | default: '' }}'>
   {% if renderAsLink == true %}
-    <a href='{{ '/tags' | relative: lang }}/{{ tag.id }}#{{ tag.name | slug }}' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name | capitalize }}</a>
+    <a href='{{ '/tags' | relative: lang }}/{{ tag.id }}' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name | capitalize }}</a>
   {% else %}
     <span class='tag' style='background-color: {{ tag.color }}'>{{ tag.name | capitalize }}</span>
   {% endif %}
