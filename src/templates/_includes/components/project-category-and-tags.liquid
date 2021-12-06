@@ -1,9 +1,7 @@
 <ul class='project-category-and-tags'>
   {% for category in categories %}
     {% if category.id == project.category %}
-      <li class='project-category-and-tags__item'>
-        {% include components/category, class: 'project-category-and-tags__item', renderAsLink: renderAsLinks %}
-      </li>
+      {% include components/category, class: 'project-category-and-tags__item', renderAsLink: renderAsLinks %}
     {% endif %}
   {% endfor %}
 
