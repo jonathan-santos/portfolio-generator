@@ -12,7 +12,7 @@
   </label>
 
   {% if filter-type %}
-    <div class='filters__group'>
+    <div class='filters__group filters__group--no-filter'>
       <a href='{{ '/' | relative: lang }}' class='category' style='background-color: grey'>{{ 'no-filter' | translate: lang }}</a>
     </div>
   {% endif %}

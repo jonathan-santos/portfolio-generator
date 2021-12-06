@@ -58,13 +58,22 @@
   }
 
   #are-filters-visible:checked ~ &__group,
-  &__group:focus-within  {
+  &__group:focus-within {
     height: initial;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.25);
     padding: 1.2rem 1.6rem;
-  
+
     @media (min-width: 720px) {
       padding: 1.2rem var(--desktop-horizontal-content-padding);
+    }
+  }
+
+  #are-filters-visible:checked ~ &__group--no-filter,
+  &__group--no-filter:focus-within {
+    padding: 0.5rem 1.6rem;
+
+    @media (min-width: 720px) {
+      padding: 0.5rem var(--desktop-horizontal-content-padding);
     }
   }
 }
