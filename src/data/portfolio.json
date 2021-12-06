@@ -28,7 +28,7 @@
       "id": 0,
       "name": "Example project 1",
       "description": "My project 1 is actually a Pudding",
-      "category": "Dessert",
+      "category": 0,
       "icon": {
         "src": "pudding.jpg",
         "width": 373,
@@ -58,8 +58,8 @@
       "id": 1,
       "name": "Example project 2",
       "description": "My project 2 is actually Cassava (Mandioca para os brasileiros)",
-      "category": "Vegetable",
-      "tags": ["Brazilian"],
+      "category": 1,
+      "tags": [1],
       "icon": {
         "src": "cassava.jpg"
       }
@@ -67,8 +67,8 @@
     {
       "id": 2,
       "name": "Example project 3",
-      "category": "Vegetable",
-      "tags": ["French"],
+      "category": 1,
+      "tags": [0],
       "icon": {
         "src": "french-fries.jpg"
       },

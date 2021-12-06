@@ -1,6 +1,6 @@
 <ul class='project-category-and-tags'>
   {% for category in categories %}
-    {% if category.name == project.category %}
+    {% if category.id == project.category %}
       <li class='project-category-and-tags__item'>
         {% include components/category, class: 'project-category-and-tags__item', renderAsLink: renderAsLinks %}
       </li>
@@ -10,7 +10,7 @@
   {% if project.tags.length > 0 %}
     {% for tag in tags %}
       {% for projectTag in project.tags %}
-        {% if tag.name == projectTag %}
+        {% if tag.id == projectTag %}
           {% include components/tag, class: 'project-category-and-tags__item', renderAsLink: renderAsLinks %}
         {% endif %}
       {% endfor %}

@@ -20,9 +20,9 @@ module.exports = {
     let projects = getPortfolio(data).projects
 
     if (data['filter-type'] === 'category') {
-      projects = projects.filter(project => project.category === data.filter.name)
+      projects = projects.filter(project => project.category === data.filter.id)
     } else if (data['filter-type'] === 'tag') {
-      projects = projects.filter(project => project.tags && project.tags.includes(data.filter.name))
+      projects = projects.filter(project => project.tags && project.tags.includes(data.filter.id))
     }
 
     return projects
