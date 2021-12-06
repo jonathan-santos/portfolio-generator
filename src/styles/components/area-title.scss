@@ -9,6 +9,10 @@
     .area-title__title {
       grid-column: 1;
       border-right: 0.1rem solid var(--color-text-light);
+
+      &--no-details {
+        grid-row: span 2;
+      }
     }
 
     .area-title__details {

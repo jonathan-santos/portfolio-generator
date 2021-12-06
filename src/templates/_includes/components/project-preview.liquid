@@ -15,8 +15,12 @@
       <p class='project-preview__description'>{{ project.description }}</p>
     </div>
 
-    <div class='project-preview__bottom'>
-      {% include components/project-category-and-tags %}
-    </div>
+    {% if portfolio.filters %}
+      {% if project.category or project.tags %}
+        <div class='project-preview__bottom'>
+          {% include components/project-category-and-tags %}
+        </div>
+      {% endif %}
+    {% endif %}
   </figcaption>
 </a>

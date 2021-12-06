@@ -1,14 +1,22 @@
 <div class='area-title area-title--project'>
-  <h1 class='area-title__title' role='text'>{{ project.name }}</h1>
+  {% if project.description or project.category or project.tags %}
+    <h1 class='area-title__title' role='text'>{{ project.name }}</h1>
+  {% else %}
+    <h1 class='area-title__title area-title__title--no-details' role='text'>{{ project.name }}</h1>
+  {% endif %}
 
   <div class='area-title__details'>
     {% if project.description %}
       <p class='area-title__description'>{{ project.description }}</p>
     {% endif %}
 
-    <div class='area-title__category-and-tags'>
-      {% include components/project-category-and-tags, renderAsLinks: true %}
-    </div>
+    {% if portfolio.filters %}
+      {% if project.category or project.tags %}
+        <div class='area-title__category-and-tags'>
+          {% include components/project-category-and-tags, renderAsLinks: true %}
+        </div>
+      {% endif %}
+    {% endif %}
   </div>
 
   <div class='area-title__icon'>
