@@ -26,6 +26,7 @@
     filter: grayscale(20%) contrast(125%);
     border-color: rgba(0, 0, 0, 1);
     outline: solid 0.1rem rgba(0, 0, 0, 1);
+    outline-offset: 0;
   }
 
   @at-root {
