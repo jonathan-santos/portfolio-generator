@@ -26,12 +26,13 @@
   p > a {
     border: 0.25rem solid transparent;
     border-radius: 0.6rem;
+    outline: solid 0.3rem transparent; /* "default" invisible outine necessary for safari */
 
     &:hover,
     &:active,
     &:focus {
       text-decoration: none;
-      outline: solid 0.3rem var(--color-text-light);
+      outline-color: var(--color-text-light);
     }
   }
 
