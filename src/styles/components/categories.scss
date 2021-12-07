@@ -24,7 +24,7 @@
   &:active,
   &:focus {
     border-color: rgba(0, 0, 0, 1);
-    filter: grayscale(20%) contrast(125%);
+    filter: grayscale(20%);
     outline: solid 0.1rem rgba(0, 0, 0, 1);
     outline-offset: 0;
   }

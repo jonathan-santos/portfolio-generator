@@ -23,7 +23,7 @@
   &:hover,
   &:active,
   &:focus {
-    filter: grayscale(20%) contrast(125%);
+    filter: grayscale(20%);
     border-color: rgba(0, 0, 0, 1);
     outline: solid 0.1rem rgba(0, 0, 0, 1);
     outline-offset: 0;
