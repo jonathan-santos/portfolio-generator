@@ -6,6 +6,10 @@
   justify-items: stretch;
   gap: 0.8rem;
 
+  @supports not (aspect-ratio: 1 / 1) {
+    grid-auto-rows: 0.5fr;
+  }
+
   @media (min-width: 720px) {
     padding: 1.6rem var(--desktop-horizontal-content-padding);
     gap: 1.6rem;
