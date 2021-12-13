@@ -3,7 +3,7 @@
 
   &--project {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: minmax(60%, 1.5fr) auto;
     grid-template-rows: auto;
 
     .area-title__title {
@@ -75,8 +75,12 @@
     font-weight: bold;
   }
 
+  &__category-and-tags {
+    background-color: var(--color-background-dark);
+    padding: 0.6rem 0.6rem 0.2rem 0.6rem;
+  }
+
   &__icon {
-    flex: 1;
     overflow: hidden;
 
     img {
@@ -84,11 +88,6 @@
       height: 100%;
       object-fit: cover;
     }
-  }
-
-  &__category-and-tags {
-    background-color: var(--color-background-dark);
-    padding: 0.6rem 0.6rem 0.2rem 0.6rem;
   }
 
   &__details {
