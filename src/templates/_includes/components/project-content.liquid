@@ -19,7 +19,7 @@
         {% if image.alt %}
           {% assign imgAlt = image.alt %}
         {% else %}
-          {% assign imgAlt = 'Image ' | append: forloop.index | append: ' {{ 'of' | translate: lang }} ' | append: project.name %}
+          {% assign imgAlt = 'Image ' | append: forloop.index | append: ' - ' | append: project.name %}
         {% endif %}
 
         <li>
