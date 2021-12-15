@@ -14,7 +14,7 @@
   {% if project.images %}
     <h2 class='project-content__title'>{{ 'images' | translate: lang }}</h2>
 
-    <ul class='project-content__images'>
+    <ul class='project-content__images' data-children-count="{{ project.images.length }}">
       {% for image in project.images %}
         {% if image.alt %}
           {% assign imgAlt = image.alt %}
@@ -39,7 +39,7 @@
   {% if project.videos %}
     <h2 class='project-content__title'>{{ 'videos' | translate: lang }}</h2>
 
-    <ul class='project-content__videos'>
+    <ul class='project-content__videos' data-children-count="{{ project.videos.length }}">
       {% for video in project.videos %}
         <li>
           {% if video.youtube %}
