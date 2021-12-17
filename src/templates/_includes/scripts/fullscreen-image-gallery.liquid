@@ -1,0 +1,79 @@
+<script>
+  var imagesContainer = document.querySelector('.project-content__images')
+  var images, currentImage
+
+  function enterCurrentImageInFullScreen() {
+    imagesContainer.requestFullscreen()
+    images[currentImage].classList.add('fullscreen')
+  }
+
+  function removeFullScreenFromCurrentImage() {
+    images[currentImage].classList.remove('fullscreen')
+  }
+
+  function changeFullScreenImageToPrevious() {
+    removeFullScreenFromCurrentImage()
+
+    if (currentImage - 1 > -1) {
+      currentImage -= 1
+    } else {
+      currentImage = images.length - 1
+    }
+
+    enterCurrentImageInFullScreen()
+  }
+
+  function changeFullScreenImageToNext() {
+    removeFullScreenFromCurrentImage()
+
+    if (currentImage + 1 < images.length) {
+      currentImage += 1
+    } else {
+      currentImage = 0
+    }
+
+    enterCurrentImageInFullScreen()
+  }
+
+  if (document.fullscreenEnabled) {
+    images = document.querySelectorAll('.project-content__images li img')
+    images.forEach(function (img, i) {
+      img.classList.remove('no-interaction')
+
+      img.addEventListener('click', function(e) {
+        if (document.fullscreenElement) {
+          changeFullScreenImageToNext()
+        } else {
+          currentImage = i
+          enterCurrentImageInFullScreen()
+        }
+      })
+    })
+
+    document.getElementById('close').addEventListener('click', function() {
+      document.exitFullscreen()
+
+      setTimeout(function () {
+        removeFullScreenFromCurrentImage()
+      }, 1000)
+    })
+
+    document.getElementById('previous').addEventListener('click', function() {
+      changeFullScreenImageToPrevious()
+    })
+
+    document.getElementById('next').addEventListener('click', function() {
+      changeFullScreenImageToNext()
+    })
+
+    document.addEventListener('keyup', function (e) {
+      if (document.fullscreenElement) {
+        if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === ' ') {
+          changeFullScreenImageToPrevious()
+        } else if (e.key === 'ArrowRight' || e.key === 'd') {
+          changeFullScreenImageToNext()
+        }
+      }
+    })
+  }
+</script>
