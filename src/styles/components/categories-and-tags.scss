@@ -1,16 +1,19 @@
+.categories,
 .tags {
   display: flex;
+  flex-wrap: wrap;
 
   li {
+    display: inline-flex;
     list-style: none;
-    margin-right: 0.6rem;
+    margin: 0.3rem 0.6rem 0.3rem 0;
   }
 }
 
+.category,
 .tag {
 	border: 0.25rem solid rgba(0, 0, 0, 0.5);
-	border-radius: 1.4rem;
-	padding: 0.4rem 0.6rem;
+	padding: 0.5rem;
 	background-color: var(--color-primary);
 	color: var(--color-text-light);
 	font-size: 1.4rem;
@@ -23,8 +26,8 @@
   &:hover,
   &:active,
   &:focus {
-    filter: grayscale(20%);
     border-color: rgba(0, 0, 0, 1);
+    filter: grayscale(20%);
     outline: solid 0.1rem rgba(0, 0, 0, 1);
     outline-offset: 0;
   }
@@ -43,4 +46,12 @@
       }
     }
   }
+}
+
+.category {
+	border-radius: 0.4rem;
+}
+
+.tag {
+	border-radius: 1.4rem;
 }
