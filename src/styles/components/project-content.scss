@@ -150,5 +150,16 @@
     #next {
       right: var(--border-distance);
     }
+
+    &[data-children-count="1"] {
+      img.fullscreen {
+        cursor: initial;
+      }
+      
+      #previous,
+      #next {
+        display: none;
+      }
+    }
   }
 }
