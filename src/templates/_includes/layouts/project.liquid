@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang='{{ lang }}'>
 
-{% include sections/head, title: project.name %}
+{% include components/head, title: project.name %}
 
 <body>
   <main class='page-project'>
@@ -9,24 +9,14 @@
 
     {% include components/language-selector, selected: lang %}
 
-    {% include sections/area-title-project %}
+    {% include components/area-title-project %}
 
-    {% include sections/project-content %}
+    {% include components/project-content %}
   </main>
 
-  {% include sections/footer %}
+  {% include components/footer %}
+
+  {% include scripts/fullscreen-image-gallery %}
 </body>
-
-<script>
-  document.querySelectorAll('.project-content__images li')
-    .forEach(function (li) {
-      li.children[0].tabIndex = '0'
-      li.children[0].classList.remove('no-interaction')
-
-      li.addEventListener('click', function() {
-        li.requestFullscreen({ navigationUI: 'show' })
-      })
-    })
-</script>
 
 </html>

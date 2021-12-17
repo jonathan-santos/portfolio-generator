@@ -1,15 +1,19 @@
 <!DOCTYPE HTML>
 <html lang='{{ lang }}'>
 
-{% include sections/head, title: filter.name %}
+{% include components/head, title: filter.name %}
 
 <body>
   <main>
     {% include components/language-selector, selected: lang %}
 
-    {% include sections/area-title, title: filter.name %}
+    {% include components/area-title-default, title: filter.name %}
 
-    {% include sections/filters, type: filter-type, filter: filter %}
+    {% if portfolio.filters %}
+      {% if portfolio.categories.length > 0 or portfolio.tags.length > 0 %}
+        {% include components/filters, type: filter-type, filter: filter %}
+      {% endif %}
+    {% endif %}
 
     <div class='projects-area'>
       {% for project in projects %}
@@ -18,7 +22,7 @@
     </div>
   </main>
 
-  {% include sections/footer %}
+  {% include components/footer %}
 </body>
 
 </html>

@@ -14,11 +14,11 @@
       "id": 0,
       "name": "Proyecto de ejemplo 1",
       "description": "El proyecto de ejemplo 1 es un pudin",
-      "category": "Postre",
+      "category": 0,
       "links": [
-        { "name": "Website", "url": "http://www.pudim.com.br" },
+        { "text": "Website", "url": "http://www.pudim.com.br" },
         {
-          "name": "Más imágenes de pudín en google",
+          "text": "Más imágenes de pudín en google",
           "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
         }
       ],
@@ -46,8 +46,8 @@
       "id": 1,
       "name": "Proyecto de ejemplo 2",
       "description": "El proyecto de ejemplo 2 es Cassava",
-      "category": "Vegetal",
-      "tags": ["brasileño"],
+      "category": 1,
+      "tags": [1],
       "icon": {
         "src": "cassava.jpg"
       }
@@ -55,8 +55,8 @@
     {
       "id": 2,
       "name": "Proyecto de ejemplo 3",
-      "category": "Vegetal",
-      "tags": ["francés"],
+      "category": 1,
+      "tags": [0],
       "icon": {
         "src": "french-fries.jpg"
       },

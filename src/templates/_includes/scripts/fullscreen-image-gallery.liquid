@@ -1,0 +1,88 @@
+<script>
+  var imagesContainer = document.querySelector('.project-content__images')
+  var images, currentImage
+
+  function registerEventListeners() {
+    if (document.fullscreenEnabled) {
+      images = document.querySelectorAll('.project-content__images li img')
+
+      images.forEach(function (img, imgIndex) {
+        img.classList.remove('no-interaction')
+
+        img.addEventListener('click', function () {
+          onImageClick(imgIndex)
+        })
+      })
+      
+      document.getElementById('close').addEventListener('click', exitFullScreen)
+      
+      document.getElementById('previous').addEventListener('click', setPreviousImageFullScreen)
+      
+      document.getElementById('next').addEventListener('click', setNextImageFullScreen)
+
+      document.addEventListener('keyup', onKeyPressed)
+    }
+  }
+
+  function onImageClick(imgIndex) {
+    if (!document.fullscreenElement) {
+      currentImage = imgIndex
+      setCurrentImageFullScreen()
+      imagesContainer.requestFullscreen()
+    } else {
+      setNextImageFullScreen()
+    }
+  }
+
+  function exitFullScreen() {
+    document.exitFullscreen()
+
+    setTimeout(function () {
+      unsetCurrentImageFullScreen()
+    }, 250)
+  }
+
+  function setCurrentImageFullScreen() {
+    images[currentImage].classList.add('fullscreen')
+  }
+
+  function unsetCurrentImageFullScreen() {
+    images[currentImage].classList.remove('fullscreen')
+  }
+
+  function setPreviousImageFullScreen() {
+    unsetCurrentImageFullScreen()
+
+    if (currentImage + 1 < images.length) {
+      currentImage += 1
+    } else {
+      currentImage = 0
+    }
+
+    setCurrentImageFullScreen()
+  }
+
+  function setNextImageFullScreen() {
+    unsetCurrentImageFullScreen()
+
+    if (currentImage - 1 > -1) {
+      currentImage -= 1
+    } else {
+      currentImage = images.length - 1
+    }
+
+    setCurrentImageFullScreen()
+  }
+
+  function onKeyPressed(e) {
+    if (document.fullscreenElement) {
+      if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === ' ') {
+        setPreviousImageFullScreen()
+      } else if (e.key === 'ArrowRight' || e.key === 'd') {
+        setNextImageFullScreen()
+      }
+    }
+  }
+
+  registerEventListeners()
+</script>

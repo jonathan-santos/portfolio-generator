@@ -5,7 +5,7 @@
     <ul class='project-content__links'>
       {% for link in project.links %}
         <li>
-          <a href='{{ link.url }}' rel='noopener' target='_blank' aria-label='{{ link.name }}, {{ 'external-link' | translate: lang }}'>{{ link.name | capitalize }}</a>
+          <a href='{{ link.url }}' rel='noopener' target='_blank' aria-label='{{ link.text }}, {{ 'external-link' | translate: lang }}'>{{ link.text | capitalize }}</a>
         </li>
       {% endfor %}
     </ul>
@@ -14,12 +14,12 @@
   {% if project.images %}
     <h2 class='project-content__title'>{{ 'images' | translate: lang }}</h2>
 
-    <ul class='project-content__images'>
+    <ul class='project-content__images' data-children-count='{{ project.images.length }}'>
       {% for image in project.images %}
         {% if image.alt %}
           {% assign imgAlt = image.alt %}
         {% else %}
-          {% assign imgAlt = 'Image ' | append: forloop.index | append: ' {{ 'of' | translate: lang }} ' | append: project.name %}
+          {% assign imgAlt = 'Image ' | append: forloop.index | append: ' - ' | append: project.name %}
         {% endif %}
 
         <li>
@@ -32,14 +32,22 @@
         </li>
       {% endfor %}
 
-      <!-- <li><img src='{{ project.images[0].src | img }}'></li> -->
+      <button id='close' hidden tabindex='-1' aria-hidden='true'>&#9747</button>
+
+      <button id='previous' hidden tabindex='-1' aria-hidden='true'>
+        <img src='{{ 'icons/arrow.svg' | asset }}' alt='{{ 'arrow-icon' | translate: lang }}' width='12' height='18'>
+      </button>
+
+      <button id='next' hidden tabindex='-1' aria-hidden='true'>
+        <img src='{{ 'icons/arrow.svg' | asset }}' alt='{{ 'arrow-icon' | translate: lang }}' width='12' height='18'>
+      </button>
     </ul>
   {% endif %}
 
   {% if project.videos %}
     <h2 class='project-content__title'>{{ 'videos' | translate: lang }}</h2>
 
-    <ul class='project-content__videos'>
+    <ul class='project-content__videos' data-children-count='{{ project.videos.length }}'>
       {% for video in project.videos %}
         <li>
           {% if video.youtube %}

@@ -1,21 +1,24 @@
 .back-button {
-	position: fixed;
-  left: 0.8rem;
-  top: 0.8rem;
-  width: 3.6rem;
-  height: 3.6rem;
+	position: absolute;
+  left: 0.4rem;
+  top: 0.4rem;
   border: 0.3rem solid var(--color-text-dark);
-  border-radius: 100%;
+  padding: 0.4rem;
+  border-radius: 0.8rem;
   background-color: var(--color-background-light);
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+
+  @media (min-width: 720px) {
+    padding: 0.6rem;
+  }
 
   &:hover,
   &:active,
   &:focus {
-    filter: contrast(150%);
     outline: 0.25rem solid var(--color-text-light);
   }
 

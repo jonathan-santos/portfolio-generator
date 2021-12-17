@@ -8,15 +8,14 @@
     "primary": "#0074D9",
     "text-light": "#FFFFFF",
     "text-dark": "#333333",
-    "background-light": "#EEEEEE",
+    "background-light": "#FFFFFF",
     "background-dark": "#1A2A3A"
   },
+  "styles": {
+    "project-preview-aspect-ratio": "1"
+  },
   "i18n": {
-    "langs": [
-      "en-US",
-      "pt-BR",
-      "es-MX"
-    ],
+    "langs": ["en-US", "pt-BR", "es-MX"],
     "default": "en-US"
   },
   "categories": [
@@ -32,19 +31,19 @@
       "id": 0,
       "name": "Example project 1",
       "description": "My project 1 is actually a Pudding",
-      "category": "Dessert",
-      "links": [
-        { "name": "website", "url": "http://www.pudim.com.br" },
-        {
-          "name": "More images of pudding at google",
-          "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
-        }
-      ],
+      "category": 0,
       "icon": {
         "src": "pudding.jpg",
         "width": 373,
         "height": 280
       },
+      "links": [
+        { "text": "website", "url": "http://www.pudim.com.br" },
+        {
+          "text": "More images of pudding at google",
+          "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
+        }
+      ],
       "images": [
         {
           "src": "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg",
@@ -62,8 +61,8 @@
       "id": 1,
       "name": "Example project 2",
       "description": "My project 2 is actually Cassava (Mandioca para os brasileiros)",
-      "category": "Vegetable",
-      "tags": ["Brazilian"],
+      "category": 1,
+      "tags": [1],
       "icon": {
         "src": "cassava.jpg"
       }
@@ -71,8 +70,8 @@
     {
       "id": 2,
       "name": "Example project 3",
-      "category": "Vegetable",
-      "tags": ["French"],
+      "category": 1,
+      "tags": [0],
       "icon": {
         "src": "french-fries.jpg"
       },

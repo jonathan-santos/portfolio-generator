@@ -1,0 +1,7 @@
+<li class='{{ class | default: '' }}'>
+  {% if renderAsLink == true %}
+    <a href='{{ '/tags' | relative: lang }}/{{ tag.id }}' class='tag' style='background-color: {{ tag.color }}'>{{ tag.name | capitalize }}</a>
+  {% else %}
+    <span class='tag' style='background-color: {{ tag.color }}'>{{ tag.name | capitalize }}</span>
+  {% endif %}
+</li>

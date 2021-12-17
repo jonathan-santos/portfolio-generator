@@ -14,11 +14,11 @@
       "id": 0,
       "name": "Projeto exemplo 1",
       "description": "O projeto exemplo 1 é um pudim",
-      "category": "Sobremesa",
+      "category": 0,
       "links": [
-        { "name": "Site", "url": "http://www.pudim.com.br" },
+        { "text": "Site", "url": "http://www.pudim.com.br" },
         {
-          "name": "Mais imagens de pudim no google",
+          "text": "Mais imagens de pudim no google",
           "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
         }
       ],
@@ -46,8 +46,8 @@
       "id": 1,
       "name": "Projeto exemplo 2",
       "description": "O projeto exemplo 2 é Mandioca (ou Aipin ou Macaxeira para alguns)",
-      "category": "Vegetal",
-      "tags": ["Brasileiro"],
+      "category": 1,
+      "tags": [1],
       "icon": {
         "src": "cassava.jpg"
       }
@@ -55,8 +55,8 @@
     {
       "id": 2,
       "name": "Projeto exemplo 3",
-      "category": "Vegetal",
-      "tags": ["Francês"],
+      "category": 1,
+      "tags": [0],
       "icon": {
         "src": "french-fries.jpg"
       },

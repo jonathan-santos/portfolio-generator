@@ -1,0 +1,105 @@
+.area-title {
+  text-align: center;
+
+  &--project {
+    display: grid;
+    grid-template-columns: minmax(60%, 1.5fr) auto;
+    grid-template-rows: auto;
+
+    .area-title__title {
+      grid-column: 1;
+      border-right: 0.1rem solid var(--color-text-light);
+
+      &--no-details {
+        grid-row: span 2;
+      }
+    }
+
+    .area-title__details {
+      grid-column: 1;
+      grid-row: 2;
+      border-right: 0.1rem solid var(--color-text-light);
+      justify-self: stretch;
+    }
+
+    .area-title__description {
+      padding: 2.4rem 3.2rem;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 720px) {
+        min-height: 12.8rem;
+      }
+    }
+
+    .area-title__icon {
+      grid-column: 2;
+      grid-row: span 2;
+      align-self: stretch;
+      justify-self: stretch;
+
+      @media (min-width: 720px) {
+        max-height: 32rem;
+      }
+    }
+  }
+
+  &__title {
+    padding: 4.8rem 1.6rem;
+    color: var(--color-text-light);
+    font-size: 2.4rem;
+    background-color: var(--color-background-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 720px) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    margin-top: 0.8rem;
+  }
+
+  &__description {
+    padding: 2.4rem 4.8rem;
+    overflow: hidden;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  &__category-and-tags {
+    background-color: var(--color-background-dark);
+    padding: 0.6rem 0.6rem 0.2rem 0.6rem;
+  }
+
+  &__icon {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__details {
+    flex: 1;
+    min-width: 60%;
+    border-left: 0.1rem solid var(--color-background-dark);
+    display: flex;
+    flex-direction: column;
+
+    & > .area-title__category-and-tags:first-child:nth-last-child(1) {
+      border-top: 0.1rem solid var(--color-text-light);
+      flex: 1;
+    }
+  }
+}

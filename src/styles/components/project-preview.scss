@@ -5,6 +5,7 @@
   overflow: hidden;
   background-color: #000;
   text-align: center;
+  aspect-ratio: var(--project-preview-aspect-ratio);
 
   &:hover,
   &:active,
@@ -63,8 +64,8 @@
   }
 
   &__bottom {
+    padding-top: 0.4rem;
     justify-content: flex-start;
-    background-color: transparent;
   }
 
   &__name,

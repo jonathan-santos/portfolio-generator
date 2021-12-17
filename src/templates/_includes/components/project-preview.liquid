@@ -1,4 +1,4 @@
-<a href='{{ '/projects' | relative: lang }}/{{ project.id }}#{{ project.name | slug }}' class='project-preview'>
+<a href='{{ '/projects' | relative: lang }}/{{ project.id }}' class='project-preview'>
   <img
     src='{{ project.icon.src | img }}'
     alt='{{ project.name }} {{ 'icon' | translate: lang }}'
@@ -15,8 +15,12 @@
       <p class='project-preview__description'>{{ project.description }}</p>
     </div>
 
-    <div class='project-preview__bottom'>
-      {% include components/project-category-and-tags %}
-    </div>
+    {% if portfolio.filters %}
+      {% if project.category or project.tags %}
+        <div class='project-preview__bottom'>
+          {% include components/project-category-and-tags %}
+        </div>
+      {% endif %}
+    {% endif %}
   </figcaption>
 </a>
