@@ -2,29 +2,56 @@
   var imagesContainer = document.querySelector('.project-content__images')
   var images, currentImage
 
-  function enterCurrentImageInFullScreen() {
-    imagesContainer.requestFullscreen()
+  function registerEventListeners() {
+    if (document.fullscreenEnabled) {
+      images = document.querySelectorAll('.project-content__images li img')
+
+      images.forEach(function (img, imgIndex) {
+        img.classList.remove('no-interaction')
+
+        img.addEventListener('click', function () {
+          onImageClick(imgIndex)
+        })
+      })
+      
+      document.getElementById('close').addEventListener('click', exitFullScreen)
+      
+      document.getElementById('previous').addEventListener('click', setPreviousImageFullScreen)
+      
+      document.getElementById('next').addEventListener('click', setNextImageFullScreen)
+
+      document.addEventListener('keyup', onKeyPressed)
+    }
+  }
+
+  function onImageClick(imgIndex) {
+    if (!document.fullscreenElement) {
+      currentImage = imgIndex
+      setCurrentImageFullScreen()
+      imagesContainer.requestFullscreen()
+    } else {
+      setNextImageFullScreen()
+    }
+  }
+
+  function exitFullScreen() {
+    document.exitFullscreen()
+
+    setTimeout(function () {
+      unsetCurrentImageFullScreen()
+    }, 1000)
+  }
+
+  function setCurrentImageFullScreen() {
     images[currentImage].classList.add('fullscreen')
   }
 
-  function removeFullScreenFromCurrentImage() {
+  function unsetCurrentImageFullScreen() {
     images[currentImage].classList.remove('fullscreen')
   }
 
-  function changeFullScreenImageToPrevious() {
-    removeFullScreenFromCurrentImage()
-
-    if (currentImage - 1 > -1) {
-      currentImage -= 1
-    } else {
-      currentImage = images.length - 1
-    }
-
-    enterCurrentImageInFullScreen()
-  }
-
-  function changeFullScreenImageToNext() {
-    removeFullScreenFromCurrentImage()
+  function setPreviousImageFullScreen() {
+    unsetCurrentImageFullScreen()
 
     if (currentImage + 1 < images.length) {
       currentImage += 1
@@ -32,48 +59,30 @@
       currentImage = 0
     }
 
-    enterCurrentImageInFullScreen()
+    setCurrentImageFullScreen()
   }
 
-  if (document.fullscreenEnabled) {
-    images = document.querySelectorAll('.project-content__images li img')
-    images.forEach(function (img, i) {
-      img.classList.remove('no-interaction')
+  function setNextImageFullScreen() {
+    unsetCurrentImageFullScreen()
 
-      img.addEventListener('click', function(e) {
-        if (document.fullscreenElement) {
-          changeFullScreenImageToNext()
-        } else {
-          currentImage = i
-          enterCurrentImageInFullScreen()
-        }
-      })
-    })
+    if (currentImage - 1 > -1) {
+      currentImage -= 1
+    } else {
+      currentImage = images.length - 1
+    }
 
-    document.getElementById('close').addEventListener('click', function() {
-      document.exitFullscreen()
+    setCurrentImageFullScreen()
+  }
 
-      setTimeout(function () {
-        removeFullScreenFromCurrentImage()
-      }, 1000)
-    })
-
-    document.getElementById('previous').addEventListener('click', function() {
-      changeFullScreenImageToPrevious()
-    })
-
-    document.getElementById('next').addEventListener('click', function() {
-      changeFullScreenImageToNext()
-    })
-
-    document.addEventListener('keyup', function (e) {
-      if (document.fullscreenElement) {
-        if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === ' ') {
-          changeFullScreenImageToPrevious()
-        } else if (e.key === 'ArrowRight' || e.key === 'd') {
-          changeFullScreenImageToNext()
-        }
+  function onKeyPressed(e) {
+    if (document.fullscreenElement) {
+      if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === ' ') {
+        setPreviousImageFullScreen()
+      } else if (e.key === 'ArrowRight' || e.key === 'd') {
+        setNextImageFullScreen()
       }
-    })
+    }
   }
+
+  registerEventListeners()
 </script>
