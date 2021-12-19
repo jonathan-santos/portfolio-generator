@@ -1,32 +1,76 @@
 # Portfolio generator
-Created using [Eleventy](https://www.11ty.dev/).
+
+A project that generates a portfolio site for you! All generated from a single json file. Created using [Eleventy](https://www.11ty.dev/).
+
+## Table of contents
+
+- [Portfolios built with it](#portfolios-built-with-it)
+- [How to use it](#how-to-use-it)
+- [Portfolio.json](#portfolio.json)
 
 ## Portfolios built with it
-- Example portfolio (https://jhow.io/portfolio-generator/public/)
-- [Jhow Santos](https://twitter.com/pipocacafeinada) (https://portfolio.jhow.io)
+
+- [Example portfolio](https://jhow.io/portfolio-generator) (The default one created by this portfolio)
+
+- [Jonathan Santos](https://portfolio.jhow.io) )
 
 ## How to use it
-1. Edit the `portfolio.json` inside the `data` folder with information about your projects and yourself.
-2. Run the command `npm start` to build the project and access `localhost:8080` to see how it turned out.
-3. If it is good, just publish the `public` folder to any static site server, like [github pages](https://pages.github.com/) or [fast.io](https://fast.io).
+
+0. Have [`node.js`](https://nodejs.org) installed in your computer (Preferably version 12 or higher)
+
+1. Fork and `git clone` the repository
+
+2. Run the command `npm install` to install the `npm` dependencies in the project
+
+3. Edit the `portfolio.json` inside the `src/data` folder with information about your projects and yourself
+
+4. Define if you want to have multiple languages in your portfolio:
+
+    4.1. If you don't want multiple languages, delete `src/data/pt-BR.json`, `src/data/es-MX.json`, `src/templates/pt-BR/` and `src/templates/es-MX`
+
+    4.2. If you want multiple languages, create (or modify current) language versions of your `portfolio.json` in `src/data` (for example the `pt-BR.json` or `es-MX`) and update the folders in `src/templates` (for example, you want a french version? Duplicate the `pt-BR/` folder, rename it to `fr-FR` and edit their contents)
+
+5. See the resulting website running the command `npm start`, access the resulting website in [`localhost:3000`](http://localhost:3000)
+
+6. Liked the result? Then you have two options for deploying the website:
+
+    6.1. [`Github Pages(Easy)`] Deploy the repository in a github repository ([like this](https://github.com/jonathan-santos/portfolio)), Change the `src/data/portfolio.json` property `root` to `portfolio` ([like this](https://github.com/jonathan-santos/portfolio/raw???)), and then in your computer run the command `npm run deploy`
+
+    6.2. [Deploy yourself] Run the command `npm run build`, it will build all the static website files in the folder `public`, you can then copy the folder content and deploy it to different places to deploy your portfolio (many free by the way):
+      - [Netifly](https://www.netlify.com/)
+      - [Github pages - Manually](https://pages.github.com/)
+      - [Amazon S3](https://aws.amazon.com/free/webapps/?trk=ps_a134p000006gXwDAAU)
+      - [Your own dev server](https://kutt.it/7nbVKz)
+
+7. And for the most important step, share your published portfolio, do it in [linkedin](https://linkedin.com), in your github profile, in your [twitter](https://twitter.com) or any other place you like. But please share it with me, I'd like to see it and, if you would like it, to add in this `README`, I'll be happy to do it 👍
 
 ## Portfolio.json
+
 The different properties from it and it's values:
+
 | Property               | Value   | What it does                                                                                                  | Example                               |
 |:-----------------------|:--------|:--------------------------------------------------------------------------------------------------------------|:--------------------------------------|
-| name                   | Text    | Name that appears at the top of the home page                                                                 | Jonathan                              |
-| description            | Text    | Text that appears bellow the name of home page                                                                | Hello there! This is my portfolio     |
+| name                   | Text    | Name that appears at the top of the home page and title of the resulting website                              | Jonathan                              |
+| description            | Text    | Text that appears bellow the name of home page and description of the resulting website                       | Hello there! This is my portfolio     |
 | showFooter             | Boolean | If the default footer should appear                                                                           | true                                  |
-| tagsFiltering          | Boolean | If the tags filtering option should appear at the homepage                                                    | true                                  |
+| filters                | Boolean | If the categories and tags filtering system should be activated                                               | true                                  |
 | root                   | Text    | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | /portfolio                            |
-| colors                 | Object  | Object that houses the properties that control the colors throught the site                                   | See the properties below              |
-| colors/primary         | Color   | The color used in accents and backgrounds of important places throught the site                               | #bf1cff                               |
-| colors/textLight       | Color   | The color used in the light text throught the site                                                            | #eeeeee                               |
-| colors/textDark        | Color   | The color used in the dark text throught the site                                                             | #333333                               |
-| colors/backgroundLight | Color   | The color used in the light backgrounds throught the site                                                     | #eeeeee                               |
-| colors/backgroundDark  | Color   | The color used in the dark backgrounds throught the site                                                      | #1a2a3a                               |
-| tags                   | List    | The tags that projects can use for identification and filtering                                               | See the [Tags](#tags) section         |
-| projects               | List    | The projects of the portfolio                                                                                 | See the [Projects](#projects) section |
+| colors                 | Object  | Object that contains the colors used in the website                                                           | ?                                     |
+| styles                 | Object  | Object that contains some styles configuration used in the website                                            | ?                                     |
+| i18n                   | Object  | Object that contains internationalization configuration                                                       | ?                                     |
+| categories             | List    | The categories that projects can use for identification and filtering                                         | ?                                     |
+| tags                   | List    | The tags that projects can use for identification and filtering                                               | ?                                     |
+| projects               | List    | The projects of the portfolio                                                                                 | ?                                     |
+
+### Colors
+### Styles
+### i18n
+### Categories
+### Tags
+### Projects
+#### Images
+#### Links
+#### Videos
 
 ### Tags
 The properties possible for each tag:
