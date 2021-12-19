@@ -8,7 +8,6 @@ A project that generates a portfolio site for you! All generated from a single j
 - [How to use it](#how-to-use-it)
 - [Portfolio.json](#portfoliojson)
   - [Colors](#Colors)
-  - [Styles](#Styles)
   - [i18n](#i18n)
   - [Categories](#Categories)
   - [Tags](#Tags)
@@ -98,11 +97,26 @@ Example:
 },
 ```
 
-
-
-
-### Styles
 ### i18n
+
+Object containg the different styles used in the resulting website, each style affects a different aspect of the resulting website.
+
+| NOTE: Each language should be represented by [`ISO 639-1`](https://www.andiamo.co.uk/resources/iso-language-codes) codes, with the second part being UPPERCASE
+
+| Property | Value     | What it does                                                | Example                     |
+|:---------|:----------|:------------------------------------------------------------|:----------------------------|
+| langs    | List/Text | The different languages the resulting website should output | ['es-MX', 'pt-BR', 'en-US'] |
+| default  | Text      | The language used in the root of the website                | en-US                       |
+
+Example:
+
+``` json
+"i18n": {
+  "langs": ["en-US", "pt-BR", "es-MX"],
+  "default": "en-US"
+},
+```
+
 ### Categories
 ### Tags
 
