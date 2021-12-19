@@ -5,7 +5,13 @@
   overflow: hidden;
   background-color: #000;
   text-align: center;
-  aspect-ratio: var(--project-preview-aspect-ratio);
+  aspect-ratio: 1;
+
+  @supports not (aspect-ratio: 1 / 1) {
+    > * {
+      height: var(--project-min-width);
+    }
+  }
 
   &:hover,
   &:active,
