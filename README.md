@@ -6,13 +6,23 @@ A project that generates a portfolio site for you! All generated from a single j
 
 - [Portfolios built with it](#portfolios-built-with-it)
 - [How to use it](#how-to-use-it)
-- [Portfolio.json](#portfolio.json)
+- [Portfolio.json](#portfoliojson)
+  - [Colors](#Colors)
+  - [Styles](#Styles)
+  - [i18n](#i18n)
+  - [Categories](#Categories)
+  - [Tags](#Tags)
+  - [Projects](#Projects)
+  - [Images](#Images)
+  - [Links](#Links)
+  - [Videos](#Videos)
+  - [Projects](#Projects)
 
 ## Portfolios built with it
 
 - [Example portfolio](https://jhow.io/portfolio-generator) (The default one created by this portfolio)
 
-- [Jonathan Santos](https://portfolio.jhow.io) )
+- [Jonathan Santos](https://portfolio.jhow.io)
 
 ## How to use it
 
@@ -46,40 +56,68 @@ A project that generates a portfolio site for you! All generated from a single j
 
 ## Portfolio.json
 
-The different properties from it and it's values:
+The file `src/data/portfolio.json` is the file used to configure how the resulting website will be, from colors and styles, to categories and projects, all is in this file (and the different languages like `pt-BR.json` or `es-MX.json`).
 
-| Property               | Value   | What it does                                                                                                  | Example                               |
-|:-----------------------|:--------|:--------------------------------------------------------------------------------------------------------------|:--------------------------------------|
-| name                   | Text    | Name that appears at the top of the home page and title of the resulting website                              | Jonathan                              |
-| description            | Text    | Text that appears bellow the name of home page and description of the resulting website                       | Hello there! This is my portfolio     |
-| showFooter             | Boolean | If the default footer should appear                                                                           | true                                  |
-| filters                | Boolean | If the categories and tags filtering system should be activated                                               | true                                  |
-| root                   | Text    | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | /portfolio                            |
-| colors                 | Object  | Object that contains the colors used in the website                                                           | ?                                     |
-| styles                 | Object  | Object that contains some styles configuration used in the website                                            | ?                                     |
-| i18n                   | Object  | Object that contains internationalization configuration                                                       | ?                                     |
-| categories             | List    | The categories that projects can use for identification and filtering                                         | ?                                     |
-| tags                   | List    | The tags that projects can use for identification and filtering                                               | ?                                     |
-| projects               | List    | The projects of the portfolio                                                                                 | ?                                     |
+Here is the reference for the properties and values it accepts:
+
+| Property               | Value   | What it does                                                                                                  | Example                                            |
+|:-----------------------|:--------|:--------------------------------------------------------------------------------------------------------------|:---------------------------------------------------|
+| name                   | Text    | Name that appears at the top of the home page and title of the resulting website                              | Jonathan                                           |
+| description            | Text    | Text that appears bellow the name of home page and description of the resulting website                       | Hello there! This is my portfolio                  |
+| showFooter             | Boolean | If the default footer should appear                                                                           | true                                               |
+| filters                | Boolean | If the categories and tags filtering system should be activated                                               | true                                               |
+| root                   | Text    | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | /portfolio                                         |
+| colors                 | Object  | Object that contains the colors used in the website                                                           | See bellow the [`colors`](#colors) section         |
+| styles                 | Object  | Object that contains some styles configuration used in the website                                            | See bellow the [`styles`](#styles) section         |
+| i18n                   | Object  | Object that contains internationalization configuration                                                       | See bellow the [`i18n`](#i18n) section             |
+| categories             | List    | The categories that projects can use for identification and filtering                                         | See bellow the [`categories`](#categories) section |
+| tags                   | List    | The tags that projects can use for identification and filtering                                               | See bellow the [`tags`](#tags) section             |
+| projects               | List    | The projects of the portfolio                                                                                 | See bellow the [`projects`](#projects) section     |
 
 ### Colors
+
+Object containg the different colors used in the resulting website, each color is a CSS color, so you can use `Hex`, `RGB` or `HSL`.
+
+| Property         | Value  | What it does                                        | Example            |
+|:-----------------|:-------|:----------------------------------------------------|:-------------------|
+| primary          | Color  | The accent color used in various website locations  | #0074D9            |
+| text-light       | Color  | The color used by text in dark backgrounds          | rgb(255, 255, 255) |
+| text-dark        | Color  | The color used by text in light backgrounds         | hsl(0, 0, 20)      |
+| background-light | Color  | The color used in light backgrounds                 | #FFFFFF            |
+| background-dark  | Color  | TThe color used in dark backgrounds                 | rgb(26, 42, 58)    |
+
+Example:
+
+``` json
+"colors": {
+  "primary": "#0074D9",
+  "text-light": "#FFFFFF",
+  "text-dark": "#333333",
+  "background-light": "#FFFFFF",
+  "background-dark": "#1A2A3A"
+},
+```
+
+
+
+
 ### Styles
 ### i18n
 ### Categories
 ### Tags
+
+The properties for each tag:
+
+| Property | Value  | What it does               | Example |
+|:---------|:-------|:---------------------------|:--------|
+| id       | Number | The identifier of the tag  | Web     |
+| name     | Text   | The name of the tag        | Web     |
+| color    | Color  | The color of the tag       | #0074D9 |
+
 ### Projects
 #### Images
 #### Links
 #### Videos
-
-### Tags
-The properties possible for each tag:
-
-| Property | Value | What it does         | Example |
-|:---------|:------|:---------------------|:--------|
-| name     | Text  | The name of the tag  | Web     |
-| color    | Color | The color of the tag | #43e0d3 |
-
 ### Projects
 The properties possible for each project:
 
