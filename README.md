@@ -58,30 +58,30 @@ The file `src/data/portfolio.json` is the file used to configure how the resulti
 
 Here is the reference for the properties and values it accepts:
 
-| Property               | Required | Value         | What it does                                                                                                  | Example                                            |
-|:-----------------------|:--------:|:--------------|:--------------------------------------------------------------------------------------------------------------|:---------------------------------------------------|
-| name                   | Yes      | Text          | Name that appears at the top of the home page and title of the resulting website                              | Jonathan                                           |
-| description            | No       | Text          | Text that appears bellow the name of home page and description of the resulting website                       | Hello there! This is my portfolio                  |
-| showFooter             | No       | Boolean       | If the default footer should appear                                                                           | true                                               |
-| filters                | No       | Boolean       | If the categories and tags filtering system should be activated                                               | true                                               |
-| root                   | No       | Text          | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | /portfolio                                         |
-| colors                 | No       | Object        | Object that contains the colors used in the website                                                           | See bellow the [`colors`](#colors) section         |
-| i18n                   | No       | Object        | Object that contains internationalization configuration                                                       | See bellow the [`i18n`](#i18n) section             |
-| categories             | No       | List/Category | The categories that projects can use for identification and filtering                                         | See bellow the [`category`](#category) section     |
-| tags                   | No       | List/Tag      | The tags that projects can use for identification and filtering                                               | See bellow the [`tag`](#tag) section               |
-| projects               | Yes      | List/Project  | The projects of the portfolio                                                                                 | See bellow the [`project`](#project) section       |
+| Property               | Required | Value         | What it does                                                                                                  | Example                                                       |
+|:-----------------------|:--------:|:--------------|:--------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------|
+| name                   | Yes      | Text          | Name that appears at the top of the home page and title of the resulting website                              | `Jonathan`, `Maria`, `Josivaldo`, `Somename Veryunique`       |
+| description            | No       | Text          | Text that appears bellow the name of home page and description of the resulting website                       | `Hello there! This is my portfolio`, `Someone's portfolio`    |
+| showFooter             | No       | Boolean       | If the default footer should appear                                                                           | `true`, `false`                                               |
+| filters                | No       | Boolean       | If the categories and tags filtering system should be activated                                               | `true`, `false`                                               |
+| root                   | No       | Text          | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | ``, `/portfolio`, `/portfolio-generator`, `/something/other/` |
+| colors                 | No       | Object        | Object that contains the colors used in the website                                                           | See bellow the [`colors`](#colors) section                    |
+| i18n                   | No       | Object        | Object that contains internationalization configuration                                                       | See bellow the [`i18n`](#i18n) section                        |
+| categories             | No       | List/Category | The categories that projects can use for identification and filtering                                         | See bellow the [`category`](#category) section                |
+| tags                   | No       | List/Tag      | The tags that projects can use for identification and filtering                                               | See bellow the [`tag`](#tag) section                          |
+| projects               | Yes      | List/Project  | The projects of the portfolio                                                                                 | See bellow the [`project`](#project) section                  |
 
 ### Colors
 
 Object containg the different colors used in the resulting website, each color is a CSS color, so you can use `Hex`, `RGB` or `HSL`.
 
-| Property         | Required | Value  | What it does                                        | Example            |
-|:-----------------|:--------:|:-------|:----------------------------------------------------|:-------------------|
-| primary          | No       | Color  | The accent color used in various website locations  | #0074D9            |
-| text-light       | No       | Color  | The color used by text in dark backgrounds          | rgb(255, 255, 255) |
-| text-dark        | No       | Color  | The color used by text in light backgrounds         | hsl(0, 0, 20)      |
-| background-light | No       | Color  | The color used in light backgrounds                 | white              |
-| background-dark  | No       | Color  | TThe color used in dark backgrounds                 | rgb(26, 42, 58)    |
+| Property         | Required | Value  | What it does                                        | Example              |
+|:-----------------|:--------:|:-------|:----------------------------------------------------|:---------------------|
+| primary          | No       | Color  | The accent color used in various website locations  | `#0074D9`            |
+| text-light       | No       | Color  | The color used by text in dark backgrounds          | `rgb(255, 255, 255)` |
+| text-dark        | No       | Color  | The color used by text in light backgrounds         | `hsl(0, 0, 20)`      |
+| background-light | No       | Color  | The color used in light backgrounds                 | `white`              |
+| background-dark  | No       | Color  | TThe color used in dark backgrounds                 | `rgb(26, 42, 58)`    |
 
 - Example:
 
@@ -101,10 +101,10 @@ Object containg the different styles used in the resulting website, each style a
 
 | NOTE: Each language should be represented by [`ISO 639-1`](https://www.andiamo.co.uk/resources/iso-language-codes) codes, with the second part being UPPERCASE
 
-| Property | Required | Value     | What it does                                                | Example                     |
-|:---------|:--------:|:----------|:------------------------------------------------------------|:----------------------------|
-| langs    | Yes      | List/Text | The different languages the resulting website should output | ['es-MX', 'pt-BR', 'en-US'] |
-| default  | Yes      | Text      | The language used in the root of the website                | en-US                       |
+| Property | Required | Value     | What it does                                                | Example                                             |
+|:---------|:--------:|:----------|:------------------------------------------------------------|:----------------------------------------------------|
+| langs    | Yes      | List/Text | The different languages the resulting website should output | `['es-MX', 'pt-BR', 'en-US']`, `['fn-FR', 'es-ES']` |
+| default  | Yes      | Text      | The language used in the root of the website                | `en-US`, `ja`, `sv-fi`                              |
 
 - Example:
 
@@ -119,11 +119,11 @@ Object containg the different styles used in the resulting website, each style a
 
 Object representing a filter used by the projects. Each project can have only 1 category.
 
-| Property | Required | Value  | What it does                   | Example |
-|:---------|:--------:|:-------|:-------------------------------|:--------|
-| id       | Yes      | Number | The identifier of the category | 0       |
-| name     | Yes      | Text   | The name of the category       | Web     |
-| color    | Yes      | Color  | The color of the category      | #0074D9 |
+| Property | Required | Value  | What it does                   | Example                               |
+|:---------|:--------:|:-------|:-------------------------------|:--------------------------------------|
+| id       | Yes      | Number | The identifier of the category | `0`, `42`, `9`                        |
+| name     | Yes      | Text   | The name of the category       | `Web`, `Games`, `Paintings`           |
+| color    | Yes      | Color  | The color of the category      | `#0074D9`, `black`, `rgb(0, 255, 255) |
 
 - Example:
 
@@ -139,11 +139,11 @@ Object representing a filter used by the projects. Each project can have only 1 
 
 Object representing a filter used by the projects. Each project can have as many tags as wanted.
 
-| Property | Required | Value  | What it does              | Example |
-|:---------|:--------:|:-------|:--------------------------|:--------|
-| id       | Yes      | Number | The identifier of the tag | 0       |
-| name     | Yes      | Text   | The name of the tag       | Food    |
-| color    | Yes      | Color  | The color of the tag      | #0074D9 |
+| Property | Required | Value  | What it does              | Example                              |
+|:---------|:--------:|:-------|:--------------------------|:-------------------------------------|
+| id       | Yes      | Number | The identifier of the tag | `0`, `75`, `6`                       |
+| name     | Yes      | Text   | The name of the tag       | `Food`, `Tutorials`, `Woodworking`   |
+| color    | Yes      | Color  | The color of the tag      | `#0074D9`, `pink`, `rgb(255, 255, 0) |
 
 - Example:
 
@@ -161,13 +161,13 @@ Objects that defines how the project is displayed both in preview and in it's ow
 
 | Property    | Required | Value       | What it does                                                     | Example                                        |
 |:------------|:--------:|:------------|:-----------------------------------------------------------------|:-----------------------------------------------|
-| id          | Yes      | Number      | The identifier of the project                                    | 0                                              |
-| name        | Yes      | Text        | The name of the project                                          | Video about cooking                            |
-| description | No       | Text        | The description of the project                                   | A video I made showing what is cooking         |
-| category    | No       | Number      | The Id of the category of the project                            | 0                                              |
-| tags        | No       | List/Number | The Ids of the tags of the project                               | [0, 2, 25, 3]                                  |
+| id          | Yes      | Number      | The identifier of the project                                    | `0`, `1`, `3050`, `2`                          |
+| name        | Yes      | Text        | The name of the project                                          | `Video about cooking`, `How to cook it`        |
+| description | No       | Text        | The description of the project                                   | `A video I made showing what is cooking`       |
+| category    | No       | Number      | The Id of the category of the project                            | `0`, `29`, `31`, `5`                           |
+| tags        | No       | List/Number | The Ids of the tags of the project                               | `[0, 2, 25, 3]`, `[5]`, `[95, 4`]              |
 | icon        | Yes      | Image       | The image used by the project review and in the top of it's page | See bellow the [`image`](#image) section       |
-| links       | No       | List/Link   | The links to be displayed at the the project page                | See bellow the [`link`](#link) section       |
+| links       | No       | List/Link   | The links to be displayed at the the project page                | See bellow the [`link`](#link) section         |
 | images      | No       | List/Image  | The images to be displayed at the project page                   | See bellow the [`image`](#image) section       |
 | videos      | No       | List/Video  | The videos to be displayed at the project page                   | See bellow the [`video`](#video) section       |
 
@@ -259,7 +259,7 @@ Link displayed in the project page
 | Property | Required | Value | What it does                          | Example                      |
 |:---------|:--------:|:------|:--------------------------------------|:-----------------------------|
 | text     | Yes      | Text  | The text displayed by the link        | `Website`, `Project running` |
-| url      | Yes      | Text  | The URL the link points to            | https://kutt.it/7nbVKz       |
+| url      | Yes      | Text  | The URL the link points to            | `https://kutt.it/7nbVKz`     |
  
 - Example:
 
