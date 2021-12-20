@@ -9,17 +9,16 @@ A project that generates a portfolio site for you! All generated from a single j
 - [Portfolio.json](#portfoliojson)
   - [Colors](#Colors)
   - [i18n](#i18n)
-  - [Categories](#Categories)
-  - [Tags](#Tags)
-  - [Projects](#Projects)
-  - [Images](#Images)
-  - [Links](#Links)
-  - [Videos](#Videos)
-  - [Projects](#Projects)
+  - [Category](#Category)
+  - [Tag](#Tag)
+  - [Project](#Project)
+  - [Image](#Image)
+  - [Link](#Link)
+  - [Video](#Video)
 
 ## Portfolios built with it
 
-- [Example portfolio](https://jhow.io/portfolio-generator) (The default one created by this portfolio)
+- [Example portfolio](https://jhow.io/portfolio-generator)
 
 - [Jonathan Santos](https://portfolio.jhow.io)
 
@@ -59,19 +58,18 @@ The file `src/data/portfolio.json` is the file used to configure how the resulti
 
 Here is the reference for the properties and values it accepts:
 
-| Property               | Value   | What it does                                                                                                  | Example                                            |
-|:-----------------------|:--------|:--------------------------------------------------------------------------------------------------------------|:---------------------------------------------------|
-| name                   | Text    | Name that appears at the top of the home page and title of the resulting website                              | Jonathan                                           |
-| description            | Text    | Text that appears bellow the name of home page and description of the resulting website                       | Hello there! This is my portfolio                  |
-| showFooter             | Boolean | If the default footer should appear                                                                           | true                                               |
-| filters                | Boolean | If the categories and tags filtering system should be activated                                               | true                                               |
-| root                   | Text    | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | /portfolio                                         |
-| colors                 | Object  | Object that contains the colors used in the website                                                           | See bellow the [`colors`](#colors) section         |
-| styles                 | Object  | Object that contains some styles configuration used in the website                                            | See bellow the [`styles`](#styles) section         |
-| i18n                   | Object  | Object that contains internationalization configuration                                                       | See bellow the [`i18n`](#i18n) section             |
-| categories             | List    | The categories that projects can use for identification and filtering                                         | See bellow the [`categories`](#categories) section |
-| tags                   | List    | The tags that projects can use for identification and filtering                                               | See bellow the [`tags`](#tags) section             |
-| projects               | List    | The projects of the portfolio                                                                                 | See bellow the [`projects`](#projects) section     |
+| Property               | Value         | What it does                                                                                                  | Example                                            |
+|:-----------------------|:--------------|:--------------------------------------------------------------------------------------------------------------|:---------------------------------------------------|
+| name                   | Text          | Name that appears at the top of the home page and title of the resulting website                              | Jonathan                                           |
+| description            | Text          | Text that appears bellow the name of home page and description of the resulting website                       | Hello there! This is my portfolio                  |
+| showFooter             | Boolean       | If the default footer should appear                                                                           | true                                               |
+| filters                | Boolean       | If the categories and tags filtering system should be activated                                               | true                                               |
+| root                   | Text          | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | /portfolio                                         |
+| colors                 | Object        | Object that contains the colors used in the website                                                           | See bellow the [`colors`](#colors) section         |
+| i18n                   | Object        | Object that contains internationalization configuration                                                       | See bellow the [`i18n`](#i18n) section             |
+| categories             | List/Category | The categories that projects can use for identification and filtering                                         | See bellow the [`category`](#category) section     |
+| tags                   | List/Tag      | The tags that projects can use for identification and filtering                                               | See bellow the [`tag`](#tag) section               |
+| projects               | List/Project  | The projects of the portfolio                                                                                 | See bellow the [`project`](#project) section       |
 
 ### Colors
 
@@ -82,7 +80,7 @@ Object containg the different colors used in the resulting website, each color i
 | primary          | Color  | The accent color used in various website locations  | #0074D9            |
 | text-light       | Color  | The color used by text in dark backgrounds          | rgb(255, 255, 255) |
 | text-dark        | Color  | The color used by text in light backgrounds         | hsl(0, 0, 20)      |
-| background-light | Color  | The color used in light backgrounds                 | #FFFFFF            |
+| background-light | Color  | The color used in light backgrounds                 | white              |
 | background-dark  | Color  | TThe color used in dark backgrounds                 | rgb(26, 42, 58)    |
 
 Example:
@@ -117,40 +115,183 @@ Example:
 },
 ```
 
-### Categories
-### Tags
+### Category
 
-The properties for each tag:
+Object representing a filter used by the projects. Each project can have only 1 category.
 
-| Property | Value  | What it does               | Example |
-|:---------|:-------|:---------------------------|:--------|
-| id       | Number | The identifier of the tag  | Web     |
-| name     | Text   | The name of the tag        | Web     |
-| color    | Color  | The color of the tag       | #0074D9 |
+| Property | Value  | What it does                   | Example |
+|:---------|:-------|:-------------------------------|:--------|
+| id       | Number | The identifier of the category | 0       |
+| name     | Text   | The name of the category       | Web     |
+| color    | Color  | The color of the category      | #0074D9 |
 
-### Projects
-#### Images
-#### Links
-#### Videos
-### Projects
-The properties possible for each project:
+Example:
 
-| Property    | Value   | What it does                                                                                                 | Example                                                                                  |
-|:------------|:--------|:-------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------|
-| name        | Text    | The name of the project                                                                                      | My Awesome project                                                                       |
-| icon        | Image   | The image that appears in the preview of the project and in the title of the dedicated page of the project   | https://www.veggieprezi.com/wp-content/uploads/2017/09/20170731_214129-555x688.jpg       |
-| tag         | Text    | The name of the tag of the project                                                                           | web                                                                                      |
-| permalink   | Text    | The final link of the project                                                                                | my-awesome-project                                                                       |
-| description | Text    | The description of the project                                                                               | This is my project about a thing I did in my free time                                   |
-| links       | List    | The list of links that appears on the dedicated page of the project                                          | See the [Links](#links) section                                                        |
-| images      | List    | The list of images that appears on the dedicated page of the project, each image is a direct link to a image | [ "https://www.veggieprezi.com/wp-content/uploads/2017/09/20170731_214129-555x688.jpg" ] |
-| video       | Text    | The link to a video about the project                                                                        | https://kutt.it/7nbVKz                                                                   |
-| youtube     | Text    | The link to a embed youtube video about the project                                                           |https://www.youtube.com/embed/dQw4w9WgXcQ                                                |
+``` json
+{
+  "id": 0,
+  "name": "Dessert",
+  "color": "#FF0000"
+}
+```
 
-### Links
-The properties for each possible link:
+### Tag
 
-| Property | Value | What it does                          | Example                |
-|:---------|:------|:--------------------------------------|:-----------------------|
-| name     | Text  | The text that appears before the link | Project running        |
-| url      | Text  | The URL the link points to            | https://kutt.it/7nbVKz |
+Object representing a filter used by the projects. Each project can have as many tags as wanted.
+
+| Property | Value  | What it does              | Example |
+|:---------|:-------|:--------------------------|:--------|
+| id       | Number | The identifier of the tag | 0       |
+| name     | Text   | The name of the tag       | Food    |
+| color    | Color  | The color of the tag      | #0074D9 |
+
+Example:
+
+``` json
+{
+  "id": 0,
+  "name": "French",
+  "color": "green"
+}
+```
+
+### Project
+
+Objects that defines how the project is displayed both in preview and in it's own page.
+
+| Property    | Value       | What it does                                                     | Example                                        |
+|:------------|:------------|:-----------------------------------------------------------------|:-----------------------------------------------|
+| id          | Number      | The identifier of the project                                    | 0                                              |
+| name        | Text        | The name of the project                                          | Video about cooking                            |
+| description | Text        | The description of the project                                   | A video I made showing what is cooking         |
+| category    | Number      | The Id of the category of the project                            | 0                                              |
+| tags        | List/Number | The Ids of the tags of the project                               | [0, 2, 25, 3]                                  |
+| icon        | Image       | The image used by the project review and in the top of it's page | See bellow the [`image`](#image) section       |
+| links       | List/Link   | The links to be displayed at the the project page                | See bellow the [`link`](#link) section       |
+| images      | List/Image  | The images to be displayed at the project page                   | See bellow the [`image`](#image) section       |
+| videos      | List/Video  | The videos to be displayed at the project page                   | See bellow the [`video`](#video) section       |
+
+Example:
+
+``` json
+{
+  "id": 0,
+  "name": "Example project 1",
+  "description": "My project 1 is actually a Pudding",
+  "category": 0,
+  "tags": [0, 2, 5, 16],
+  "icon": {
+    "src": "pudding.jpg",
+    "width": 373,
+    "height": 280
+  },
+  "links": [
+    {
+      "text": "website",
+      "url": "http://www.pudim.com.br"
+    },
+    {
+      "text": "More images of pudding at google",
+      "url": "https://www.google.com/search?tbm=isch&q=pudding&tbs=imgo:1"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg",
+      "alt": "A Pudding",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "src": "https://www.yummytummyaarthi.com/wp-content/uploads/2017/08/1-9.jpg"
+    }
+  ],
+  "videos": [
+    { "src": "https://kutt.it/7nbVKz" },
+    { "youtube": "https://www.youtube.com/embed/CpGwrfOzCA0?start=21" }
+  ]
+},
+```
+
+#### Image
+
+Objects containing properties used by images in projects.
+
+| Note: The `src` property that doesn't contain a `http` link to a image, directly links to files contained in the folder `src/assets/img`
+
+| Property | Value  | What it does                                          | Example                                                                                       |
+|:---------|:-------|:------------------------------------------------------|:----------------------------------------------------------------------------------------------|
+| src      | Text   | `http` link or file name of image                     | `pudding.png`, `https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg` |
+| alt      | Text   | The image description used by bots and screen readers | `A pudding`, `A photo of a pudding`, `The pudding I made`                                     |
+| width    | Number | Width of the image                                    | `1280`, `1920`                                                                                |
+| height   | Number | Height of the image                                   | `720`, `1080`                                                                                 |
+
+``` json
+{
+  "src": "pudding.png"
+}
+
+// ...
+
+{
+  "src": "pudding.png",
+  "alt": "A pudding photo"
+}
+
+// ...
+
+{
+  "src": "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg",
+  "alt": "A Pudding I totally made",
+  "width": 1280,
+  "height": 720
+}
+
+```
+
+#### Link
+
+Link displayed in the project page
+
+| Note: All links text have the first letter uppercased in the resulting website (ex: `website` will render as `Website`)
+
+| Property | Value | What it does                          | Example                      |
+|:---------|:------|:--------------------------------------|:-----------------------------|
+| text     | Text  | The text displayed by the link        | `Website`, `Project running` |
+| url      | Text  | The URL the link points to            | https://kutt.it/7nbVKz       |
+
+``` json
+{
+  "text": "website",
+  "url": "http://www.pudim.com.br"
+}
+```
+
+#### Video
+
+Objects containing properties used by videos in projects. The video must be provided by one of the properties, with the `youtube` one, resulting in a `iframe` to the video, [like this](https://jhow.io/portfolio-generator/projects/2)
+
+| Note: The `src` property that doesn't contain a `http` link to a video, directly links to files contained in the folder `src/assets/video`
+
+| Property | Value  | What it does                                          | Example                                |
+|:---------|:-------|:------------------------------------------------------|:---------------------------------------|
+| src      | Text   | `http` link or file name of video                     | `makeof.mp4`, `https://kutt.it/7nbVKz` |
+| youtube  | Text   | Youtube video                                         | `https://youtu.be/1_q8txKyg4E`         |
+
+``` json
+{
+  "src": "https://kutt.it/7nbVKz"
+}
+
+// ...
+
+{
+  "src": "https://kutt.it/7nbVKz"
+}
+
+// ...
+
+{
+  "youtube": "https://youtu.be/1_q8txKyg4E"
+}
+```
