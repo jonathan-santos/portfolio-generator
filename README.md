@@ -64,7 +64,7 @@ Here is the reference for the properties and values it accepts:
 | description            | No       | Text          | Text that appears bellow the name of home page and description of the resulting website                       | `Hello there! This is my portfolio`, `Someone's portfolio`    |
 | showFooter             | No       | Boolean       | If the default footer should appear                                                                           | `true`, `false`                                               |
 | filters                | No       | Boolean       | If the categories and tags filtering system should be activated                                               | `true`, `false`                                               |
-| root                   | No       | Text          | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | ``, `/portfolio`, `/portfolio-generator`, `/something/other/` |
+| root                   | No       | Text          | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | `/portfolio`, `/portfolio-generator`, `/something/other/`     |
 | colors                 | No       | Object        | Object that contains the colors used in the website                                                           | See bellow the [`colors`](#colors) section                    |
 | i18n                   | No       | Object        | Object that contains internationalization configuration                                                       | See bellow the [`i18n`](#i18n) section                        |
 | categories             | No       | List/Category | The categories that projects can use for identification and filtering                                         | See bellow the [`category`](#category) section                |
@@ -119,11 +119,11 @@ Object containg the different styles used in the resulting website, each style a
 
 Object representing a filter used by the projects. Each project can have only 1 category.
 
-| Property | Required | Value  | What it does                   | Example                               |
-|:---------|:--------:|:-------|:-------------------------------|:--------------------------------------|
-| id       | Yes      | Number | The identifier of the category | `0`, `42`, `9`                        |
-| name     | Yes      | Text   | The name of the category       | `Web`, `Games`, `Paintings`           |
-| color    | Yes      | Color  | The color of the category      | `#0074D9`, `black`, `rgb(0, 255, 255) |
+| Property | Required | Value  | What it does                   | Example                                |
+|:---------|:--------:|:-------|:-------------------------------|:---------------------------------------|
+| id       | Yes      | Number | The identifier of the category | `0`, `42`, `9`                         |
+| name     | Yes      | Text   | The name of the category       | `Web`, `Games`, `Paintings`            |
+| color    | Yes      | Color  | The color of the category      | `#0074D9`, `black`, `rgb(0, 255, 255)` |
 
 - Example:
 
@@ -139,11 +139,11 @@ Object representing a filter used by the projects. Each project can have only 1 
 
 Object representing a filter used by the projects. Each project can have as many tags as wanted.
 
-| Property | Required | Value  | What it does              | Example                              |
-|:---------|:--------:|:-------|:--------------------------|:-------------------------------------|
-| id       | Yes      | Number | The identifier of the tag | `0`, `75`, `6`                       |
-| name     | Yes      | Text   | The name of the tag       | `Food`, `Tutorials`, `Woodworking`   |
-| color    | Yes      | Color  | The color of the tag      | `#0074D9`, `pink`, `rgb(255, 255, 0) |
+| Property | Required | Value  | What it does              | Example                               |
+|:---------|:--------:|:-------|:--------------------------|:--------------------------------------|
+| id       | Yes      | Number | The identifier of the tag | `0`, `75`, `6`                        |
+| name     | Yes      | Text   | The name of the tag       | `Food`, `Tutorials`, `Woodworking`    |
+| color    | Yes      | Color  | The color of the tag      | `#0074D9`, `pink`, `rgb(255, 255, 0)` |
 
 - Example:
 
@@ -165,7 +165,7 @@ Objects that defines how the project is displayed both in preview and in it's ow
 | name        | Yes      | Text        | The name of the project                                          | `Video about cooking`, `How to cook it`        |
 | description | No       | Text        | The description of the project                                   | `A video I made showing what is cooking`       |
 | category    | No       | Number      | The Id of the category of the project                            | `0`, `29`, `31`, `5`                           |
-| tags        | No       | List/Number | The Ids of the tags of the project                               | `[0, 2, 25, 3]`, `[5]`, `[95, 4`]              |
+| tags        | No       | List/Number | The Ids of the tags of the project                               | `[0, 2, 25, 3]`, `[5]`, `[95, 4]`              |
 | icon        | Yes      | Image       | The image used by the project review and in the top of it's page | See bellow the [`image`](#image) section       |
 | links       | No       | List/Link   | The links to be displayed at the the project page                | See bellow the [`link`](#link) section         |
 | images      | No       | List/Image  | The images to be displayed at the project page                   | See bellow the [`image`](#image) section       |
