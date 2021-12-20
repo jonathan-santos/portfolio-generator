@@ -83,7 +83,7 @@ Object containg the different colors used in the resulting website, each color i
 | background-light | Color  | The color used in light backgrounds                 | white              |
 | background-dark  | Color  | TThe color used in dark backgrounds                 | rgb(26, 42, 58)    |
 
-Example:
+- Example:
 
 ``` json
 "colors": {
@@ -106,7 +106,7 @@ Object containg the different styles used in the resulting website, each style a
 | langs    | List/Text | The different languages the resulting website should output | ['es-MX', 'pt-BR', 'en-US'] |
 | default  | Text      | The language used in the root of the website                | en-US                       |
 
-Example:
+- Example:
 
 ``` json
 "i18n": {
@@ -125,7 +125,7 @@ Object representing a filter used by the projects. Each project can have only 1 
 | name     | Text   | The name of the category       | Web     |
 | color    | Color  | The color of the category      | #0074D9 |
 
-Example:
+- Example:
 
 ``` json
 {
@@ -145,7 +145,7 @@ Object representing a filter used by the projects. Each project can have as many
 | name     | Text   | The name of the tag       | Food    |
 | color    | Color  | The color of the tag      | #0074D9 |
 
-Example:
+- Example:
 
 ``` json
 {
@@ -171,7 +171,7 @@ Objects that defines how the project is displayed both in preview and in it's ow
 | images      | List/Image  | The images to be displayed at the project page                   | See bellow the [`image`](#image) section       |
 | videos      | List/Video  | The videos to be displayed at the project page                   | See bellow the [`video`](#video) section       |
 
-Example:
+- Example:
 
 ``` json
 {
@@ -226,27 +226,28 @@ Objects containing properties used by images in projects.
 | width    | Number | Width of the image                                    | `1280`, `1920`                                                                                |
 | height   | Number | Height of the image                                   | `720`, `1080`                                                                                 |
 
+- Examples:
+
 ``` json
 {
   "src": "pudding.png"
 }
+```
 
-// ...
-
+``` json
 {
   "src": "pudding.png",
   "alt": "A pudding photo"
 }
+```
 
-// ...
-
+``` json
 {
   "src": "https://cookingwithdog.com/wp-content/uploads/2017/01/custard-pudding-00.jpg",
   "alt": "A Pudding I totally made",
   "width": 1280,
   "height": 720
 }
-
 ```
 
 #### Link
@@ -259,6 +260,8 @@ Link displayed in the project page
 |:---------|:------|:--------------------------------------|:-----------------------------|
 | text     | Text  | The text displayed by the link        | `Website`, `Project running` |
 | url      | Text  | The URL the link points to            | https://kutt.it/7nbVKz       |
+ 
+- Example:
 
 ``` json
 {
@@ -278,19 +281,15 @@ Objects containing properties used by videos in projects. The video must be prov
 | src      | Text   | `http` link or file name of video                     | `makeof.mp4`, `https://kutt.it/7nbVKz` |
 | youtube  | Text   | Youtube video                                         | `https://youtu.be/1_q8txKyg4E`         |
 
+- Examples:
+
 ``` json
 {
   "src": "https://kutt.it/7nbVKz"
 }
+```
 
-// ...
-
-{
-  "src": "https://kutt.it/7nbVKz"
-}
-
-// ...
-
+``` json
 {
   "youtube": "https://youtu.be/1_q8txKyg4E"
 }
