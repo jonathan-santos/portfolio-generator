@@ -15,6 +15,7 @@ A project that generates a portfolio site for you! All generated from a single j
   - [Image](#image)
   - [Link](#link)
   - [Video](#video)
+- [How to make a multilingual portfolio](#how-to-make-a-multilingual-portfolio)
 
 ## Portfolios built with it
 
@@ -32,11 +33,11 @@ A project that generates a portfolio site for you! All generated from a single j
 
 3. Edit the `portfolio.json` inside the `src/data` folder with information about your projects and yourself
 
-4. Define if you want to have multiple languages in your portfolio:
+4. Define if you want to have a multilingual portfolio:
 
-    4.1. If you don't want multiple languages, delete `src/data/pt-BR.json`, `src/data/es-MX.json`, `src/templates/pt-BR/` and `src/templates/es-MX`
+    4.1. If you don't want it, delete `src/data/pt-BR.json`, `src/data/es-MX.json`, `src/templates/pt-BR/` and `src/templates/es-MX`
 
-    4.2. If you want multiple languages, create (or modify current) language versions of your `portfolio.json` in `src/data` (for example the `pt-BR.json` or `es-MX`) and update the folders in `src/templates` (for example, you want a french version? Duplicate the `pt-BR/` folder, rename it to `fr-FR` and edit their contents)
+    4.2. If you want it, follow the steps in the section [How to make a multilingual portfolio](#how-to-make-a-multilingual-portfolio)
 
 5. See the resulting website running the command `npm start`, access the resulting website in [`localhost:3000`](http://localhost:3000)
 
@@ -46,7 +47,7 @@ A project that generates a portfolio site for you! All generated from a single j
 
     6.2. [Deploy yourself] Run the command `npm run build`, it will build all the static website files in the folder `public`, you can then copy the folder content and deploy it to different places to deploy your portfolio (many free by the way):
       - [Netifly](https://www.netlify.com/)
-      - [Github pages - Manually](https://pages.github.com/)
+      - [Github pages - Manually](https://pages./.github.com/)
       - [Amazon S3](https://aws.amazon.com/free/webapps/?trk=ps_a134p000006gXwDAAU)
       - [Your own dev server](https://kutt.it/7nbVKz)
 
@@ -72,7 +73,7 @@ Here is the reference for the properties and values it accepts:
 | projects               | Yes      | List/Project  | The projects of the portfolio                                                                                 | See bellow the [`project`](#project) section                  |
 
 ### Colors
-
+ 
 Object containg the different colors used in the resulting website, each color is a CSS color, so you can use `Hex`, `RGB` or `HSL`.
 
 | Property         | Required | Value  | What it does                                        | Example              |
@@ -83,7 +84,7 @@ Object containg the different colors used in the resulting website, each color i
 | background-light | No       | Color  | The color used in light backgrounds                 | `white`              |
 | background-dark  | No       | Color  | TThe color used in dark backgrounds                 | `rgb(26, 42, 58)`    |
 
-- Example:
+Example:
 
 ``` json
 "colors": {
@@ -106,7 +107,7 @@ Object containg the different styles used in the resulting website, each style a
 | langs    | Yes      | List/Text | The different languages the resulting website should output | `['es-MX', 'pt-BR', 'en-US']`, `['fn-FR', 'es-ES']` |
 | default  | Yes      | Text      | The language used in the root of the website                | `en-US`, `ja`, `sv-fi`                              |
 
-- Example:
+Example:
 
 ``` json
 "i18n": {
@@ -125,7 +126,7 @@ Object representing a filter used by the projects. Each project can have only 1 
 | name     | Yes      | Text   | The name of the category       | `Web`, `Games`, `Paintings`            |
 | color    | Yes      | Color  | The color of the category      | `#0074D9`, `black`, `rgb(0, 255, 255)` |
 
-- Example:
+Example:
 
 ``` json
 {
@@ -145,7 +146,7 @@ Object representing a filter used by the projects. Each project can have as many
 | name     | Yes      | Text   | The name of the tag       | `Food`, `Tutorials`, `Woodworking`    |
 | color    | Yes      | Color  | The color of the tag      | `#0074D9`, `pink`, `rgb(255, 255, 0)` |
 
-- Example:
+Example:
 
 ``` json
 {
@@ -171,7 +172,7 @@ Objects that defines how the project is displayed both in preview and in it's ow
 | images      | No       | List/Image  | The images to be displayed at the project page                   | See bellow the [`image`](#image) section       |
 | videos      | No       | List/Video  | The videos to be displayed at the project page                   | See bellow the [`video`](#video) section       |
 
-- Example:
+Example:
 
 ``` json
 {
@@ -226,7 +227,7 @@ Objects containing properties used by images in projects.
 | width    | No       | Number | Width of the image                                    | `1280`, `1920`                                                                                |
 | height   | No       | Number | Height of the image                                   | `720`, `1080`                                                                                 |
 
-- Examples:
+Examples:
 
 ``` json
 {
@@ -261,7 +262,7 @@ Link displayed in the project page
 | text     | Yes      | Text  | The text displayed by the link        | `Website`, `Project running` |
 | url      | Yes      | Text  | The URL the link points to            | `https://kutt.it/7nbVKz`     |
  
-- Example:
+Example:
 
 ``` json
 {
@@ -281,7 +282,7 @@ Objects containing properties used by videos in projects. The video must be prov
 | src      | No       | Text   | `http` link or file name of video                     | `makeof.mp4`, `https://kutt.it/7nbVKz` |
 | youtube  | No       | Text   | Youtube video                                         | `https://youtu.be/1_q8txKyg4E`         |
 
-- Examples:
+Examples:
 
 ``` json
 {
@@ -294,3 +295,79 @@ Objects containing properties used by videos in projects. The video must be prov
   "youtube": "https://youtu.be/1_q8txKyg4E"
 }
 ```
+
+## How to make a multilingual portfolio
+
+In order to make a multilingual portfolio you need to add a few properties to `portfolio.json`, create and modify a few files. I will use the example with the languages english, spanish and french, with the default being english:
+
+0. After deciding the languages you will use, get the [`ISO 639-1`](https://www.andiamo.co.uk/resources/iso-language-codes) codes for the language variations you wish, in this example i'll use: `en-GB` (United Kingdom english), `es-AR` (Argentina spanish) and `fr` (standard french).
+
+1. Edit the [`i18n`](#i18n) property in `portfolio.json` with the languages and default language you wish. For example:
+
+    ``` json
+    "i18n": {
+      "langs": ["en-GB", "es-ar", "fr"],
+      "default": "en-GB"
+    },
+    ```
+
+2. Create text translations in `src/data/translations.json` for the language variations you need. In this example, the modifications would be like this:
+
+    ```json
+    {
+      "en-GB": {
+        // Reused the default `en-US` content
+      },
+      "es-AR": {
+        // Reused the default `es-MX` content
+      },
+      "fr": {
+        "categories": "Catégories",
+        "tags": "Mots clés",
+        "links": "Liens",
+        "images": "Images",
+        "videos": "Vidéos",
+        "filter": "Filtre",
+        "no-filter": "Pas de filtre",
+        "active-filter": "Filtre actif",
+        "external-link": "ouvre un lien externe dans une nouvelle fenêtre",
+        "go-to-home": "Aller à la maison",
+        "made-with": "Portfolio réalisé avec",
+        "built-with": "Construit avec",
+        "back-to-top": "Retour au sommet",
+        "arrow-icon": "Icône de flèche",
+        "icon": "icône",
+        "and": "et",
+        "love": "Aimer",
+        "by": "par"
+      }
+    }
+    ```
+
+3. Create different language versions of `portfolio.json` in `src/data`, meaning you will add the same content from `portfolio.json`, but with all content with the language you want (for reference, check the [`src/data`](https://github.com/jonathan-santos/portfolio-generator/tree/main/src/data) folder content in the default project). In this example create the files: `es-AR.json` and `fr.json`. You don't need to create one for `en-GB`, because as it is the default language it's content should be in `portfolio.json`. You don't need to add content for properties `showFooter`, `filters`, `root`, `colors` or `i18n`.
+
+4. Edit or copy one of the language folders in `src/templates` like `es-MX` or `pt-BR`, renaming them to the languages you need (except `en-GB` as it is the default language), in this case `es-AR` and `fr`. Delete the older folders (`es-MX`, `pt-BR`) if you have not reused them. The `src/template` folder should now look like this:
+
+    ![Updated template folder](.github/readme/updated-project-structure.png)
+
+5. Edit the `data` property with the new language in the files `categories.liquid`, `projects.liquid` and `tags.liquid` inside the language folders you created. For example, in the `categories.liquid` inside folder `fr`:
+
+    - Before:
+
+      ```yaml
+      layout: layouts/projects-and-filters
+      pagination:
+        data: pt-BR.categories
+      ```
+
+    - After:
+
+      ```yaml
+      layout: layouts/projects-and-filters
+      pagination:
+        data: fr.categories
+      ```
+
+6. All should be ready now. Execute `yarn start`, and in the website the `language-selector` should now show working links to the different language versions of your website:
+
+    ![Updated language selector](.github/readme/updated-language-selector.png)
