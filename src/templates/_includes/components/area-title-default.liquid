@@ -7,5 +7,7 @@
     {% endif %}
   </h1>
 
-  <p class='area-title__description'>{{ portfolioDescription }}</p>
+  {% if portfolioDescription %}
+    <p class='area-title__description'>{{ portfolioDescription }}</p>
+  {% endif %}
 </div>

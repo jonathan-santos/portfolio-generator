@@ -1,6 +1,6 @@
 const portfolio = require('../data/portfolio.json')
 
-const getRootPath = () => process.argv.includes('--serve') ? '' : portfolio.root
+const getRootPath = () => process.argv.includes('--serve') || !portfolio.root ? '' : portfolio.root
 
 const getRelativePath = (path, lang) => {
   if (!lang || !portfolio.i18n || lang === portfolio.i18n.default) {
