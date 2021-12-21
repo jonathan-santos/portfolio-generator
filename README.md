@@ -61,6 +61,12 @@ A project that generates a portfolio site for you! All generated from a single j
 
 The file `src/data/portfolio.json` is the file used to configure how the resulting website will be, from colors and styles, to categories and projects, all is in this file (and the different languages like `pt-BR.json` or `es-MX.json`).
 
+For examples `portfolio.json`:
+
+- [Default project - portfolio.json](https://github.com/jonathan-santos/portfolio-generator/blob/main/src/data/portfolio.json) ([Resulting website](https://jhow.io/portfolio-generator))
+
+- [Jonathan Santos - portfolio.json](https://github.com/jonathan-santos/portfolio/blob/main/src/data/portfolio.json) ([Resulting website](https://jhow.io/portfolio))
+
 Here is the reference for the properties and values it accepts:
 
 | Property               | Required | Value         | What it does                                                                                                  | Example                                                       |
