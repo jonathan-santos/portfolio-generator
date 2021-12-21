@@ -15,8 +15,9 @@ A project that generates a portfolio site for you! All generated from a single j
   - [Image](#image)
   - [Link](#link)
   - [Video](#video)
-- [How to make a multilingual portfolio](#how-to-make-a-multilingual-portfolio)
 - [Assets management](#assets-management)
+- [How to make a multilingual portfolio](#how-to-make-a-multilingual-portfolio)
+- [License](#license)
 
 ## Portfolios built with it
 
@@ -26,27 +27,27 @@ A project that generates a portfolio site for you! All generated from a single j
 
 ## How to use it
 
-0. Have [`node.js`](https://nodejs.org) installed in your computer (Preferably version 12 or higher)
+0. Have [`node.js`](https://nodejs.org) installed in your computer (Preferably version 12 or higher).
 
-1. Fork and `git clone` the repository
+1. Fork and `git clone` the repository.
 
-2. Run the command `npm install` to install the `npm` dependencies in the project
+2. Run the command `npm install` to install the `npm` dependencies in the project.
 
-3. Edit the `portfolio.json` inside the `src/data` folder with information about your projects and yourself
+3. Edit the `portfolio.json` inside the `src/data` folder with information about your projects and yourself.
 
-4. [Add your assets](#assets-management) (images, videos, favicon, etc.)
+4. [Add your assets](#assets-management) (images, videos, favicon, etc.).
 
-5. See the resulting website running the command `npm start`, access the resulting website in [`localhost:3000`](http://localhost:3000)
+5. See the resulting website running the command `npm start`, access the resulting website in [`localhost:3000`](http://localhost:3000).
 
 6. Define if you want to have a multilingual portfolio:
 
-    6.1. If you don't want it, delete `src/data/pt-BR.json`, `src/data/es-MX.json`, `src/templates/pt-BR/` and `src/templates/es-MX`
+    6.1. If you don't want it, delete `src/data/pt-BR.json`, `src/data/es-MX.json`, `src/templates/pt-BR/` and `src/templates/es-MX`.
 
-    6.2. If you want it, follow the steps in the section [How to make a multilingual portfolio](#how-to-make-a-multilingual-portfolio)
+    6.2. If you want it, follow the steps in the section [How to make a multilingual portfolio](#how-to-make-a-multilingual-portfolio).
 
 7. Liked the result? Then you have two options for deploying the website:
 
-    7.1. [`Github Pages(Easy)`] Deploy the repository in a github repository ([like this](https://github.com/jonathan-santos/portfolio)), Change the `src/data/portfolio.json` property `root` to `portfolio` ([like this](https://github.com/jonathan-santos/portfolio/raw???)), and then in your computer run the command `npm run deploy`
+    7.1. [`Github Pages(Easy)`] Deploy the repository in a github repository ([like this](https://github.com/jonathan-santos/portfolio)), Change the `src/data/portfolio.json` property `root` to `portfolio` ([like this](https://github.com/jonathan-santos/portfolio/raw???)), and then in your computer run the command `npm run deploy`.
 
     7.2. [Deploy yourself] Run the command `npm run build`, it will build all the static website files in the folder `public`, you can then copy the folder content and deploy it to different places to deploy your portfolio (many free by the way):
       - [Netifly](https://www.netlify.com/)
@@ -54,7 +55,7 @@ A project that generates a portfolio site for you! All generated from a single j
       - [Amazon S3](https://aws.amazon.com/free/webapps/?trk=ps_a134p000006gXwDAAU)
       - [Your own dev server](https://kutt.it/7nbVKz)
 
-8. And for the most important step, share your published portfolio, do it in [linkedin](https://linkedin.com), in your github profile, in your [twitter](https://twitter.com) or any other place you like. But please share it with me, I'd like to see it and, if you would like it, to add in this `README`, I'll be happy to do it 👍
+8. And for the most important step, share your published portfolio, do it in [linkedin](https://linkedin.com), in your github profile, in your [twitter](https://twitter.com) or any other place you like. But please share it with me, I'd like to see it and, if you would like it, to add in this `README`, I'll be happy to do it 👍.
 
 ## Portfolio.json
 
@@ -301,7 +302,7 @@ Examples:
 
 ## Assets management
 
-Assets (images, videos, favicon, etc.) need specific places to be put in order to appear correctly in the resulting website. So for each asset
+If you want your own Assets (images, videos, favicon, etc.) to be inside the project and the resulting website, you need to put them in specific places in order to appear correctly in the resulting website. All the project assets should be located in `src/assets`.
 
 ### Default assets
 
@@ -311,17 +312,17 @@ The project has some assets by default:
 
 As for each folder:
 
-- **favicon:** The [`favicon`](https://www.seoptimer.com/blog/what-is-a-favicon/) folder should not be deleted, but it's content can be updated, more on it [bellow](#favicon)
+- **favicon:** The [`favicon`](https://www.seoptimer.com/blog/what-is-a-favicon/) folder should not be deleted, but it's content can be updated, more on it [bellow](#favicon).
 
-- **icons:** The `icons` folder should not be deleted, the icons are used in various places in the result website. You should not add any assets in it either, as it's not the right place
+- **icons:** The `icons` folder should not be deleted, the icons are used in various places in the result website. You should not add any assets in it either, as it's not the right place.
 
-- **img:** The 3 images inside can be safely removed (if you don't want them, which I presume you won't), you can delete the folder if you want, but you'll recreate it later to add your own images
+- **img:** The 3 images inside can be safely removed (if you don't want them, which I presume you won't), you can delete the folder if you want, but you'll recreate it later to add your own images.
 
 ### Images
 
 To add your own images to the project, like project icons or images, just add them in the folder `src/assets/img`. Then they can be used in projects just by adding their name in respective properties in `portfolio.json`, as an example:
 
-``` json
+``` jsonc
 // src/assets/img/project-icon.png
 {
   "projects": [
@@ -338,7 +339,7 @@ To add your own images to the project, like project icons or images, just add th
 
 To add your own videos to the project, like project overviews and explanations, just add them in the folder `src/assets/video`. Then they can be used in projects just by adding their name in respective properties in `portfolio.json`, as an example:
 
-``` json
+``` jsonc
 // src/assets/video/project-video.mp4
 {
   "projects": [
@@ -355,9 +356,7 @@ To add your own videos to the project, like project overviews and explanations, 
 
 ### Favicon
 
-| Note: 
-
-The default favicon looks like this:
+The default [`favicon`](https://www.seoptimer.com/blog/what-is-a-favicon/) looks like this:
 
 ![Default favicon](.github/readme/default-favicon.png)
 
@@ -380,7 +379,7 @@ In order to make a multilingual portfolio you need to add a few properties to `p
 
 2. Create text translations in `src/data/translations.json` for the language variations you need. In this example, the modifications would be like this:
 
-    ```json
+    ```jsonc
     {
       "en-GB": {
         // Reused the default `en-US` content
@@ -438,3 +437,7 @@ In order to make a multilingual portfolio you need to add a few properties to `p
 6. All should be ready now. Execute `yarn start`, and in the website the `language-selector` should now show working links to the different language versions of your website:
 
     ![Updated language selector](.github/readme/updated-language-selector.png)
+
+## License
+
+Portfolio-generator is [MIT licensed](https://github.com/jonathan-santos/portfolio-generator/blob/main/LICENSE.md).
