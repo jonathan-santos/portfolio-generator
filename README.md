@@ -23,7 +23,7 @@ A project that generates a portfolio site for you! All generated from a single j
 
 - [Example portfolio](https://jhow.io/portfolio-generator)
 
-- [Jonathan Santos](https://portfolio.jhow.io)
+- [Jonathan Santos](https://jhow.io/portfolio)
 
 ## How to use it
 
@@ -47,7 +47,7 @@ A project that generates a portfolio site for you! All generated from a single j
 
 7. Liked the result? Then you have two options for deploying the website:
 
-    7.1. **Github Pages(Easy):≈** Deploy the repository in a github repository ([like this](https://github.com/jonathan-santos/portfolio)), Change the `src/data/portfolio.json` property `root` to `portfolio` ([like this](https://github.com/jonathan-santos/portfolio/raw???)), and then in your computer run the command `npm run deploy`.
+    7.1. **Github Pages(Easy):≈** Deploy the repository in a github repository ([like this](https://github.com/jonathan-santos/portfolio)), Change the `src/data/portfolio.json` property `root` to `portfolio` ([like this](https://github.com/jonathan-santos/portfolio/blob/main/src/data/portfolio.json#L6)), and then in your computer run the command `npm run deploy`.
 
     7.2. **Deploy yourself:** Run the command `npm run build`, it will build all the static website files in the folder `public`, you can then copy the folder content and deploy it to different places to deploy your portfolio (many free by the way):
       - [Netifly](https://www.netlify.com/)
@@ -55,7 +55,7 @@ A project that generates a portfolio site for you! All generated from a single j
       - [Amazon S3](https://aws.amazon.com/free/webapps/?trk=ps_a134p000006gXwDAAU)
       - [Your own dev server](https://kutt.it/7nbVKz)
 
-8. And for the most important step, share your published portfolio, do it in [linkedin](https://linkedin.com), in your github profile, in your [twitter](https://twitter.com) or any other place you like. But please share it with me, I'd like to see it and, if you would like it, to add in this `README`, I'll be happy to do it 👍.
+8. And for the most important step, share your published portfolio, do it in linkedin, in your github profile, in your twitter or any other place you like. But please share it with me, I'd like to see it and, if you would like it, to add in this `README`, I'll be happy to do it 👍.
 
 ## Portfolio.json
 
