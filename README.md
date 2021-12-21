@@ -29,7 +29,7 @@ A project that generates a portfolio site for you! All generated from a single j
 
 0. Have [`node.js`](https://nodejs.org) installed in your computer (Preferably version 12 or higher).
 
-1. Fork and `git clone` the repository.
+1. Fork and `git clone` the repository (if not forking, just remember to change the default `git` remote).
 
 2. Run the command `npm install` to install the `npm` dependencies in the project.
 
@@ -47,9 +47,9 @@ A project that generates a portfolio site for you! All generated from a single j
 
 7. Liked the result? Then you have two options for deploying the website:
 
-    7.1. [`Github Pages(Easy)`] Deploy the repository in a github repository ([like this](https://github.com/jonathan-santos/portfolio)), Change the `src/data/portfolio.json` property `root` to `portfolio` ([like this](https://github.com/jonathan-santos/portfolio/raw???)), and then in your computer run the command `npm run deploy`.
+    7.1. **Github Pages(Easy):≈** Deploy the repository in a github repository ([like this](https://github.com/jonathan-santos/portfolio)), Change the `src/data/portfolio.json` property `root` to `portfolio` ([like this](https://github.com/jonathan-santos/portfolio/raw???)), and then in your computer run the command `npm run deploy`.
 
-    7.2. [Deploy yourself] Run the command `npm run build`, it will build all the static website files in the folder `public`, you can then copy the folder content and deploy it to different places to deploy your portfolio (many free by the way):
+    7.2. **Deploy yourself:** Run the command `npm run build`, it will build all the static website files in the folder `public`, you can then copy the folder content and deploy it to different places to deploy your portfolio (many free by the way):
       - [Netifly](https://www.netlify.com/)
       - [Github pages - Manually](https://pages./.github.com/)
       - [Amazon S3](https://aws.amazon.com/free/webapps/?trk=ps_a134p000006gXwDAAU)
@@ -72,8 +72,8 @@ Here is the reference for the properties and values it accepts:
 | root                   | No       | Text          | The relative link to the site, used if your portfolio site is not in the root of server, like in github pages | `/portfolio`, `/portfolio-generator`, `/something/other/`     |
 | colors                 | No       | Object        | Object that contains the colors used in the website                                                           | See bellow the [`colors`](#colors) section                    |
 | i18n                   | No       | Object        | Object that contains internationalization configuration                                                       | See bellow the [`i18n`](#i18n) section                        |
-| categories             | No       | List/Category | The categories that projects can use for identification and filtering                                         | See bellow the [`category`](#category) section                |
-| tags                   | No       | List/Tag      | The tags that projects can use for identification and filtering                                               | See bellow the [`tag`](#tag) section                          |
+| categories             | Yes      | List/Category | The categories that projects can use for identification and filtering                                         | See bellow the [`category`](#category) section                |
+| tags                   | Yes      | List/Tag      | The tags that projects can use for identification and filtering                                               | See bellow the [`tag`](#tag) section                          |
 | projects               | Yes      | List/Project  | The projects of the portfolio                                                                                 | See bellow the [`project`](#project) section                  |
 
 ### Colors
