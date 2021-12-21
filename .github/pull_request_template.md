@@ -56,3 +56,7 @@
     - `file`:
       - Change
   
+## Todos
+- [ ] Update `package.json` version
+- [ ] Test generated result from `npm run build` command
+- [ ] Update `README.md` if necessary
